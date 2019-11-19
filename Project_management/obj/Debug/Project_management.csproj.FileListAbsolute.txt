@@ -1,0 +1,17 @@
+C:\Users\Norman\source\repos\Project_management\Project_management\Project_management\bin\Debug\Project_management.exe.config
+C:\Users\Norman\source\repos\Project_management\Project_management\Project_management\bin\Debug\Project_management.exe
+C:\Users\Norman\source\repos\Project_management\Project_management\Project_management\bin\Debug\Project_management.pdb
+C:\Users\Norman\source\repos\Project_management\Project_management\Project_management\obj\Debug\Project_management.csprojAssemblyReference.cache
+C:\Users\Norman\source\repos\Project_management\Project_management\Project_management\obj\Debug\App.g.cs
+C:\Users\Norman\source\repos\Project_management\Project_management\Project_management\obj\Debug\Project_management_MarkupCompile.cache
+C:\Users\Norman\source\repos\Project_management\Project_management\Project_management\obj\Debug\Project_management_MarkupCompile.lref
+C:\Users\Norman\source\repos\Project_management\Project_management\Project_management\obj\Debug\Project_management.g.resources
+C:\Users\Norman\source\repos\Project_management\Project_management\Project_management\obj\Debug\Project_management.Properties.Resources.resources
+C:\Users\Norman\source\repos\Project_management\Project_management\Project_management\obj\Debug\Project_management.csproj.GenerateResource.cache
+C:\Users\Norman\source\repos\Project_management\Project_management\Project_management\obj\Debug\Project_management.csproj.CoreCompileInputs.cache
+C:\Users\Norman\source\repos\Project_management\Project_management\Project_management\obj\Debug\Project_management.exe
+C:\Users\Norman\source\repos\Project_management\Project_management\Project_management\obj\Debug\Project_management.pdb
+C:\Users\Norman\source\repos\Project_management\Project_management\Project_management\obj\Debug\mainwindow.g.cs
+C:\Users\Norman\source\repos\Project_management\Project_management\Project_management\obj\Debug\mainwindow.baml
+C:\Users\Norman\source\repos\Project_management\Project_management\Project_management\obj\Debug\SelectionMenuAdmin.g.cs
+C:\Users\Norman\source\repos\Project_management\Project_management\Project_management\obj\Debug\SelectionMenuAdmin.baml

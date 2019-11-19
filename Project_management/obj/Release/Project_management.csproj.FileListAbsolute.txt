@@ -1,0 +1,16 @@
+C:\Users\Norman\source\repos\Project_management\Project_management\Project_management\bin\Release\Project_management.exe.config
+C:\Users\Norman\source\repos\Project_management\Project_management\Project_management\bin\Release\Project_management.exe
+C:\Users\Norman\source\repos\Project_management\Project_management\Project_management\bin\Release\Project_management.pdb
+C:\Users\Norman\source\repos\Project_management\Project_management\Project_management\obj\Release\mainwindow.g.cs
+C:\Users\Norman\source\repos\Project_management\Project_management\Project_management\obj\Release\SelectionMenuAdmin.g.cs
+C:\Users\Norman\source\repos\Project_management\Project_management\Project_management\obj\Release\App.g.cs
+C:\Users\Norman\source\repos\Project_management\Project_management\Project_management\obj\Release\Project_management_MarkupCompile.cache
+C:\Users\Norman\source\repos\Project_management\Project_management\Project_management\obj\Release\Project_management_MarkupCompile.lref
+C:\Users\Norman\source\repos\Project_management\Project_management\Project_management\obj\Release\mainwindow.baml
+C:\Users\Norman\source\repos\Project_management\Project_management\Project_management\obj\Release\SelectionMenuAdmin.baml
+C:\Users\Norman\source\repos\Project_management\Project_management\Project_management\obj\Release\Project_management.g.resources
+C:\Users\Norman\source\repos\Project_management\Project_management\Project_management\obj\Release\Project_management.Properties.Resources.resources
+C:\Users\Norman\source\repos\Project_management\Project_management\Project_management\obj\Release\Project_management.csproj.GenerateResource.cache
+C:\Users\Norman\source\repos\Project_management\Project_management\Project_management\obj\Release\Project_management.csproj.CoreCompileInputs.cache
+C:\Users\Norman\source\repos\Project_management\Project_management\Project_management\obj\Release\Project_management.exe
+C:\Users\Norman\source\repos\Project_management\Project_management\Project_management\obj\Release\Project_management.pdb
