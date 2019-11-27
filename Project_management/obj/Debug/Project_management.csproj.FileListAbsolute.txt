@@ -18,7 +18,6 @@ C:\Users\Norman\source\repos\Project_management\Project_management\Project_manag
 D:\VisualRepo\Projekt_bd\Project_management\bin\Debug\Project_management.exe.config
 D:\VisualRepo\Projekt_bd\Project_management\bin\Debug\Project_management.exe
 D:\VisualRepo\Projekt_bd\Project_management\bin\Debug\Project_management.pdb
-D:\VisualRepo\Projekt_bd\Project_management\obj\Debug\Project_management.csprojAssemblyReference.cache
 D:\VisualRepo\Projekt_bd\Project_management\obj\Debug\mainwindow.g.cs
 D:\VisualRepo\Projekt_bd\Project_management\obj\Debug\SelectionMenuAdmin.g.cs
 D:\VisualRepo\Projekt_bd\Project_management\obj\Debug\App.g.cs

@@ -11,3 +11,4 @@ D:\VisualRepo\Projekt_bd\database_layer\obj\Debug\database_layer.Properties.Reso
 D:\VisualRepo\Projekt_bd\database_layer\obj\Debug\database_layer.csproj.GenerateResource.cache
 D:\VisualRepo\Projekt_bd\database_layer\obj\Debug\database_layer.exe
 D:\VisualRepo\Projekt_bd\database_layer\obj\Debug\database_layer.pdb
+D:\VisualRepo\Projekt_bd\database_layer\obj\Debug\database_layer.csprojAssemblyReference.cache
