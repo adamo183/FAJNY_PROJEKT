@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="BD_Project" Class="project_mng_data_baseDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=LAPTOP-LKBFME05;Initial Catalog=BD_Project;Integrated Security=True" SettingsObjectName="database_layer.Properties.Settings" SettingsPropertyName="BD_ProjectConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Section" Member="Section">
+    <Type Name="Section">
+      <Column Name="ID_Section" Type="System.Int16" DbType="SmallInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Free_space" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="ID_Subject" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="ID_Semester" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
