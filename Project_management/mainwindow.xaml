@@ -7,8 +7,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="280,137,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="222"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="280,202,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="222"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="280,137,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="222" Name="login_text"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="280,202,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="222" Name ="password_text"/>
         <Label Content="Login" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="280,106,0,0"/>
         <Label Content="Password" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="280,171,0,0"/>
         <Button Content="Connect" HorizontalAlignment="Left" VerticalAlignment="Top" Width="141" Margin="313,248,0,0" Height="42" Click="OpenWindow"/>

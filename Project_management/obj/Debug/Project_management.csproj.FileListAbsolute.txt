@@ -30,3 +30,11 @@ D:\VisualRepo\Projekt_bd\Project_management\obj\Debug\Project_management.Propert
 D:\VisualRepo\Projekt_bd\Project_management\obj\Debug\Project_management.csproj.GenerateResource.cache
 D:\VisualRepo\Projekt_bd\Project_management\obj\Debug\Project_management.exe
 D:\VisualRepo\Projekt_bd\Project_management\obj\Debug\Project_management.pdb
+D:\VisualRepo\Projekt_bd\Project_management\obj\Debug\Project_management.csprojAssemblyReference.cache
+D:\VisualRepo\Projekt_bd\Project_management\bin\Debug\database_layer.exe
+D:\VisualRepo\Projekt_bd\Project_management\bin\Debug\logic_layer.exe
+D:\VisualRepo\Projekt_bd\Project_management\bin\Debug\database_layer.pdb
+D:\VisualRepo\Projekt_bd\Project_management\bin\Debug\database_layer.exe.config
+D:\VisualRepo\Projekt_bd\Project_management\bin\Debug\logic_layer.pdb
+D:\VisualRepo\Projekt_bd\Project_management\bin\Debug\logic_layer.exe.config
+D:\VisualRepo\Projekt_bd\Project_management\obj\Debug\Project_management.csproj.CopyComplete
