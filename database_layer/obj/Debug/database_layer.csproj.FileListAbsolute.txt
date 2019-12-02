@@ -11,3 +11,17 @@ D:\VisualRepo\Projekt_bd\database_layer\obj\Debug\database_layer.Properties.Reso
 D:\VisualRepo\Projekt_bd\database_layer\obj\Debug\database_layer.csproj.GenerateResource.cache
 D:\VisualRepo\Projekt_bd\database_layer\obj\Debug\database_layer.exe
 D:\VisualRepo\Projekt_bd\database_layer\obj\Debug\database_layer.pdb
+C:\Users\hp\Source\Repos\FAJNY_PROJEKT\database_layer\bin\Debug\database_layer.exe.config
+C:\Users\hp\Source\Repos\FAJNY_PROJEKT\database_layer\bin\Debug\database_layer.exe
+C:\Users\hp\Source\Repos\FAJNY_PROJEKT\database_layer\bin\Debug\database_layer.pdb
+C:\Users\hp\Source\Repos\FAJNY_PROJEKT\database_layer\obj\Debug\MainWindow.g.cs
+C:\Users\hp\Source\Repos\FAJNY_PROJEKT\database_layer\obj\Debug\App.g.cs
+C:\Users\hp\Source\Repos\FAJNY_PROJEKT\database_layer\obj\Debug\database_layer_MarkupCompile.cache
+C:\Users\hp\Source\Repos\FAJNY_PROJEKT\database_layer\obj\Debug\database_layer_MarkupCompile.lref
+C:\Users\hp\Source\Repos\FAJNY_PROJEKT\database_layer\obj\Debug\MainWindow.baml
+C:\Users\hp\Source\Repos\FAJNY_PROJEKT\database_layer\obj\Debug\database_layer.g.resources
+C:\Users\hp\Source\Repos\FAJNY_PROJEKT\database_layer\obj\Debug\database_layer.Properties.Resources.resources
+C:\Users\hp\Source\Repos\FAJNY_PROJEKT\database_layer\obj\Debug\database_layer.csproj.GenerateResource.cache
+C:\Users\hp\Source\Repos\FAJNY_PROJEKT\database_layer\obj\Debug\database_layer.exe
+C:\Users\hp\Source\Repos\FAJNY_PROJEKT\database_layer\obj\Debug\database_layer.pdb
+C:\Users\hp\Source\Repos\FAJNY_PROJEKT\database_layer\obj\Debug\database_layer.csprojAssemblyReference.cache
