@@ -46,7 +46,15 @@
             </Button.Background>
         </Button>
         <Label x:Name="Label" Content="Hello!" Grid.Column="4" HorizontalAlignment="Left" Margin="136,40,0,0" VerticalAlignment="Top" Height="68" Width="264" FontSize="40" Grid.IsSharedSizeScope="True" FontFamily="Rockwell Nova"/>
-        <Button Content="New user" Grid.Column="4" HorizontalAlignment="Left" Margin="471,11,0,0" VerticalAlignment="Top" Width="135" FontSize="16" Height="25" Grid.ColumnSpan="2" FontFamily="Rockwell Nova">
+        <Button Content="New user" Grid.Column="4" HorizontalAlignment="Left" Margin="477,7,0,0" VerticalAlignment="Top" Width="136" FontSize="16" Height="25" Grid.ColumnSpan="2" FontFamily="Rockwell Nova" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.503"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="0"/>
