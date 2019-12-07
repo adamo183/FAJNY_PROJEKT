@@ -23,5 +23,19 @@ namespace Project_management
         {
             InitializeComponent();
         }
+
+        /// To potem wyedytować bo SML_Sub_EditButton przenosi tam gdzie SML_Sub_AddSubjectButton
+        private void SML_Sub_EditButton(object sender, RoutedEventArgs e)
+        {
+            SML_Sub_AddEdit SML_Sub_AddEdit_window = new SML_Sub_AddEdit();
+            this.Visibility = Visibility.Hidden;
+            SML_Sub_AddEdit_window.Show();
+        }
+        private void SML_Sub_AddSubjectButton(object sender, RoutedEventArgs e) 
+        {
+            SML_Sub_AddEdit SML_Sub_AddEdit_window = new SML_Sub_AddEdit();
+            this.Visibility = Visibility.Hidden;
+            SML_Sub_AddEdit_window.Show();
+        }
     }
 }

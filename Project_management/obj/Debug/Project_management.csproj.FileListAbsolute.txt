@@ -88,3 +88,11 @@ C:\Users\Norman\Source\Repos\FAJNY_PROJEKT\Project_management\obj\Debug\Project_
 C:\Users\Norman\Source\Repos\FAJNY_PROJEKT\Project_management\obj\Debug\Project_management.csproj.CopyComplete
 C:\Users\Norman\Source\Repos\FAJNY_PROJEKT\Project_management\obj\Debug\Project_management.exe
 C:\Users\Norman\Source\Repos\FAJNY_PROJEKT\Project_management\obj\Debug\Project_management.pdb
+C:\Users\Norman\Source\Repos\FAJNY_PROJEKT\Project_management\obj\Debug\SelectionMenuStudent.g.cs
+C:\Users\Norman\Source\Repos\FAJNY_PROJEKT\Project_management\obj\Debug\SML_Presence.g.cs
+C:\Users\Norman\Source\Repos\FAJNY_PROJEKT\Project_management\obj\Debug\SML_SectionManagement.g.cs
+C:\Users\Norman\Source\Repos\FAJNY_PROJEKT\Project_management\obj\Debug\SML_Sub_AddEdit.g.cs
+C:\Users\Norman\Source\Repos\FAJNY_PROJEKT\Project_management\obj\Debug\SelectionMenuStudent.baml
+C:\Users\Norman\Source\Repos\FAJNY_PROJEKT\Project_management\obj\Debug\SML_Presence.baml
+C:\Users\Norman\Source\Repos\FAJNY_PROJEKT\Project_management\obj\Debug\SML_SectionManagement.baml
+C:\Users\Norman\Source\Repos\FAJNY_PROJEKT\Project_management\obj\Debug\SML_Sub_AddEdit.baml
