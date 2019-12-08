@@ -64,5 +64,6 @@
         </Button>
         <Image Grid.Column="5" HorizontalAlignment="Left" Height="100" Margin="207,196,-201,0" VerticalAlignment="Top" Width="100"/>
         <Button Grid.ColumnSpan="2" Content="Do prowadzących" Grid.Column="4" HorizontalAlignment="Left" Margin="458,158,0,0" VerticalAlignment="Top" Width="116" Click="DoProwadzacych"/>
+        <Button Grid.ColumnSpan="2" Content="Do admina" Grid.Column="4" HorizontalAlignment="Left" Margin="458,211,0,0" VerticalAlignment="Top" Width="116"/>
     </Grid>
 </Window>
