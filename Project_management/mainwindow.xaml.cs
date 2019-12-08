@@ -67,7 +67,7 @@ namespace Project_management
         {
             SelectionMenuAdmin SelectionMenuAdmin_window = new SelectionMenuAdmin();
             this.Visibility = Visibility;
-            SelectionMenuAdmin_window.Show();
+            SelectionMenuAdmin_window.Show(); 
 
 
         }
