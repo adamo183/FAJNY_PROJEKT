@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\VisualRepo\projeck_adm\Project_management\obj\Release\
+C:\Users\hp\Source\Repos\FAJNY_PROJEKT5\Project_management\obj\Release\
 Project_management
 none
 false
 TRACE
-D:\VisualRepo\projeck_adm\Project_management\App.xaml
+C:\Users\hp\Source\Repos\FAJNY_PROJEKT5\Project_management\App.xaml
 8-1290486874
 
 12683821026
-16-1158189410
+16-2107079199
 mainwindow.xaml;SelectionMenuAdmin.xaml;SelectionMenuLecturer.xaml;SelectionMenuStudent.xaml;SML_Presence.xaml;SML_SectionManagement.xaml;SML_Subject.xaml;SML_Sub_AddEdit.xaml;
 
-False
+True
 
