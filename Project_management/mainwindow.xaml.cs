@@ -62,6 +62,14 @@ namespace Project_management
             this.Visibility = Visibility.Hidden;
             SelectionMenuLecturer_window.Show();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            SelectionMenuAdmin SelectionMenuAdmin_window = new SelectionMenuAdmin();
+            this.Visibility = Visibility.Hidden;
+            SelectionMenuAdmin_window.Show();
+
+        }
     }
 
     class Login
