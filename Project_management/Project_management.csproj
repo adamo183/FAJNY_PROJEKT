@@ -74,6 +74,24 @@
     <Compile Include="SelectionMenuAdmin.xaml.cs">
       <DependentUpon>SelectionMenuAdmin.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SelectionMenuLecturer.xaml.cs">
+      <DependentUpon>SelectionMenuLecturer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SelectionMenuStudent.xaml.cs">
+      <DependentUpon>SelectionMenuStudent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SML_Presence.xaml.cs">
+      <DependentUpon>SML_Presence.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SML_SectionManagement.xaml.cs">
+      <DependentUpon>SML_SectionManagement.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SML_Subject.xaml.cs">
+      <DependentUpon>SML_Subject.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SML_Sub_AddEdit.xaml.cs">
+      <DependentUpon>SML_Sub_AddEdit.xaml</DependentUpon>
+    </Compile>
     <Page Include="mainwindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -87,6 +105,30 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="SelectionMenuAdmin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SelectionMenuLecturer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SelectionMenuStudent.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SML_Presence.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SML_SectionManagement.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SML_Subject.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SML_Sub_AddEdit.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

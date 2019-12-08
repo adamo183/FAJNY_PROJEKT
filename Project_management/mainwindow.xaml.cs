@@ -55,6 +55,13 @@ namespace Project_management
 
             }
         }
+        ///Usunąć potem funkcję DoProwadzących, tylko do testów sobie zrobiłem
+        private void DoProwadzacych(object sender, RoutedEventArgs e)
+        {
+            SelectionMenuLecturer SelectionMenuLecturer_window = new SelectionMenuLecturer();
+            this.Visibility = Visibility.Hidden;
+            SelectionMenuLecturer_window.Show();
+        }
     }
 
     class Login
