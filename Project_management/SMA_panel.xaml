@@ -57,7 +57,7 @@
                     <Button Content="Add" HorizontalAlignment="Left" Margin="381,77,0,0" VerticalAlignment="Top" Width="74" Grid.Column="2"/>
                     <Button Content="Cancel" HorizontalAlignment="Left" Margin="381,321,0,0" VerticalAlignment="Top" Width="74" Grid.Column="2"/>
                     <Button Content="Save" HorizontalAlignment="Left" Margin="381,292,0,0" VerticalAlignment="Top" Width="74" Grid.Column="2"/>
-                    <Button Content="Delete" HorizontalAlignment="Left" Margin="381,120,0,0" VerticalAlignment="Top" Width="74" Grid.Column="2"/>
+                    <Button Content="Delete" HorizontalAlignment="Left" Margin="381,124,0,0" VerticalAlignment="Top" Width="74" Grid.Column="2"/>
                 </Grid>
             </TabItem>
         </TabControl>
