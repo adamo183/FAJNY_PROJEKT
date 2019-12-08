@@ -66,12 +66,12 @@ namespace Project_management
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             SelectionMenuAdmin SelectionMenuAdmin_window = new SelectionMenuAdmin();
-            this.Visibility = Visibility.Hidden;
-            SelectionMenuAdmin_window.Show();
+            this.Visibility = Visibility;
+            SelectionMenuAdmin_window.Show(); 
 
 
         }
-    }
+    } 
 
     class Login
     {
