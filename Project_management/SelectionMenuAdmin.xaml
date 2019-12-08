@@ -7,9 +7,9 @@
         mc:Ignorable="d"
         Title="SelectionMenuAdmin" Height="450" Width="800">
     <Grid>
-        <Button Content="Admin" HorizontalAlignment="Left" Margin="85,170,0,0" VerticalAlignment="Top" Width="168" Height="78" FontFamily="Rockwell Nova" FontSize="18"/>
-        <Button Content="Lecturer" HorizontalAlignment="Left" Margin="317,170,0,0" VerticalAlignment="Top" Width="168" Height="78" FontFamily="Rockwell Nova" FontSize="18"/>
-        <Button Content="Student" HorizontalAlignment="Left" Margin="544,170,0,0" VerticalAlignment="Top" Width="168" Height="78" FontFamily="Rockwell Nova" FontSize="18"/>
+        <Button Content="Admin" HorizontalAlignment="Left" Margin="85,170,0,0" VerticalAlignment="Top" Width="168" Height="78" FontFamily="Rockwell Nova" FontSize="18" Click="Button_Click_1"/>
+        <Button Content="Lecturer" HorizontalAlignment="Left" Margin="317,170,0,0" VerticalAlignment="Top" Width="168" Height="78" FontFamily="Rockwell Nova" FontSize="18" Click="Button_Click_3"/>
+        <Button Content="Student" HorizontalAlignment="Left" Margin="544,170,0,0" VerticalAlignment="Top" Width="168" Height="78" FontFamily="Rockwell Nova" FontSize="18" Click="Button_Click_2"/>
 
     </Grid>
 </Window>

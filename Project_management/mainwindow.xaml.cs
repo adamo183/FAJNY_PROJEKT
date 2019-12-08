@@ -66,7 +66,7 @@ namespace Project_management
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             SelectionMenuAdmin SelectionMenuAdmin_window = new SelectionMenuAdmin();
-            this.Visibility = Visibility.Hidden;
+            this.Visibility = Visibility;
             SelectionMenuAdmin_window.Show();
 
 
