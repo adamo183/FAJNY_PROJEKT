@@ -80,6 +80,9 @@
     <Compile Include="SelectionMenuStudent.xaml.cs">
       <DependentUpon>SelectionMenuStudent.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SMA_panel.xaml.cs">
+      <DependentUpon>SMA_panel.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SML_Presence.xaml.cs">
       <DependentUpon>SML_Presence.xaml</DependentUpon>
     </Compile>
@@ -113,6 +116,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="SelectionMenuStudent.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SMA_panel.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
