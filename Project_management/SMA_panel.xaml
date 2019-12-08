@@ -35,7 +35,7 @@
                     </Grid.ColumnDefinitions>
                     <TextBox HorizontalAlignment="Left" Height="290" Margin="6.5,51,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="290" Grid.ColumnSpan="4" Grid.Column="1"/>
                     <Button Content="Add" Grid.Column="4" HorizontalAlignment="Left" Margin="404,76,0,0" VerticalAlignment="Top" Width="75"/>
-                    <Button Content="Save" Grid.Column="4" HorizontalAlignment="Left" Margin="404,282,0,0" VerticalAlignment="Top" Width="75"/>
+                    <Button Content="Save" Grid.Column="4" HorizontalAlignment="Left" Margin="404,283,0,0" VerticalAlignment="Top" Width="75"/>
                     <Button Content="Cancel" Grid.Column="4" HorizontalAlignment="Left" Margin="404,321,0,0" VerticalAlignment="Top" Width="75"/>
                     <Button Content="Delete" Grid.Column="4" HorizontalAlignment="Left" Margin="404,118,0,0" VerticalAlignment="Top" Width="75"/>
                 </Grid>
