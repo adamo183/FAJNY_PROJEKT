@@ -23,5 +23,22 @@ namespace Project_management
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            SML_Stu_Add stu_add_window = new SML_Stu_Add();
+            stu_add_window.Show();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            SML_SecMan_SecAdd SML_SecMan_SecAdd_window = new SML_SecMan_SecAdd();
+            SML_SecMan_SecAdd_window.Show();
+        }
     }
 }

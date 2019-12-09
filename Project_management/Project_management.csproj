@@ -86,8 +86,14 @@
     <Compile Include="SML_Presence.xaml.cs">
       <DependentUpon>SML_Presence.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SML_SecMan_SecAdd.xaml.cs">
+      <DependentUpon>SML_SecMan_SecAdd.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SML_SectionManagement.xaml.cs">
       <DependentUpon>SML_SectionManagement.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SML_Stu_Add.xaml.cs">
+      <DependentUpon>SML_Stu_Add.xaml</DependentUpon>
     </Compile>
     <Compile Include="SML_Subject.xaml.cs">
       <DependentUpon>SML_Subject.xaml</DependentUpon>
@@ -127,7 +133,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="SML_SecMan_SecAdd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="SML_SectionManagement.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SML_Stu_Add.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

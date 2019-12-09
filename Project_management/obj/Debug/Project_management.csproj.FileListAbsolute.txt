@@ -170,3 +170,7 @@ D:\VisualRepo\projeck_adm\Project_management\obj\Debug\Project_management.csproj
 D:\VisualRepo\projeck_adm\Project_management\obj\Debug\Project_management.csproj.CopyComplete
 D:\VisualRepo\projeck_adm\Project_management\obj\Debug\Project_management.exe
 D:\VisualRepo\projeck_adm\Project_management\obj\Debug\Project_management.pdb
+D:\VisualRepo\projeck_adm\Project_management\obj\Debug\SML_Stu_Add.g.cs
+D:\VisualRepo\projeck_adm\Project_management\obj\Debug\SML_Stu_Add.baml
+D:\VisualRepo\projeck_adm\Project_management\obj\Debug\SML_SecMan_SecAdd.g.cs
+D:\VisualRepo\projeck_adm\Project_management\obj\Debug\SML_SecMan_SecAdd.baml

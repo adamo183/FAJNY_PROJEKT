@@ -5,18 +5,27 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Project_management"
         mc:Ignorable="d"
-        Title="SML_SectionManagement" Height="450" Width="800">
-    <Grid>
-        <Label Content="Section Management" Height="39" Margin="288,39,0,342" Width="181" Cursor="None" BorderThickness="1,1,1,1" BorderBrush="Black" FontSize="18" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Center" HorizontalAlignment="LEFT"  >
-            <Label.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-0.775"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Label.RenderTransform>
-        </Label>
+        Title="SML_SectionManagement" Height="556.8" Width="1019">
+    <Grid Margin="0,0,-230.2,-60.8">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <DataGrid HorizontalAlignment="Left" Height="222" Margin="44,42,0,0" VerticalAlignment="Top" Width="440" Grid.RowSpan="2"/>
+        <Button Content="New section" HorizontalAlignment="Left" Height="51" Margin="573,213,0,0" VerticalAlignment="Top" Width="387" Grid.RowSpan="2" Click="Button_Click_2"/>
+        <Button Content="Add student" HorizontalAlignment="Left" Height="51" Margin="573,340,0,0" VerticalAlignment="Top" Width="387" Click="Button_Click" Grid.RowSpan="2"/>
+        <Button Content="Add degree" HorizontalAlignment="Left" Height="51" Margin="573,396,0,0" VerticalAlignment="Top" Width="387" Click="Button_Click_1" Grid.RowSpan="2"/>
+        <DataGrid HorizontalAlignment="Left" Height="194" Margin="44,316,0,0" VerticalAlignment="Top" Width="440" Grid.RowSpan="2"/>
+        <Label Content="Students in section:" HorizontalAlignment="Left" Margin="200,285,0,0" Grid.RowSpan="2" VerticalAlignment="Top"/>
+        <Label Content="Sections" HorizontalAlignment="Left" Margin="229,10,0,0" Grid.RowSpan="2" VerticalAlignment="Top"/>
+        <Label Content="Section ID:" HorizontalAlignment="Left" Margin="588,42,0,0" Grid.RowSpan="2" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="26" Margin="702,42,0,0" Grid.RowSpan="2" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="90"/>
+        <CheckBox Content="Non-full sections" HorizontalAlignment="Left" Margin="702,136,0,0" Grid.RowSpan="2" VerticalAlignment="Top"/>
+        <Label Content="Section topic:" HorizontalAlignment="Left" Margin="588,73,0,0" Grid.RowSpan="2" VerticalAlignment="Top" RenderTransformOrigin="0.549,-0.746"/>
+        <Label Content="Section semestr:" HorizontalAlignment="Left" Height="26" Margin="588,104,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="106"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="702,76,0,0" Grid.RowSpan="2" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="90"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="702,108,0,0" Grid.RowSpan="2" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="90"/>
+        <Button Content="Find" HorizontalAlignment="Left" Height="24" Margin="665,172,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="85"/>
 
     </Grid>
 </Window>

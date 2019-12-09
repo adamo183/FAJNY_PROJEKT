@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\VisualRepo\projeck_adm\Project_management\App.xaml
-9-1303280175
+11-210955597
 
-14-2132216458
+16-425122441
 16457251130
-mainwindow.xaml;SelectionMenuAdmin.xaml;SelectionMenuLecturer.xaml;SelectionMenuStudent.xaml;SMA_panel.xaml;SML_Presence.xaml;SML_SectionManagement.xaml;SML_Subject.xaml;SML_Sub_AddEdit.xaml;
+mainwindow.xaml;SelectionMenuAdmin.xaml;SelectionMenuLecturer.xaml;SelectionMenuStudent.xaml;SMA_panel.xaml;SML_Presence.xaml;SML_SecMan_SecAdd.xaml;SML_SectionManagement.xaml;SML_Stu_Add.xaml;SML_Subject.xaml;SML_Sub_AddEdit.xaml;
 
 True
 
