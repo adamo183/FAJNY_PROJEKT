@@ -65,9 +65,9 @@ namespace Project_management
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            SelectionMenuAdmin SelectionMenuAdmin_window = new SelectionMenuAdmin();
+            SMA_panel SMA_panel_window = new SMA_panel();
             this.Visibility = Visibility;
-            SelectionMenuAdmin_window.Show(); 
+            SMA_panel_window.Show(); 
 
 
         }
