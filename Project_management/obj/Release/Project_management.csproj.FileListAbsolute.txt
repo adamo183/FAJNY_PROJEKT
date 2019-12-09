@@ -49,3 +49,5 @@ D:\VisualRepo\projeck_adm\Project_management\obj\Release\Project_management.cspr
 D:\VisualRepo\projeck_adm\Project_management\obj\Release\Project_management.csproj.CopyComplete
 D:\VisualRepo\projeck_adm\Project_management\obj\Release\Project_management.exe
 D:\VisualRepo\projeck_adm\Project_management\obj\Release\Project_management.pdb
+D:\VisualRepo\projeck_adm\Project_management\obj\Release\SMA_panel.g.cs
+D:\VisualRepo\projeck_adm\Project_management\obj\Release\SMA_panel.baml

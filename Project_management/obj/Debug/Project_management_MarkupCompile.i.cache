@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\hp\Source\Repos\FAJNY_PROJEKT4\Project_management\obj\Debug\
+D:\VisualRepo\projeck_adm\Project_management\obj\Debug\
 Project_management
 none
 false
 DEBUG;TRACE
-C:\Users\hp\Source\Repos\FAJNY_PROJEKT4\Project_management\App.xaml
+D:\VisualRepo\projeck_adm\Project_management\App.xaml
 9-1303280175
 
-14-1128155462
-161709787202
+14-2132216458
+16457251130
 mainwindow.xaml;SelectionMenuAdmin.xaml;SelectionMenuLecturer.xaml;SelectionMenuStudent.xaml;SMA_panel.xaml;SML_Presence.xaml;SML_SectionManagement.xaml;SML_Subject.xaml;SML_Sub_AddEdit.xaml;
 
 True
