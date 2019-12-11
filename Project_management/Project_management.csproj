@@ -101,6 +101,9 @@
     <Compile Include="SML_Sub_AddEdit.xaml.cs">
       <DependentUpon>SML_Sub_AddEdit.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SMS_Join.xaml.cs">
+      <DependentUpon>SMS_Join.xaml</DependentUpon>
+    </Compile>
     <Page Include="mainwindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -150,6 +153,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="SML_Sub_AddEdit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SMS_Join.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
