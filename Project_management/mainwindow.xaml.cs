@@ -71,7 +71,14 @@ namespace Project_management
 
 
         }
-    } 
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            SelectionMenuStudent NewWindow = new SelectionMenuStudent();
+            this.Visibility = Visibility.Hidden;
+            NewWindow.Show();
+        }
+    }
 
     class Login
     {
