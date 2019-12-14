@@ -18,7 +18,7 @@
                         <ColumnDefinition Width="48*"/>
                         <ColumnDefinition Width="620*"/>
                     </Grid.ColumnDefinitions>
-                    <Button Content="Add" Grid.Column="5" HorizontalAlignment="Left" Margin="323,72,0,0" VerticalAlignment="Top" Width="75"/>
+                    <Button Content="Add" Grid.Column="5" HorizontalAlignment="Left" Margin="323,72,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
                     <Button Content="Cancel" Grid.Column="5" HorizontalAlignment="Left" Margin="323,321,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.6,1.8"/>
                     <Button Content="Save" Grid.Column="5" HorizontalAlignment="Left" Margin="323,284,0,0" VerticalAlignment="Top" Width="75"/>
                     <Button Content="Modify" Grid.Column="5" HorizontalAlignment="Left" Margin="323,110,0,0" VerticalAlignment="Top" Width="75"/>
@@ -34,7 +34,7 @@
                         <ColumnDefinition Width="35*"/>
                         <ColumnDefinition Width="698*"/>
                     </Grid.ColumnDefinitions>
-                    <Button Content="Add" Grid.Column="4" HorizontalAlignment="Left" Margin="404,72,0,0" VerticalAlignment="Top" Width="75"/>
+                    <Button Content="Add" Grid.Column="4" HorizontalAlignment="Left" Margin="404,72,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
                     <Button Content="Save" Grid.Column="4" HorizontalAlignment="Left" Margin="404,283,0,0" VerticalAlignment="Top" Width="75"/>
                     <Button Content="Cancel" Grid.Column="4" HorizontalAlignment="Left" Margin="404,321,0,0" VerticalAlignment="Top" Width="75"/>
                     <Button Content="Modify" Grid.Column="4" HorizontalAlignment="Left" Margin="404,108,0,0" VerticalAlignment="Top" Width="75"/>
@@ -55,7 +55,7 @@
                         <ColumnDefinition Width="11*"/>
                         <ColumnDefinition Width="338*"/>
                     </Grid.ColumnDefinitions>
-                    <Button Content="Add" HorizontalAlignment="Left" Margin="381,72,0,0" VerticalAlignment="Top" Width="74" Grid.Column="3"/>
+                    <Button Content="Add" HorizontalAlignment="Left" Margin="381,72,0,0" VerticalAlignment="Top" Width="74" Grid.Column="3" Click="Button_Click_2"/>
                     <Button Content="Cancel" HorizontalAlignment="Left" Margin="381,321,0,0" VerticalAlignment="Top" Width="74" Grid.Column="3"/>
                     <Button Content="Save" HorizontalAlignment="Left" Margin="381,284,0,0" VerticalAlignment="Top" Width="74" Grid.Column="3"/>
                     <Button Content="Modify" HorizontalAlignment="Left" Margin="381,108,0,0" VerticalAlignment="Top" Width="74" Grid.Column="3"/>

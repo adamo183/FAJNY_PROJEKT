@@ -23,5 +23,27 @@ namespace Project_management
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            SMA_add SMA_add_window = new SMA_add();
+            this.Visibility = Visibility ;
+            SMA_add_window.Show();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            SMA_add SMA_add_window = new SMA_add();
+            this.Visibility = Visibility;
+            SMA_add_window.Show();
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            SMA_add SMA_add_window = new SMA_add();
+            this.Visibility = Visibility;
+            SMA_add_window.Show();
+        }
     }
-}
+    }
+
