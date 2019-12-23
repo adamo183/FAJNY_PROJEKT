@@ -15,13 +15,14 @@
                         <ColumnDefinition Width="63*"/>
                         <ColumnDefinition Width="9*"/>
                         <ColumnDefinition Width="9*"/>
-                        <ColumnDefinition Width="671*"/>
+                        <ColumnDefinition Width="48*"/>
+                        <ColumnDefinition Width="620*"/>
                     </Grid.ColumnDefinitions>
-                    <TextBox HorizontalAlignment="Left" Height="290" Margin="0,51,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="290" Grid.ColumnSpan="4" Grid.Column="1"/>
-                    <Button Content="Add" Grid.Column="4" HorizontalAlignment="Left" Margin="371,72,0,0" VerticalAlignment="Top" Width="75"/>
-                    <Button Content="Cancel" Grid.Column="4" HorizontalAlignment="Left" Margin="371,321,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.6,1.8"/>
-                    <Button Content="Save" Grid.Column="4" HorizontalAlignment="Left" Margin="371,284,0,0" VerticalAlignment="Top" Width="75"/>
-                    <Button Content="Delete" Grid.Column="4" HorizontalAlignment="Left" Margin="371,110,0,0" VerticalAlignment="Top" Width="75"/>
+                    <Button Content="Add" Grid.Column="5" HorizontalAlignment="Left" Margin="323,72,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
+                    <Button Content="Cancel" Grid.Column="5" HorizontalAlignment="Left" Margin="323,321,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.6,1.8"/>
+                    <Button Content="Save" Grid.Column="5" HorizontalAlignment="Left" Margin="323,284,0,0" VerticalAlignment="Top" Width="75"/>
+                    <Button Content="Modify" Grid.Column="5" HorizontalAlignment="Left" Margin="323,110,0,0" VerticalAlignment="Top" Width="75"/>
+                    <DataGrid Grid.Column="1" HorizontalAlignment="Left" Height="232" Margin="10,72,0,0" VerticalAlignment="Top" Width="244" Grid.ColumnSpan="5"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Lecturer" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="59" Margin="1,0,-7,0">
@@ -33,11 +34,11 @@
                         <ColumnDefinition Width="35*"/>
                         <ColumnDefinition Width="698*"/>
                     </Grid.ColumnDefinitions>
-                    <TextBox HorizontalAlignment="Left" Height="290" Margin="6.5,51,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="290" Grid.ColumnSpan="4" Grid.Column="1"/>
-                    <Button Content="Add" Grid.Column="4" HorizontalAlignment="Left" Margin="404,76,0,0" VerticalAlignment="Top" Width="75"/>
+                    <Button Content="Add" Grid.Column="4" HorizontalAlignment="Left" Margin="404,72,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
                     <Button Content="Save" Grid.Column="4" HorizontalAlignment="Left" Margin="404,283,0,0" VerticalAlignment="Top" Width="75"/>
                     <Button Content="Cancel" Grid.Column="4" HorizontalAlignment="Left" Margin="404,321,0,0" VerticalAlignment="Top" Width="75"/>
-                    <Button Content="Delete" Grid.Column="4" HorizontalAlignment="Left" Margin="404,127,0,0" VerticalAlignment="Top" Width="75"/>
+                    <Button Content="Modify" Grid.Column="4" HorizontalAlignment="Left" Margin="404,108,0,0" VerticalAlignment="Top" Width="75"/>
+                    <DataGrid Grid.Column="2" HorizontalAlignment="Left" Height="232" Margin="5,72,0,0" VerticalAlignment="Top" Width="244" Grid.ColumnSpan="3"/>
                 </Grid>
             </TabItem>
             <Button Content="Add" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75"/>
@@ -49,15 +50,16 @@
             <TabItem Header="Student" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="69" Margin="-71,0,0,0">
                 <Grid Background="#FFE5E5E5">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="66*"/>
-                        <ColumnDefinition Width="22*"/>
-                        <ColumnDefinition Width="677*"/>
+                        <ColumnDefinition Width="10*"/>
+                        <ColumnDefinition Width="23*"/>
+                        <ColumnDefinition Width="11*"/>
+                        <ColumnDefinition Width="338*"/>
                     </Grid.ColumnDefinitions>
-                    <TextBox HorizontalAlignment="Left" Height="290" Margin="15,51,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="290" Grid.ColumnSpan="3"/>
-                    <Button Content="Add" HorizontalAlignment="Left" Margin="381,77,0,0" VerticalAlignment="Top" Width="74" Grid.Column="2"/>
-                    <Button Content="Cancel" HorizontalAlignment="Left" Margin="381,321,0,0" VerticalAlignment="Top" Width="74" Grid.Column="2"/>
-                    <Button Content="Save" HorizontalAlignment="Left" Margin="381,292,0,0" VerticalAlignment="Top" Width="74" Grid.Column="2"/>
-                    <Button Content="Delete" HorizontalAlignment="Left" Margin="381,124,0,0" VerticalAlignment="Top" Width="74" Grid.Column="2"/>
+                    <Button Content="Add" HorizontalAlignment="Left" Margin="381,72,0,0" VerticalAlignment="Top" Width="74" Grid.Column="3" Click="Button_Click_2"/>
+                    <Button Content="Cancel" HorizontalAlignment="Left" Margin="381,321,0,0" VerticalAlignment="Top" Width="74" Grid.Column="3"/>
+                    <Button Content="Save" HorizontalAlignment="Left" Margin="381,284,0,0" VerticalAlignment="Top" Width="74" Grid.Column="3"/>
+                    <Button Content="Modify" HorizontalAlignment="Left" Margin="381,108,0,0" VerticalAlignment="Top" Width="74" Grid.Column="3"/>
+                    <DataGrid HorizontalAlignment="Left" Height="232" Margin="5,72,0,0" VerticalAlignment="Top" Width="244" Grid.ColumnSpan="3" Grid.Column="1"/>
                 </Grid>
             </TabItem>
         </TabControl>

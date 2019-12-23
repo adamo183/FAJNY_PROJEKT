@@ -26,3 +26,17 @@ C:\Users\pablo\Source\Repos\FAJNY_PROJEKT\database_layer\obj\Release\database_la
 C:\Users\pablo\Source\Repos\FAJNY_PROJEKT\database_layer\obj\Release\database_layer.csproj.GenerateResource.cache
 C:\Users\pablo\Source\Repos\FAJNY_PROJEKT\database_layer\obj\Release\database_layer.exe
 C:\Users\pablo\Source\Repos\FAJNY_PROJEKT\database_layer\obj\Release\database_layer.pdb
+C:\Users\hp\Source\Repos\FAJNY_PROJEKT6\database_layer\bin\Release\database_layer.exe.config
+C:\Users\hp\Source\Repos\FAJNY_PROJEKT6\database_layer\bin\Release\database_layer.exe
+C:\Users\hp\Source\Repos\FAJNY_PROJEKT6\database_layer\bin\Release\database_layer.pdb
+C:\Users\hp\Source\Repos\FAJNY_PROJEKT6\database_layer\obj\Release\database_layer.csprojAssemblyReference.cache
+C:\Users\hp\Source\Repos\FAJNY_PROJEKT6\database_layer\obj\Release\MainWindow.g.cs
+C:\Users\hp\Source\Repos\FAJNY_PROJEKT6\database_layer\obj\Release\App.g.cs
+C:\Users\hp\Source\Repos\FAJNY_PROJEKT6\database_layer\obj\Release\database_layer_MarkupCompile.cache
+C:\Users\hp\Source\Repos\FAJNY_PROJEKT6\database_layer\obj\Release\database_layer_MarkupCompile.lref
+C:\Users\hp\Source\Repos\FAJNY_PROJEKT6\database_layer\obj\Release\MainWindow.baml
+C:\Users\hp\Source\Repos\FAJNY_PROJEKT6\database_layer\obj\Release\database_layer.g.resources
+C:\Users\hp\Source\Repos\FAJNY_PROJEKT6\database_layer\obj\Release\database_layer.Properties.Resources.resources
+C:\Users\hp\Source\Repos\FAJNY_PROJEKT6\database_layer\obj\Release\database_layer.csproj.GenerateResource.cache
+C:\Users\hp\Source\Repos\FAJNY_PROJEKT6\database_layer\obj\Release\database_layer.exe
+C:\Users\hp\Source\Repos\FAJNY_PROJEKT6\database_layer\obj\Release\database_layer.pdb
