@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace Project_management
 {
     /// <summary>
-    /// Logika interakcji dla klasy SMS_Join.xaml
+    /// Logika interakcji dla klasy SML_AddPresence.xaml
     /// </summary>
-    public partial class SMS_Join : Window
+    public partial class SML_AddPresence : Window
     {
-        public SMS_Join()
+        public SML_AddPresence()
         {
             InitializeComponent();
         }

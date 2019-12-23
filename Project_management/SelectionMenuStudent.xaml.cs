@@ -27,8 +27,7 @@ namespace Project_management
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            SMS_Join objSecondWindow = new SMS_Join();
-            objSecondWindow.Show();
+         
         }
     }
 }

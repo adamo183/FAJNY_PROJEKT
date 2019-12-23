@@ -44,6 +44,11 @@ namespace Project_management
             this.Visibility = Visibility;
             SMA_add_window.Show();
         }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
     }
 

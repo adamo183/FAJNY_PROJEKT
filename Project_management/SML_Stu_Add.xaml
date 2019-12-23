@@ -13,10 +13,6 @@
         <TextBox HorizontalAlignment="Left" Height="23" Margin="488,67,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="138"/>
         <TextBox HorizontalAlignment="Left" Height="22" Margin="488,102,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="138"/>
         <Button Content="Find" HorizontalAlignment="Left" Height="19" Margin="438,140,0,0" VerticalAlignment="Top" Width="113"/>
-        <ComboBox HorizontalAlignment="Left" Height="20" Margin="503,208,0,0" VerticalAlignment="Top" Width="204"/>
-        <ComboBox HorizontalAlignment="Left" Height="22" Margin="503,250,0,0" VerticalAlignment="Top" Width="204"/>
-        <Label Content ="Field of study:" HorizontalAlignment="Left" Height="30" Margin="374,208,0,0" VerticalAlignment="Top" Width="97" />
-        <Label Content="Year:" HorizontalAlignment="Left" Margin="374,243,0,0" VerticalAlignment="Top" Height="32" Width="68"/>
 
     </Grid>
 </Window>

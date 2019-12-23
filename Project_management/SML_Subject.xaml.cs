@@ -32,13 +32,13 @@ namespace Project_management
             Subject s1 = new Subject();
             s1.Name = "temat1";
             SML_Sub_AddEdit SML_Sub_AddEdit_window = new SML_Sub_AddEdit(0,s1);
-           // this.Visibility = Visibility.Hidden;
+           this.Visibility = Visibility.Hidden;
             SML_Sub_AddEdit_window.Show();
         }
         private void SML_Sub_AddSubjectButton(object sender, RoutedEventArgs e) 
         {
             SML_Sub_AddEdit SML_Sub_AddEdit_window = new SML_Sub_AddEdit();
-          //  this.Visibility = Visibility.Hidden;
+           this.Visibility = Visibility.Hidden;
             SML_Sub_AddEdit_window.Show();
         }
     }

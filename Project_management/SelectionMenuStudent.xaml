@@ -6,15 +6,14 @@
         xmlns:local="clr-namespace:Project_management"
         mc:Ignorable="d"
         Title="SelectionMenuStudent" Height="450" Width="800">
-    <Grid>
-        <DataGrid HorizontalAlignment="Left" Height="240" Margin="95,75,0,0" VerticalAlignment="Top" Width="241"/>
-        <Label Content="Section" HorizontalAlignment="Left" Margin="383,75,0,0" VerticalAlignment="Top" Width="84"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="437,79,0,0" TextWrapping="Wrap" Text="Section name" VerticalAlignment="Top" Width="171"/>
-        <Button Content="Search" HorizontalAlignment="Left" Margin="613,79,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.136,0.14"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="437,107,0,0" TextWrapping="Wrap" Text="Subject name" VerticalAlignment="Top" Width="171"/>
-        <Label Content="Subject" HorizontalAlignment="Left" Margin="383,103,0,0" VerticalAlignment="Top"/>
-        <Button Content="Search" HorizontalAlignment="Left" Margin="613,107,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button Content="Leave Section" HorizontalAlignment="Left" Margin="381,295,0,0" VerticalAlignment="Top" Width="90"/>
-        <Button Content="Join Section" HorizontalAlignment="Left" Margin="491,295,0,0" VerticalAlignment="Top" Width="90" Click="Button_Click_1"/>
+    <Grid Margin="0,0,-50.4,-56">
+        <DataGrid HorizontalAlignment="Left" Height="161" Margin="95,75,0,0" VerticalAlignment="Top" Width="241"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="435,79,0,0" TextWrapping="Wrap" Text="Subject name" VerticalAlignment="Top" Width="171"/>
+        <Label Content="Subject" HorizontalAlignment="Left" Margin="381,75,0,0" VerticalAlignment="Top"/>
+        <Button Content="Search" HorizontalAlignment="Left" Margin="626,79,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Join Section" HorizontalAlignment="Left" Margin="451,295,0,0" VerticalAlignment="Top" Width="155" Click="Button_Click_1" Height="47"/>
+        <Label Content="Topic:" HorizontalAlignment="Left" Margin="194,44,0,0" VerticalAlignment="Top"/>
+        <Label Content="Members:" HorizontalAlignment="Left" Margin="194,262,0,0" VerticalAlignment="Top"/>
+        <DataGrid HorizontalAlignment="Left" Height="107" Margin="95,295,0,0" VerticalAlignment="Top" Width="241"/>
     </Grid>
 </Window>

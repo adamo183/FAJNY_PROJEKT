@@ -40,5 +40,17 @@ namespace Project_management
             SML_SecMan_SecAdd SML_SecMan_SecAdd_window = new SML_SecMan_SecAdd();
             SML_SecMan_SecAdd_window.Show();
         }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            SML_Presence precence_window = new SML_Presence();
+            precence_window.Show();
+        }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            SML_AddPresence addpresence_windows = new SML_AddPresence();
+            addpresence_windows.Show();
+        }
     }
 }

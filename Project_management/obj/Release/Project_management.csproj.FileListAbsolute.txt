@@ -139,3 +139,8 @@ C:\Users\hp\Source\Repos\FAJNY_PROJEKT6\Project_management\obj\Release\Project_m
 C:\Users\hp\Source\Repos\FAJNY_PROJEKT6\Project_management\obj\Release\Project_management.Properties.Resources.resources
 C:\Users\hp\Source\Repos\FAJNY_PROJEKT6\Project_management\obj\Release\Project_management.csproj.GenerateResource.cache
 C:\Users\hp\Source\Repos\FAJNY_PROJEKT6\Project_management\obj\Release\Project_management.csproj.CopyComplete
+D:\VisualRepo\projeck_adm\Project_management\obj\Release\SMA_add.g.cs
+D:\VisualRepo\projeck_adm\Project_management\obj\Release\SML_AddPresence.g.cs
+D:\VisualRepo\projeck_adm\Project_management\obj\Release\SML_SecMan_SecAdd.g.cs
+D:\VisualRepo\projeck_adm\Project_management\obj\Release\SML_Stu_Add.g.cs
+D:\VisualRepo\projeck_adm\Project_management\obj\Release\SMS_Join.g.cs
