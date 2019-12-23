@@ -94,3 +94,9 @@ C:\Users\pablo\Source\Repos\FAJNY_PROJEKT\Project_management\obj\Release\Project
 C:\Users\pablo\Source\Repos\FAJNY_PROJEKT\Project_management\obj\Release\Project_management.csproj.CopyComplete
 C:\Users\pablo\Source\Repos\FAJNY_PROJEKT\Project_management\obj\Release\Project_management.exe
 C:\Users\pablo\Source\Repos\FAJNY_PROJEKT\Project_management\obj\Release\Project_management.pdb
+D:\VisualRepo\projeck_adm\Project_management\obj\Release\SML_SecMan_SecAdd.g.cs
+D:\VisualRepo\projeck_adm\Project_management\obj\Release\SML_Stu_Add.g.cs
+D:\VisualRepo\projeck_adm\Project_management\obj\Release\SMS_Join.g.cs
+D:\VisualRepo\projeck_adm\Project_management\obj\Release\SML_SecMan_SecAdd.baml
+D:\VisualRepo\projeck_adm\Project_management\obj\Release\SML_Stu_Add.baml
+D:\VisualRepo\projeck_adm\Project_management\obj\Release\SMS_Join.baml

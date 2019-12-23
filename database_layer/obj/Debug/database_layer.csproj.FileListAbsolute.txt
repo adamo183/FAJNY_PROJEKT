@@ -80,3 +80,4 @@ C:\Users\pablo\Source\Repos\FAJNY_PROJEKT\database_layer\obj\Debug\database_laye
 C:\Users\pablo\Source\Repos\FAJNY_PROJEKT\database_layer\obj\Debug\database_layer.csproj.GenerateResource.cache
 C:\Users\pablo\Source\Repos\FAJNY_PROJEKT\database_layer\obj\Debug\database_layer.exe
 C:\Users\pablo\Source\Repos\FAJNY_PROJEKT\database_layer\obj\Debug\database_layer.pdb
+D:\VisualRepo\projeck_adm\database_layer\obj\Debug\database_layer.csprojAssemblyReference.cache

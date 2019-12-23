@@ -30,6 +30,9 @@ namespace database_layer
 		
     #region Extensibility Method Definitions
     partial void OnCreated();
+    partial void InsertSubject(Subject instance);
+    partial void UpdateSubject(Subject instance);
+    partial void DeleteSubject(Subject instance);
     #endregion
 		
 		public DataClasses1DataContext() : 
@@ -67,6 +70,14 @@ namespace database_layer
 			get
 			{
 				return this.GetTable<login_tab>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Subject> Subject
+		{
+			get
+			{
+				return this.GetTable<Subject>();
 			}
 		}
 	}
@@ -112,6 +123,164 @@ namespace database_layer
 				{
 					this._password = value;
 				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Subject")]
+	public partial class Subject : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private short _ID_Subject;
+		
+		private string _Name;
+		
+		private string _Description;
+		
+		private short _ID_Lecturer;
+		
+		private bool _Status;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnID_SubjectChanging(short value);
+    partial void OnID_SubjectChanged();
+    partial void OnNameChanging(string value);
+    partial void OnNameChanged();
+    partial void OnDescriptionChanging(string value);
+    partial void OnDescriptionChanged();
+    partial void OnID_LecturerChanging(short value);
+    partial void OnID_LecturerChanged();
+    partial void OnStatusChanging(bool value);
+    partial void OnStatusChanged();
+    #endregion
+		
+		public Subject()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_Subject", DbType="SmallInt NOT NULL", IsPrimaryKey=true)]
+		public short ID_Subject
+		{
+			get
+			{
+				return this._ID_Subject;
+			}
+			set
+			{
+				if ((this._ID_Subject != value))
+				{
+					this.OnID_SubjectChanging(value);
+					this.SendPropertyChanging();
+					this._ID_Subject = value;
+					this.SendPropertyChanged("ID_Subject");
+					this.OnID_SubjectChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="NChar(40) NOT NULL", CanBeNull=false)]
+		public string Name
+		{
+			get
+			{
+				return this._Name;
+			}
+			set
+			{
+				if ((this._Name != value))
+				{
+					this.OnNameChanging(value);
+					this.SendPropertyChanging();
+					this._Name = value;
+					this.SendPropertyChanged("Name");
+					this.OnNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Description", DbType="Char(2000) NOT NULL", CanBeNull=false)]
+		public string Description
+		{
+			get
+			{
+				return this._Description;
+			}
+			set
+			{
+				if ((this._Description != value))
+				{
+					this.OnDescriptionChanging(value);
+					this.SendPropertyChanging();
+					this._Description = value;
+					this.SendPropertyChanged("Description");
+					this.OnDescriptionChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_Lecturer", DbType="SmallInt NOT NULL")]
+		public short ID_Lecturer
+		{
+			get
+			{
+				return this._ID_Lecturer;
+			}
+			set
+			{
+				if ((this._ID_Lecturer != value))
+				{
+					this.OnID_LecturerChanging(value);
+					this.SendPropertyChanging();
+					this._ID_Lecturer = value;
+					this.SendPropertyChanged("ID_Lecturer");
+					this.OnID_LecturerChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Status", DbType="Bit NOT NULL")]
+		public bool Status
+		{
+			get
+			{
+				return this._Status;
+			}
+			set
+			{
+				if ((this._Status != value))
+				{
+					this.OnStatusChanging(value);
+					this.SendPropertyChanging();
+					this._Status = value;
+					this.SendPropertyChanged("Status");
+					this.OnStatusChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
 		}
 	}

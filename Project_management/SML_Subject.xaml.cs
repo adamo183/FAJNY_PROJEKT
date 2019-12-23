@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using database_layer;
+
 
 namespace Project_management
 {
@@ -24,11 +26,12 @@ namespace Project_management
             InitializeComponent();
         }
 
-        /// To potem wyedytować bo SML_Sub_EditButton przenosi tam gdzie SML_Sub_AddSubjectButton
-        /// tak właśnie musiało być XDDD okno może być chyba to samo , tylko po kliknięciu w edytuj będzie odrazu wypełnione danymi 
+       
         private void SML_Sub_EditButton(object sender, RoutedEventArgs e)
         {
-            SML_Sub_AddEdit SML_Sub_AddEdit_window = new SML_Sub_AddEdit();
+            Subject s1 = new Subject();
+            s1.Name = "temat1";
+            SML_Sub_AddEdit SML_Sub_AddEdit_window = new SML_Sub_AddEdit(0,s1);
            // this.Visibility = Visibility.Hidden;
             SML_Sub_AddEdit_window.Show();
         }

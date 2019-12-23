@@ -217,3 +217,5 @@ C:\Users\pablo\Source\Repos\FAJNY_PROJEKT\Project_management\obj\Debug\Project_m
 C:\Users\pablo\Source\Repos\FAJNY_PROJEKT\Project_management\obj\Debug\Project_management.pdb
 C:\Users\pablo\Source\Repos\FAJNY_PROJEKT\Project_management\obj\Debug\SMS_Join.g.cs
 C:\Users\pablo\Source\Repos\FAJNY_PROJEKT\Project_management\obj\Debug\SMS_Join.baml
+D:\VisualRepo\projeck_adm\Project_management\obj\Debug\SMS_Join.g.cs
+D:\VisualRepo\projeck_adm\Project_management\obj\Debug\SMS_Join.baml
