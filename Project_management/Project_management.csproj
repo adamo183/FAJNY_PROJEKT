@@ -202,12 +202,15 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\database_layer\database_layer.csproj">
-      <Project>{a363cbea-00a9-4276-a347-02ad5243d95b}</Project>
+      <Project>{c03ebcd3-1149-41eb-aeef-54d0323ba4eb}</Project>
       <Name>database_layer</Name>
     </ProjectReference>
     <ProjectReference Include="..\logic_layer\logic_layer.csproj">
-      <Project>{5d94fac1-6751-4227-baee-37a02abd7a07}</Project>
+      <Project>{3366e8df-390a-480e-9e11-ff67fc2afdda}</Project>
       <Name>logic_layer</Name>
     </ProjectReference>
   </ItemGroup>

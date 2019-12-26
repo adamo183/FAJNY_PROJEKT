@@ -40,22 +40,6 @@
             </Button.RenderTransform>
         </Button>
         <Label x:Name="Label" Content="Hello!" Grid.Column="4" HorizontalAlignment="Left" Margin="136,40,0,0" VerticalAlignment="Top" Height="68" Width="264" FontSize="40" Grid.IsSharedSizeScope="True" FontFamily="Rockwell Nova"/>
-        <Button Content="New user" Grid.Column="4" HorizontalAlignment="Left" Margin="477,7,0,0" VerticalAlignment="Top" Width="136" FontSize="16" Height="25" Grid.ColumnSpan="2" FontFamily="Rockwell Nova" RenderTransformOrigin="0.5,0.5">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0.503"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Button.RenderTransform>
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                    <GradientStop Color="Black" Offset="0"/>
-                    <GradientStop Color="White" Offset="0.397"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
         <Image Grid.Column="5" HorizontalAlignment="Left" Height="100" Margin="207,196,-201,0" VerticalAlignment="Top" Width="100"/>
         <Button Grid.ColumnSpan="2" Content="Do prowadzących" Grid.Column="4" HorizontalAlignment="Left" Margin="458,158,0,0" VerticalAlignment="Top" Width="116" Click="DoProwadzacych"/>
         <Button Content="Do admina" Grid.Column="4" HorizontalAlignment="Left" Margin="458,224,0,0" VerticalAlignment="Top" Width="116" Grid.ColumnSpan="2" Click="Button_Click"/>

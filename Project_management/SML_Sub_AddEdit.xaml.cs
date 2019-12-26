@@ -27,18 +27,19 @@ namespace Project_management
         {
             InitializeComponent();
         }
-        public SML_Sub_AddEdit(int mod, Subject sub )
+        public SML_Sub_AddEdit(int mod, Subject sub)
         {
             mode = mod;
             subject = sub;
             InitializeComponent();
             view();
         }
-        private void view()
-        {
-            if(mode == 0 )
-                this.s_name.Text = subject.Name;
-        }
+          private void view()
+          {
+              if(mode == 0 )
+                  this.s_name.Text = subject.Name;
+          }
+          
 
         private void CheckBox_Checked(object sender, RoutedEventArgs e)
         {

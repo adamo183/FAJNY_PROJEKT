@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="BD_Project" Class="DataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=LAPTOP-LKBFME05;Initial Catalog=BD_Project;Integrated Security=True" SettingsObjectName="database_layer.Properties.Settings" SettingsPropertyName="BD_ProjectConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.admin_tab" Member="admin_tab">
+    <Type Name="admin_tab">
+      <Column Name="admin_id" Type="System.Int16" DbType="SmallInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="admin_name" Type="System.String" DbType="NChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="admin_surname" Type="System.String" DbType="NChar(43) NOT NULL" CanBeNull="false" />
+      <Column Name="active" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Lecturer" Member="Lecturer">
+    <Type Name="Lecturer">
+      <Column Name="ID_lecturer" Type="System.Int16" DbType="SmallInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Surname" Type="System.String" DbType="NChar(43) NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Degree" Type="System.String" DbType="NChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="active" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Lecturer_Subject" Member="Subject" ThisKey="ID_lecturer" OtherKey="ID_Lecturer" Type="Subject" />
+    </Type>
+  </Table>
+  <Table Name="dbo.login_tab" Member="login_tab">
+    <Type Name="login_tab">
+      <Column Name="login" Type="System.String" DbType="NChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="password" Type="System.String" DbType="NChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="role" Type="System.String" DbType="NChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="status" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="u_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Presence" Member="Presence">
+    <Type Name="Presence">
+      <Column Name="ID_presence" Type="System.Int16" DbType="SmallInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Date" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="ID_Stu_Sec" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Association Name="Stu_Sec_Presence" Member="Stu_Sec" ThisKey="ID_Stu_Sec" OtherKey="ID_Stu_Sek" Type="Stu_Sec" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Section" Member="Section">
+    <Type Name="Section">
+      <Column Name="ID_Section" Type="System.Int16" DbType="SmallInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Max_user" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="ID_Subject" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="ID_Semester" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Association Name="Section_Stu_Sec" Member="Stu_Sec" ThisKey="ID_Section" OtherKey="ID_Section" Type="Stu_Sec" />
+      <Association Name="Section_Uploaded" Member="Uploaded" ThisKey="ID_Section" OtherKey="ID_Section" Type="Uploaded" />
+      <Association Name="Semester_Section" Member="Semester" ThisKey="ID_Semester" OtherKey="ID_Semester" Type="Semester" IsForeignKey="true" />
+      <Association Name="Subject_Section" Member="Subject" ThisKey="ID_Subject" OtherKey="ID_Subject" Type="Subject" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Semester" Member="Semester">
+    <Type Name="Semester">
+      <Column Name="ID_Semester" Type="System.Int16" DbType="SmallInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Year" Type="System.String" DbType="Char(4) NOT NULL" CanBeNull="false" />
+      <Column Name="Field_of_Study" Type="System.String" DbType="NChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="Semester_Section" Member="Section" ThisKey="ID_Semester" OtherKey="ID_Semester" Type="Section" />
+      <Association Name="Semester_Stu_Sem" Member="Stu_Sem" ThisKey="ID_Semester" OtherKey="ID_Semester" Type="Stu_Sem" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Stu_Sec" Member="Stu_Sec">
+    <Type Name="Stu_Sec">
+      <Column Name="ID_Stu_Sek" Type="System.Int16" DbType="SmallInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Mark" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="ID_Album" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ID_Section" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Association Name="Stu_Sec_Presence" Member="Presence" ThisKey="ID_Stu_Sek" OtherKey="ID_Stu_Sec" Type="Presence" />
+      <Association Name="Section_Stu_Sec" Member="Section" ThisKey="ID_Section" OtherKey="ID_Section" Type="Section" IsForeignKey="true" />
+      <Association Name="Student_Stu_Sec" Member="Student" ThisKey="ID_Album" OtherKey="ID_Album" Type="Student" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Stu_Sem" Member="Stu_Sem">
+    <Type Name="Stu_Sem">
+      <Column Name="ID_Stu_Sem" Type="System.Int16" DbType="SmallInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ID_Album" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ID_Semester" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Association Name="Semester_Stu_Sem" Member="Semester" ThisKey="ID_Semester" OtherKey="ID_Semester" Type="Semester" IsForeignKey="true" />
+      <Association Name="Student_Stu_Sem" Member="Student" ThisKey="ID_Album" OtherKey="ID_Album" Type="Student" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Student" Member="Student">
+    <Type Name="Student">
+      <Column Name="ID_Album" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Surname" Type="System.String" DbType="NChar(43) NOT NULL" CanBeNull="false" />
+      <Column Name="active" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Student_Stu_Sec" Member="Stu_Sec" ThisKey="ID_Album" OtherKey="ID_Album" Type="Stu_Sec" />
+      <Association Name="Student_Stu_Sem" Member="Stu_Sem" ThisKey="ID_Album" OtherKey="ID_Album" Type="Stu_Sem" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Subject" Member="Subject">
+    <Type Name="Subject">
+      <Column Name="ID_Subject" Type="System.Int16" DbType="SmallInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="Char(2000) NOT NULL" CanBeNull="false" />
+      <Column Name="ID_Lecturer" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Subject_Section" Member="Section" ThisKey="ID_Subject" OtherKey="ID_Subject" Type="Section" />
+      <Association Name="Lecturer_Subject" Member="Lecturer" ThisKey="ID_Lecturer" OtherKey="ID_lecturer" Type="Lecturer" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Uploaded" Member="Uploaded">
+    <Type Name="Uploaded">
+      <Column Name="ID_Upl" Type="System.Int16" DbType="SmallInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Data" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="ID_Section" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="Payload" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="Section_Uploaded" Member="Section" ThisKey="ID_Section" OtherKey="ID_Section" Type="Section" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

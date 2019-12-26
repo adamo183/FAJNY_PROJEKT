@@ -133,7 +133,6 @@ C:\Users\hp\Source\Repos\FAJNY_PROJEKT4\Project_management\obj\Debug\Project_man
 C:\Users\hp\Source\Repos\FAJNY_PROJEKT4\Project_management\obj\Debug\Project_management.csproj.CopyComplete
 C:\Users\hp\Source\Repos\FAJNY_PROJEKT4\Project_management\obj\Debug\Project_management.exe
 C:\Users\hp\Source\Repos\FAJNY_PROJEKT4\Project_management\obj\Debug\Project_management.pdb
-D:\VisualRepo\projeck_adm\Project_management\bin\Debug\Project_management.exe
 C:\Users\pablo\Source\Repos\FAJNY_PROJEKT\Project_management\bin\Debug\Project_management.exe.config
 C:\Users\pablo\Source\Repos\FAJNY_PROJEKT\Project_management\bin\Debug\Project_management.exe
 C:\Users\pablo\Source\Repos\FAJNY_PROJEKT\Project_management\bin\Debug\Project_management.pdb
@@ -177,14 +176,6 @@ C:\Users\pablo\Source\Repos\FAJNY_PROJEKT\Project_management\obj\Debug\Project_m
 C:\Users\pablo\Source\Repos\FAJNY_PROJEKT\Project_management\obj\Debug\Project_management.pdb
 C:\Users\pablo\Source\Repos\FAJNY_PROJEKT\Project_management\obj\Debug\SMS_Join.g.cs
 C:\Users\pablo\Source\Repos\FAJNY_PROJEKT\Project_management\obj\Debug\SMS_Join.baml
-D:\VisualRepo\projeck_adm\Project_management\bin\Debug\Project_management.exe.config
-D:\VisualRepo\projeck_adm\Project_management\bin\Debug\database_layer.exe
-D:\VisualRepo\projeck_adm\Project_management\bin\Debug\logic_layer.exe
-D:\VisualRepo\projeck_adm\Project_management\bin\Debug\database_layer.pdb
-D:\VisualRepo\projeck_adm\Project_management\bin\Debug\database_layer.exe.config
-D:\VisualRepo\projeck_adm\Project_management\bin\Debug\logic_layer.pdb
-D:\VisualRepo\projeck_adm\Project_management\bin\Debug\logic_layer.exe.config
-D:\VisualRepo\projeck_adm\Project_management\obj\Debug\Project_management.csprojAssemblyReference.cache
 D:\VisualRepo\projeck_adm\Project_management\obj\Debug\mainwindow.g.cs
 D:\VisualRepo\projeck_adm\Project_management\obj\Debug\SelectionMenuAdmin.g.cs
 D:\VisualRepo\projeck_adm\Project_management\obj\Debug\SelectionMenuLecturer.g.cs
@@ -201,6 +192,9 @@ D:\VisualRepo\projeck_adm\Project_management\obj\Debug\SML_Sub_AddEdit.g.cs
 D:\VisualRepo\projeck_adm\Project_management\obj\Debug\App.g.cs
 D:\VisualRepo\projeck_adm\Project_management\obj\Debug\Project_management_MarkupCompile.cache
 D:\VisualRepo\projeck_adm\Project_management\obj\Debug\Project_management_MarkupCompile.lref
+D:\VisualRepo\projeck_adm\Project_management\bin\Debug\Project_management.exe.config
+D:\VisualRepo\projeck_adm\Project_management\bin\Debug\Project_management.exe
+D:\VisualRepo\projeck_adm\Project_management\bin\Debug\Project_management.pdb
 D:\VisualRepo\projeck_adm\Project_management\obj\Debug\mainwindow.baml
 D:\VisualRepo\projeck_adm\Project_management\obj\Debug\SelectionMenuAdmin.baml
 D:\VisualRepo\projeck_adm\Project_management\obj\Debug\SelectionMenuLecturer.baml
@@ -217,7 +211,12 @@ D:\VisualRepo\projeck_adm\Project_management\obj\Debug\SML_Sub_AddEdit.baml
 D:\VisualRepo\projeck_adm\Project_management\obj\Debug\Project_management.g.resources
 D:\VisualRepo\projeck_adm\Project_management\obj\Debug\Project_management.Properties.Resources.resources
 D:\VisualRepo\projeck_adm\Project_management\obj\Debug\Project_management.csproj.GenerateResource.cache
-D:\VisualRepo\projeck_adm\Project_management\obj\Debug\Project_management.csproj.CopyComplete
 D:\VisualRepo\projeck_adm\Project_management\obj\Debug\Project_management.exe
 D:\VisualRepo\projeck_adm\Project_management\obj\Debug\Project_management.pdb
-D:\VisualRepo\projeck_adm\Project_management\bin\Debug\Project_management.pdb
+D:\VisualRepo\projeck_adm\Project_management\bin\Debug\logic_layer.dll
+D:\VisualRepo\projeck_adm\Project_management\bin\Debug\logic_layer.pdb
+D:\VisualRepo\projeck_adm\Project_management\obj\Debug\Project_management.csprojAssemblyReference.cache
+D:\VisualRepo\projeck_adm\Project_management\obj\Debug\Project_management.csproj.CopyComplete
+D:\VisualRepo\projeck_adm\Project_management\bin\Debug\database_layer.dll
+D:\VisualRepo\projeck_adm\Project_management\bin\Debug\database_layer.pdb
+D:\VisualRepo\projeck_adm\Project_management\bin\Debug\database_layer.dll.config

@@ -39,7 +39,7 @@ namespace Project_management
             log_t = login_text.Text;
             if(login_text.Text == "" || password_text.Text == "")
             {
-                MessageBox.Show("Błędne dane logowania!","Error",MessageBoxButton.OK,MessageBoxImage.Error);
+                MessageBox.Show("Uzupełnij pola login oraz hasło!","Error",MessageBoxButton.OK,MessageBoxImage.Error);
             }
             else
             {
@@ -79,13 +79,19 @@ namespace Project_management
             this.Visibility = Visibility.Hidden;
             NewWindow.Show();
         }
+        protected override void OnClosed(EventArgs e)
+        {
+            base.OnClosed(e);
+
+            Application.Current.Shutdown();
+        }
     }
 
     class Login
     {
       public static bool login(string log_f, string pass_f)
         {
-            DataClasses1DataContext context = new DataClasses1DataContext();
+            DataClassesDataContext context = new DataClassesDataContext();
             var q = from t in context.login_tab
                     where t.login == log_f && 
                     t.password == pass_f
@@ -93,7 +99,8 @@ namespace Project_management
 
 
                 return (q.Count() == 1);
-
+                
+            
         }
     }
 }
