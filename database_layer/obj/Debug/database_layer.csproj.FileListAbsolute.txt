@@ -10,3 +10,4 @@ D:\VisualRepo\projeck_adm\database_layer\obj\Debug\database_layer.csproj.Generat
 D:\VisualRepo\projeck_adm\database_layer\obj\Debug\database_layer.dll
 D:\VisualRepo\projeck_adm\database_layer\obj\Debug\database_layer.pdb
 D:\VisualRepo\projeck_adm\database_layer\bin\Debug\database_layer.dll.config
+D:\VisualRepo\projeck_adm\database_layer\obj\Debug\database_layer.csprojAssemblyReference.cache

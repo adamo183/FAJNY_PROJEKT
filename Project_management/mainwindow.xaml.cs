@@ -37,21 +37,44 @@ namespace Project_management
             objSMA.Show();
             */
             log_t = login_text.Text;
-            if(login_text.Text == "" || password_text.Text == "")
+            if(login_text.Text == "" || password_text.Password == "")
             {
                 MessageBox.Show("Uzupełnij pola login oraz hasło!","Error",MessageBoxButton.OK,MessageBoxImage.Error);
             }
             else
             {
-                bool access = Login.login(login_text.Text, password_text.Text);
+                string role;
+                int id;
+         
+                bool access = Login.login(login_text.Text, password_text.Password,out role,out id);
+               role =  role.Trim(' ');
                 if (access)
                 {
-                    SelectionMenuAdmin objSMA = new SelectionMenuAdmin();
-                    this.Visibility = Visibility.Hidden;
-                    objSMA.Show();
+
+                   if(role == "admin")
+                    {
+                        SMA_panel admin_window = new SMA_panel();
+                        admin_window.Show();
+
+                    }
+                   else if (role == "student")
+                    {
+                        SelectionMenuStudent student_window = new SelectionMenuStudent();
+                        student_window.Show();
+                    }
+                   else if(role == "lecturer")
+                    {
+                        SelectionMenuLecturer lecturer_window = new SelectionMenuLecturer();
+                        lecturer_window.Show();
+                    }
+                   else
+                    {
+                        MessageBox.Show("Samfing is not yes!");
+                    }
+
                 }
                 else
-                    MessageBox.Show("Błędne dane logowania!(spróbuj admin,123)");
+                    MessageBox.Show("Błędne dane logowania!");
 
 
             }
@@ -87,20 +110,5 @@ namespace Project_management
         }
     }
 
-    class Login
-    {
-      public static bool login(string log_f, string pass_f)
-        {
-            DataClassesDataContext context = new DataClassesDataContext();
-            var q = from t in context.login_tab
-                    where t.login == log_f && 
-                    t.password == pass_f
-                    select t;
-
-
-                return (q.Count() == 1);
-                
-            
-        }
-    }
+    
 }

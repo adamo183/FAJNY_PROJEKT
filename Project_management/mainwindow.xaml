@@ -15,12 +15,7 @@
             <ColumnDefinition Width="509*"/>
             <ColumnDefinition Width="106*"/>
         </Grid.ColumnDefinitions>
-        <TextBox HorizontalAlignment="Left" Height="26" Margin="33,142,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="352" Name="login_text" Grid.Column="4"/>
-        <TextBox HorizontalAlignment="Left" Height="27" Margin="33,217,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="352" Name ="password_text" Background="White" Grid.Column="4">
-            <TextBox.BindingGroup>
-                <BindingGroup/>
-            </TextBox.BindingGroup>
-        </TextBox>
+        <TextBox HorizontalAlignment="Left" Height="26" Margin="33,142,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="352" Name="login_text" Grid.Column="4"/>
         <Label Content="Login" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="33,106,0,0" FontFamily="Rockwell Nova" Grid.Column="4" Height="30" Width="70" FontSize="16" Background="{x:Null}"/>
         <Label Content="Password" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="33,181,0,0" FontFamily="Rockwell Nova" Grid.Column="4" Height="30" Width="108" FontSize="16"/>
         <Button Content="Connect" HorizontalAlignment="Left" VerticalAlignment="Top" Width="224" Margin="91,296,0,0" Height="48" Click="OpenWindow" FontSize="16" FontFamily="Rockwell Nova" Grid.Column="4" RenderTransformOrigin="0.5,0.5">
@@ -44,5 +39,6 @@
         <Button Grid.ColumnSpan="2" Content="Do prowadzących" Grid.Column="4" HorizontalAlignment="Left" Margin="458,158,0,0" VerticalAlignment="Top" Width="116" Click="DoProwadzacych"/>
         <Button Content="Do admina" Grid.Column="4" HorizontalAlignment="Left" Margin="458,224,0,0" VerticalAlignment="Top" Width="116" Grid.ColumnSpan="2" Click="Button_Click"/>
         <Button Grid.ColumnSpan="2" Content="Do studenta" Grid.Column="4" HorizontalAlignment="Left" Margin="458,281,0,0" VerticalAlignment="Top" Width="116" Click="Button_Click_1"/>
+        <PasswordBox Grid.Column="4" HorizontalAlignment="Left" Margin="33.4,224,0,0" VerticalAlignment="Top" Width="352" Height="26" Name ="password_text"/>
     </Grid>
 </Window>
