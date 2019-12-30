@@ -24,13 +24,14 @@ namespace Project_management
         public SML_Subject()
         {
             InitializeComponent();
+
         }
         
        
         private void SML_Sub_EditButton(object sender, RoutedEventArgs e)
         {
             Subject s1 = new Subject();
-               s1.Name = "temat1";
+           s1.Name = "temat1";
             SML_Sub_AddEdit SML_Sub_AddEdit_window = new SML_Sub_AddEdit(0,s1);
            this.Visibility = Visibility.Hidden;
             SML_Sub_AddEdit_window.Show();

@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using logic_layer;
+using database_layer;
 
 namespace Project_management
 {
@@ -22,6 +24,23 @@ namespace Project_management
         public SelectionMenuLecturer()
         {
             InitializeComponent();
+            
+
+        }
+        public SelectionMenuLecturer(Lecturer lecturer)
+        {
+
+
+            InitializeComponent();
+            List<Tuple<int, string, string>> semsetrInfoList = new List<Tuple<int, string, string>>();
+
+            IQueryable<SemsestrInfo> stb = MenuLecturerLogic.getSemestrInfo();
+            stb.ToList();
+            foreach (var rec in stb) semsetrInfoList.Add(Tuple.Create(rec.semestrid, rec.fieldofstudy.Trim(), rec.yearofstudy));
+
+            fieldofstudybox.ItemsSource = semsetrInfoList;
+
+
         }
 
         private void SML_CreateSubject_button(object sender, RoutedEventArgs e)
@@ -43,6 +62,22 @@ namespace Project_management
             SML_Presence SML_Presence_window = new SML_Presence();
             //this.Visibility = Visibility.Hidden;
             SML_Presence_window.Show();
+        }
+
+        private void ComboBox_SelectionChanged()
+        {
+
+        }
+
+        private void ComboBox_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
+        {
+
+            
+        }
+
+        private void ComboBox_SelectionChanged_2(object sender, SelectionChangedEventArgs e)
+        {
+            
         }
     }
 }

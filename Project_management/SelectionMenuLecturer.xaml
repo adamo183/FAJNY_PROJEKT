@@ -9,10 +9,8 @@
     <Grid>
         <Button Content="Create Subject" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" Margin="150,145,0,0" Height="80" Click="SML_CreateSubject_button"/>
         <Button Content="Section Management" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" Margin="325,145,0,0" Height="80" Click="SML_SectionManagement_button"/>
-        <Label Content="Kierunek:" HorizontalAlignment="Left" Margin="150,315,0,0" VerticalAlignment="Top" Height="26" Width="104"/>
-        <ComboBox HorizontalAlignment="Left" Margin="150,341,0,0" VerticalAlignment="Top" Width="205" Height="21"/>
-        <Label Content="Rok:" HorizontalAlignment="Left" Margin="150,255,0,0" VerticalAlignment="Top" Width="56"/>
-        <ComboBox HorizontalAlignment="Left" Margin="150,286,0,0" VerticalAlignment="Top" Width="205"/>
+        <Label Content="Kierunek:" HorizontalAlignment="Left" Margin="150,255,0,0" VerticalAlignment="Top" Height="26" Width="104"/>
+        <ComboBox HorizontalAlignment="Left" Margin="150,286,0,0" VerticalAlignment="Top" Name="fieldofstudybox"  Width="205" SelectionChanged="ComboBox_SelectionChanged_2" />
 
     </Grid>
 </Window>

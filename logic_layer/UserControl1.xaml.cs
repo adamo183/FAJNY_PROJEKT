@@ -117,4 +117,54 @@ namespace logic_layer
         }
     }
 
+
+    public class SemsestrInfo
+    {
+        public int semestrid { get; set; }
+        public string fieldofstudy { get; set; }
+        public string yearofstudy { get; set; }
+    }
+    public class MenuLecturerLogic
+    {
+
+        public static IQueryable<SemsestrInfo> getSemestrInfo()
+        {
+            DataClassesDataContext context = new DataClassesDataContext();
+            var st = (from s in context.Semester select new SemsestrInfo() { fieldofstudy = s.Field_of_Study, yearofstudy = s.Year ,semestrid = s.ID_Semester}); 
+
+            return st;
+        }
+        public static Lecturer getLectuterData(int id)
+        {
+            try
+            {
+                DataClassesDataContext context = new DataClassesDataContext();
+                var li = (from l in context.Lecturer
+                         where l.ID_lecturer.Equals(id)
+                         select new 
+                         {
+
+                             ID_lecturer = l.ID_lecturer,
+                             Name = l.Name,
+                             Surname = l.Surname,
+                             Degree = l.Degree,
+                             active = l.active
+                         }).AsEnumerable().Select( x => new Lecturer {
+                             ID_lecturer = x.ID_lecturer,
+                             Name = x.Name,
+                             Surname = x.Surname,
+                             Degree = x.Degree,
+                             active = x.active
+                         } ).ToList();
+
+                
+                return li.FirstOrDefault();
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+    }
 }
