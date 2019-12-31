@@ -38,6 +38,7 @@ namespace Project_management
           {
             if (mode == 0)
             {
+
                 this.s_name.Text = subject.Name;
                 this.Desctrip.Text = subject.Description;
                 this.Availbe.IsChecked = subject.Status;
@@ -52,7 +53,21 @@ namespace Project_management
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            if(mode == 0)
+            {
+                DataClassesDataContext context = new DataClassesDataContext();
+                var upd = (from s in context.Subject where s.ID_Subject == subject.ID_Subject select s).Single();
+                upd.Name = s_name.Text;
+                upd.Description = Desctrip.Text;
+                upd.Status = (bool)Availbe.IsChecked;
+                context.SubmitChanges();
 
+            }
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }
