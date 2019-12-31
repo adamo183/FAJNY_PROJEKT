@@ -27,6 +27,7 @@ namespace Project_management
             
 
         }
+        public Lecturer lecturer { get; private set; }
         public SelectionMenuLecturer(Lecturer lecturer)
         {
 
@@ -39,13 +40,20 @@ namespace Project_management
             foreach (var rec in stb) semsetrInfoList.Add(Tuple.Create(rec.semestrid, rec.fieldofstudy.Trim(), rec.yearofstudy));
 
             fieldofstudybox.ItemsSource = semsetrInfoList;
-
+            /* this.lecturer = new Lecturer();
+             this.lecturer.ID_lecturer = lecturer.ID_lecturer;
+             this.lecturer.Name = lecturer.Name;
+             this.lecturer.Surname = lecturer.Surname;
+             this.lecturer.Degree = lecturer.Degree;
+               */
+            this.lecturer = lecturer;
 
         }
 
         private void SML_CreateSubject_button(object sender, RoutedEventArgs e)
         {
-            SML_Subject SML_Subject_window = new SML_Subject();
+            SML_Subject SML_Subject_window = new SML_Subject(lecturer);
+            
              //this.Visibility = Visibility.Hidden;
             SML_Subject_window.Show();
         }

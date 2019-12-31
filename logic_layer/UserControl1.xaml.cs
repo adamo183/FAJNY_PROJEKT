@@ -165,6 +165,24 @@ namespace logic_layer
                 throw ex;
             }
         }
+        public class SubjectInfo
+        {
+            public string name { get; set; }
+            public string description { get; set; }
+            public int id { get; set; }
+            public bool status { get; set; }
+
+        }
+        public static IQueryable getSubjectList(int id_l)
+        {
+            DataClassesDataContext context = new DataClassesDataContext();
+            var sub_t = (from s in context.Subject where s.ID_Lecturer.Equals(id_l) select new SubjectInfo() {id = s.ID_Subject,name = s.Name,description = s.Description.Trim(),status = s.Status });
+    
+
+
+
+            return sub_t;  
+        }
 
     }
 }

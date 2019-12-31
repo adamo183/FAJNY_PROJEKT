@@ -36,8 +36,12 @@ namespace Project_management
         }
           private void view()
           {
-              if(mode == 0 )
-                  this.s_name.Text = subject.Name;
+            if (mode == 0)
+            {
+                this.s_name.Text = subject.Name;
+                this.Desctrip.Text = subject.Description;
+                this.Availbe.IsChecked = subject.Status;
+            }
           }
           
 
