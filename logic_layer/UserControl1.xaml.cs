@@ -174,7 +174,7 @@ namespace logic_layer
             public bool Status { get; set; }
 
         }
-        public static IQueryable getSubjectList(int id_l)
+        public static IEnumerable<SubjectInfo> getSubjectList(int id_l)
         {
             DataClassesDataContext context = new DataClassesDataContext();
             var sub_t = (from s in context.Subject where s.ID_Lecturer.Equals(id_l) select new SubjectInfo() {Id = s.ID_Subject,Name = s.Name,Description = s.Description.Trim(),Status = s.Status });
@@ -239,6 +239,21 @@ namespace logic_layer
             var sis = (from f in context.Stu_Sec where f.ID_Section == sec_id select new {f.Student.ID_Album, f.Student.Name, f.Student.Surname }).AsEnumerable().Select(x => new StudentDisplay() {Id = x.ID_Album,Name = x.Name,Surname = x.Surname }); 
 
             return sis;
+        }
+        public static void addSection(database_layer.Section sec)
+        {
+            DataClassesDataContext context = new DataClassesDataContext();
+            context.Section.InsertOnSubmit(sec);
+            context.SubmitChanges();
+        }
+
+        public static IEnumerable<Stu_Sem> getFreeStudentInSem(Semester sem)
+        {
+            DataClassesDataContext context = new DataClassesDataContext();
+            var freeStu = from s in context.Stu_Sem where !(from s2 in context.Stu_Sec select s2.ID_Album).Contains(s.ID_Album) select s;
+
+
+            return freeStu;
         }
     }
 

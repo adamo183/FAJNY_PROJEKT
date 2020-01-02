@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="SML_Stu_Add" Height="450" Width="800">
     <Grid>
-        <DataGrid HorizontalAlignment="Left" Height="303" Margin="48,40,0,0" VerticalAlignment="Top" Width="301"/>
+        <DataGrid HorizontalAlignment="Left" Name="StudentGrid" Height="303" Margin="48,40,0,0" VerticalAlignment="Top" Width="301" SelectionChanged="DataGrid_SelectionChanged"/>
         <Label Content="Name: " HorizontalAlignment="Left" Margin="413,67,0,0" VerticalAlignment="Top"/>
         <Label Content="Surname" HorizontalAlignment="Left" Margin="413,98,0,0" VerticalAlignment="Top"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="488,67,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="138"/>

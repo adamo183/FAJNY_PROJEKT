@@ -36,7 +36,7 @@ namespace Project_management
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            SML_Stu_Add stu_add_window = new SML_Stu_Add();
+            SML_Stu_Add stu_add_window = new SML_Stu_Add(semestr);
             stu_add_window.Show();
         }
 
