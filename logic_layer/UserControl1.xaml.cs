@@ -174,7 +174,7 @@ namespace logic_layer
             public bool Status { get; set; }
 
         }
-        public static IQueryable getSubjectList(int id_l)
+        public static IEnumerable<SubjectInfo> getSubjectList(int id_l)
         {
             DataClassesDataContext context = new DataClassesDataContext();
             var sub_t = (from s in context.Subject where s.ID_Lecturer.Equals(id_l) select new SubjectInfo() {Id = s.ID_Subject,Name = s.Name,Description = s.Description.Trim(),Status = s.Status });
