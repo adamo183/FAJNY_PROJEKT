@@ -9,7 +9,7 @@
     <Grid>
         <Button Content="Edit" HorizontalAlignment="Left" Margin="565,100,0,0" VerticalAlignment="Top" Width="150" Height="80" Click="SML_Sub_EditButton"/>
         <Button Content="Add Subject" HorizontalAlignment="Left" Margin="565,260,0,0" VerticalAlignment="Top" Width="150" Height="80" Click="SML_Sub_AddSubjectButton"/>
-        <DataGrid HorizontalAlignment="Left" Name ="subject_grid"  Height="327" Margin="74,48,0,0" VerticalAlignment="Top" Width="426"/>
+        <DataGrid HorizontalAlignment="Left" Name ="subject_grid"  Height="327" Margin="74,48,0,0" VerticalAlignment="Top" Width="426" SelectionChanged="subject_grid_SelectionChanged"/>
 
     </Grid>
 </Window>
