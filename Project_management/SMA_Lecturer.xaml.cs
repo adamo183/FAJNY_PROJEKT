@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using database_layer;
+using logic_layer;
 
 namespace Project_management
 {
@@ -20,9 +22,14 @@ namespace Project_management
     /// </summary>
     public partial class SMA_Lecturer : Page
     {
+        public Lecturer lecturer { get; private set; }
         public SMA_Lecturer()
         {
             InitializeComponent();
+            this.lecturer = lecturer;
+            IQueryable tab_l = MenuLecturerLogic.getSubjectList(lecturer.ID_lecturer);
+            Lecturer_Grid.IsReadOnly = true;
+            Lecturer_Grid.ItemsSource = tab_l;
         }
     }
 }
