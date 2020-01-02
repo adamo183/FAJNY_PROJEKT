@@ -9,12 +9,10 @@
     <Grid>
         <Label Content="Add/Edit Subject" HorizontalAlignment="Left" Margin="319,20,0,0" VerticalAlignment="Top" FontSize="19"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="80,112,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="500" Name="s_name"/>
-        <TextBox HorizontalAlignment="Left" Name="Desctrip" Height="133" Margin="80,232,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="500"/>
-        <ListBox HorizontalAlignment="Left" Name="lecturer_" Height="23" Margin="80,171,0,0" VerticalAlignment="Top" Width="500"/>
+        <TextBox HorizontalAlignment="Left" Name="Desctrip" Height="133" Margin="80,205,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="500"/>
         <CheckBox Content="Subject available" Name="Availbe" HorizontalAlignment="Left" Margin="268,379,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked"/>
         <Label Content="Name" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="80,81,0,0"/>
-        <Label Content="Description" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="80,201,0,0"/>
-        <Label Content="Lecturer" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="80,140,0,0"/>
+        <Label Content="Description" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="80,174,0,0"/>
         <Button Content="Save" HorizontalAlignment="Left" Margin="613,112,0,0" VerticalAlignment="Top" Width="150" Height="80" Click="Button_Click"/>
         <Button Content="Cancel" HorizontalAlignment="Left" Margin="613,285,0,0" VerticalAlignment="Top" Width="150" Height="80" Click="Button_Click_1"/>
 

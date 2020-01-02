@@ -60,9 +60,22 @@ namespace Project_management
 
         private void SML_SectionManagement_button(object sender, RoutedEventArgs e)
         {
-            SML_SectionManagement SML_SectionManagement_window = new SML_SectionManagement();
-            //this.Visibility = Visibility.Hidden;
-            SML_SectionManagement_window.Show();
+            if (fieldofstudybox.SelectedItem == null)
+            {
+                MessageBox.Show("Wybierz kierunek!");
+            }
+            else
+            {
+                Tuple<int, string, string> select_field = (Tuple<int, string, string>)fieldofstudybox.SelectedItem;
+                Semester selected_semestr = new Semester();
+                selected_semestr.ID_Semester = (short)select_field.Item1;
+                selected_semestr.Field_of_Study = select_field.Item2;
+                selected_semestr.Year = select_field.Item3;
+
+                SML_SectionManagement SML_SectionManagement_window = new SML_SectionManagement(lecturer,selected_semestr);
+                //this.Visibility = Visibility.Hidden;
+                SML_SectionManagement_window.Show();
+            }
         }
 
         private void SML_Presence_button(object sender, RoutedEventArgs e)

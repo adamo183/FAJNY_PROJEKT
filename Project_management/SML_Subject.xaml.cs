@@ -28,6 +28,7 @@ namespace Project_management
             InitializeComponent();
             this.lecturer = lecturer;
             IQueryable tab_s = MenuLecturerLogic.getSubjectList(lecturer.ID_lecturer);
+            subject_grid.IsReadOnly = true;
             subject_grid.ItemsSource = tab_s;
             //subject_grid
         }
@@ -37,17 +38,17 @@ namespace Project_management
         {
 
 
-            if (subject_grid.SelectedItem != null)
+            if (subject_grid.SelectedItem != null )
             {
                 var row_list = (MenuLecturerLogic.SubjectInfo)subject_grid.SelectedItem;
-                string name = row_list.name;
+                string name = row_list.Name;
                 //MessageBox.Show(name);
                 Subject s1 = new Subject();
-                s1.ID_Subject = (short)row_list.id;
-                s1.Name = row_list.name;
-                s1.Description = row_list.description;
+                s1.ID_Subject = (short)row_list.Id;
+                s1.Name = row_list.Name;
+                s1.Description = row_list.Description;
                 s1.ID_Lecturer = lecturer.ID_lecturer;
-                s1.Status = row_list.status;
+                s1.Status = row_list.Status;
 
                 SML_Sub_AddEdit SML_Sub_AddEdit_window = new SML_Sub_AddEdit(0, s1);
                 this.Visibility = Visibility.Hidden;
@@ -61,9 +62,20 @@ namespace Project_management
         }
         private void SML_Sub_AddSubjectButton(object sender, RoutedEventArgs e) 
         {
-            SML_Sub_AddEdit SML_Sub_AddEdit_window = new SML_Sub_AddEdit();
+
+            Subject s1 = new Subject();
+            s1.ID_Lecturer = lecturer.ID_lecturer;
+            SML_Sub_AddEdit SML_Sub_AddEdit_window = new SML_Sub_AddEdit(1,s1);
+            
+
+
            this.Visibility = Visibility.Hidden;
-            SML_Sub_AddEdit_window.Show();
+           SML_Sub_AddEdit_window.Show();
+        }
+
+        private void subject_grid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }

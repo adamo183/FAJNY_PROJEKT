@@ -9,9 +9,9 @@
     <Grid>
         <TextBox HorizontalAlignment="Left" Height="22" Margin="178,230,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="440"/>
         <Label Content="Capacity:" HorizontalAlignment="Left" Margin="363,199,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="22" Margin="178,143,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="440"/>
         <Label Content="Topic:" HorizontalAlignment="Left" Margin="363,96,0,0" VerticalAlignment="Top"/>
         <Button Content="Add" HorizontalAlignment="Left" Margin="320,349,0,0" VerticalAlignment="Top" Width="115" Height="30"/>
+        <ComboBox HorizontalAlignment="Left" Name="Topiccombobox" Margin="178,139,0,0" VerticalAlignment="Top" Width="440" Height="21" SelectionChanged="ComboBox_SelectionChanged"/>
 
     </Grid>
 </Window>

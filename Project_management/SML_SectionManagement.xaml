@@ -11,11 +11,11 @@
             <RowDefinition Height="0*"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <DataGrid HorizontalAlignment="Left" Height="222" Margin="44,42,0,0" VerticalAlignment="Top" Width="440" Grid.RowSpan="2"/>
+        <DataGrid x:Name="sectionsgrid" HorizontalAlignment="Left" Height="222" Margin="44,42,0,0" VerticalAlignment="Top" Width="440" Grid.RowSpan="2" SelectionChanged="sectionsgrid_SelectionChanged"/>
         <Button Content="New section" HorizontalAlignment="Left" Height="51" Margin="573,213,0,0" VerticalAlignment="Top" Width="387" Grid.RowSpan="2" Click="Button_Click_2"/>
         <Button Content="Add student" HorizontalAlignment="Left" Height="51" Margin="573,316,0,0" VerticalAlignment="Top" Width="387" Click="Button_Click" Grid.RowSpan="2"/>
         <Button Content="Add degree" HorizontalAlignment="Left" Height="51" Margin="573,372,0,0" VerticalAlignment="Top" Width="387" Click="Button_Click_1" Grid.RowSpan="2"/>
-        <DataGrid HorizontalAlignment="Left" Height="194" Margin="44,316,0,0" VerticalAlignment="Top" Width="440" Grid.RowSpan="2"/>
+        <DataGrid HorizontalAlignment="Left" Name="StuSecGrid" Height="194" Margin="44,316,0,0" VerticalAlignment="Top" Width="440" Grid.RowSpan="2" SelectionChanged="DataGrid_SelectionChanged"/>
         <Label Content="Students in section:" HorizontalAlignment="Left" Margin="200,285,0,0" Grid.RowSpan="2" VerticalAlignment="Top"/>
         <Label Content="Sections" HorizontalAlignment="Left" Margin="229,10,0,0" Grid.RowSpan="2" VerticalAlignment="Top"/>
         <Label Content="Section ID:" HorizontalAlignment="Left" Margin="588,42,0,0" Grid.RowSpan="2" VerticalAlignment="Top"/>

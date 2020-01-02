@@ -12,6 +12,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using logic_layer;
+
 
 namespace Project_management
 {
@@ -23,8 +25,10 @@ namespace Project_management
         private Subject subject;
         private int mode;
 
-        public SML_Sub_AddEdit()
+        public SML_Sub_AddEdit(int mod)
         {
+
+
             InitializeComponent();
         }
         public SML_Sub_AddEdit(int mod, Subject sub)
@@ -61,8 +65,29 @@ namespace Project_management
                 upd.Description = Desctrip.Text;
                 upd.Status = (bool)Availbe.IsChecked;
                 context.SubmitChanges();
-
+                this.Close();
             }
+            if(mode == 1)
+            {
+                if(this.s_name.Text == "" || this.Desctrip.Text == "")
+                {
+                    MessageBox.Show("Wypełnij wszystkie pola");
+                }
+                else
+                {
+                    subject.Description = this.Desctrip.Text;
+                    subject.Name = this.s_name.Text;
+                    subject.Status = (bool)this.Availbe.IsChecked;
+                    bool IsAddGood = MenuLecturerLogic.addSubject(subject);
+                    if(!IsAddGood)
+                    {
+                        MessageBox.Show("Nie udało sie dodac przedmiotu");
+                    }
+                    this.Close();
+                }
+                
+            }
+
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)

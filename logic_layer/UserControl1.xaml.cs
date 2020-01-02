@@ -101,6 +101,7 @@ namespace logic_layer
             u_id = 0;
             role = "";
 
+           
             if (q.Count() == 1)
             {
                 foreach (var c in q)
@@ -167,22 +168,78 @@ namespace logic_layer
         }
         public class SubjectInfo
         {
-            public string name { get; set; }
-            public string description { get; set; }
-            public int id { get; set; }
-            public bool status { get; set; }
+            public string Name { get; set; }
+            public string Description { get; set; }
+            public int Id { get; set; }
+            public bool Status { get; set; }
 
         }
         public static IQueryable getSubjectList(int id_l)
         {
             DataClassesDataContext context = new DataClassesDataContext();
-            var sub_t = (from s in context.Subject where s.ID_Lecturer.Equals(id_l) select new SubjectInfo() {id = s.ID_Subject,name = s.Name,description = s.Description.Trim(),status = s.Status });
+            var sub_t = (from s in context.Subject where s.ID_Lecturer.Equals(id_l) select new SubjectInfo() {Id = s.ID_Subject,Name = s.Name,Description = s.Description.Trim(),Status = s.Status });
     
 
 
 
             return sub_t;  
         }
+        public static bool addSubject(Subject s1)
+        {
+            DataClassesDataContext context = new DataClassesDataContext();
+            var f = context.Subject.OrderByDescending(u => u.ID_Subject).FirstOrDefault();
+            s1.ID_Subject = (short)(f.ID_Subject + 1);
+            context.Connection.Open();
+            context.ExecuteCommand("SET IDENTITY_INSERT Subject ON");
+            context.Subject.InsertOnSubmit(s1);
+            try
+            {
+                context.SubmitChanges();
+                context.ExecuteCommand("SET IDENTITY_INSERT Subject OFF");
+                return true;
 
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show(e.Message);
+                return false;
+            }
+
+            
+        }
+
+        public class SectionDisplay
+        {
+            public int ID_sekcji { get; set; }
+            public int Max_User { get; set; }
+            public string Topic { get; set; }
+
+
+        }
+        public static IQueryable getSection(int id_sem)
+        {
+
+            DataClassesDataContext context = new DataClassesDataContext();
+            var s = (from f in context.Section where f.ID_Semester == id_sem select new SectionDisplay() { ID_sekcji = f.ID_Section, Max_User = f.Max_user , Topic = f.Subject.Name  });
+
+
+
+            return s;
+        }
+
+        public class StudentDisplay
+        {
+            public int Id { get; set; }
+            public string Name { get; set; }
+            public string Surname { get; set; }
+        }
+        public static IEnumerable<StudentDisplay> getStudentInSection(int sec_id)
+        {
+            DataClassesDataContext context = new DataClassesDataContext();
+            var sis = (from f in context.Stu_Sec where f.ID_Section == sec_id select new {f.Student.ID_Album, f.Student.Name, f.Student.Surname }).AsEnumerable().Select(x => new StudentDisplay() {Id = x.ID_Album,Name = x.Name,Surname = x.Surname }); 
+
+            return sis;
+        }
     }
+
 }
