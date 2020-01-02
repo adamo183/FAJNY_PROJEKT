@@ -7,9 +7,11 @@
         mc:Ignorable="d"
         Title="SelectionMenuAdmin" Height="450" Width="800">
     <Grid>
-        <Button Content="Admin" HorizontalAlignment="Left" Margin="85,170,0,0" VerticalAlignment="Top" Width="168" Height="78" FontFamily="Rockwell Nova" FontSize="18" Click="Button_Click_1"/>
-        <Button Content="Lecturer" HorizontalAlignment="Left" Margin="317,170,0,0" VerticalAlignment="Top" Width="168" Height="78" FontFamily="Rockwell Nova" FontSize="18" Click="Button_Click_3"/>
-        <Button Content="Student" HorizontalAlignment="Left" Margin="544,170,0,0" VerticalAlignment="Top" Width="168" Height="78" FontFamily="Rockwell Nova" FontSize="18" Click="Button_Click_2"/>
-
+        <StackPanel Orientation="Horizontal" Height="35" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,5">
+            <Button Content="Admin" MinWidth="100" Click="Button_Click"/>
+            <Button Content="Lecturer" MinWidth="100" Margin="10,0,0,0" Click="Button_Click_1"/>
+            <Button Content="Student" MinWidth="100" Margin="10,0,0,0" Click="Button_Click_2"/>
+        </StackPanel>
+        <Frame x:Name="SMA" Margin="0,45,0,0" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>

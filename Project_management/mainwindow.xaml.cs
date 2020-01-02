@@ -53,7 +53,7 @@ namespace Project_management
 
                    if(role == "admin")
                     {
-                        SMA_panel admin_window = new SMA_panel();
+                        SelectionMenuAdmin admin_window = new SelectionMenuAdmin();
                         admin_window.Show();
 
                     }
@@ -91,18 +91,18 @@ namespace Project_management
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            SMA_panel SMA_panel_window = new SMA_panel();
+            SelectionMenuAdmin SelectionMenuAdmin_window = new SelectionMenuAdmin();
             this.Visibility = Visibility;
-            SMA_panel_window.Show(); 
+            SelectionMenuAdmin_window.Show(); 
 
 
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            SelectionMenuStudent NewWindow = new SelectionMenuStudent();
+            SelectionMenuStudent SelectionMenuStudent_Window = new SelectionMenuStudent();
             this.Visibility = Visibility.Hidden;
-            NewWindow.Show();
+            SelectionMenuStudent_Window.Show();
         }
         protected override void OnClosed(EventArgs e)
         {

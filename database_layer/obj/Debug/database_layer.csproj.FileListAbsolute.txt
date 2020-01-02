@@ -11,3 +11,15 @@ D:\VisualRepo\projeck_adm\database_layer\obj\Debug\database_layer.dll
 D:\VisualRepo\projeck_adm\database_layer\obj\Debug\database_layer.pdb
 D:\VisualRepo\projeck_adm\database_layer\bin\Debug\database_layer.dll.config
 D:\VisualRepo\projeck_adm\database_layer\obj\Debug\database_layer.csprojAssemblyReference.cache
+C:\Users\Norman\Source\Repos\FAJNY_PROJEKT\database_layer\bin\Debug\database_layer.dll.config
+C:\Users\Norman\Source\Repos\FAJNY_PROJEKT\database_layer\bin\Debug\database_layer.dll
+C:\Users\Norman\Source\Repos\FAJNY_PROJEKT\database_layer\bin\Debug\database_layer.pdb
+C:\Users\Norman\Source\Repos\FAJNY_PROJEKT\database_layer\obj\Debug\UserControl1.g.cs
+C:\Users\Norman\Source\Repos\FAJNY_PROJEKT\database_layer\obj\Debug\database_layer_MarkupCompile.cache
+C:\Users\Norman\Source\Repos\FAJNY_PROJEKT\database_layer\obj\Debug\database_layer_MarkupCompile.lref
+C:\Users\Norman\Source\Repos\FAJNY_PROJEKT\database_layer\obj\Debug\UserControl1.baml
+C:\Users\Norman\Source\Repos\FAJNY_PROJEKT\database_layer\obj\Debug\database_layer.g.resources
+C:\Users\Norman\Source\Repos\FAJNY_PROJEKT\database_layer\obj\Debug\database_layer.Properties.Resources.resources
+C:\Users\Norman\Source\Repos\FAJNY_PROJEKT\database_layer\obj\Debug\database_layer.csproj.GenerateResource.cache
+C:\Users\Norman\Source\Repos\FAJNY_PROJEKT\database_layer\obj\Debug\database_layer.dll
+C:\Users\Norman\Source\Repos\FAJNY_PROJEKT\database_layer\obj\Debug\database_layer.pdb
