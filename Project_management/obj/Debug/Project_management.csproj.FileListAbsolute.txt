@@ -146,7 +146,6 @@ D:\VisualRepo\projeck_adm\Project_management\obj\Debug\SelectionMenuAdmin.g.cs
 D:\VisualRepo\projeck_adm\Project_management\obj\Debug\SelectionMenuLecturer.g.cs
 D:\VisualRepo\projeck_adm\Project_management\obj\Debug\SelectionMenuStudent.g.cs
 D:\VisualRepo\projeck_adm\Project_management\obj\Debug\SMA_add.g.cs
-D:\VisualRepo\projeck_adm\Project_management\obj\Debug\SMA_panel.g.cs
 D:\VisualRepo\projeck_adm\Project_management\obj\Debug\SML_AddPresence.g.cs
 D:\VisualRepo\projeck_adm\Project_management\obj\Debug\SML_Presence.g.cs
 D:\VisualRepo\projeck_adm\Project_management\obj\Debug\SML_SecMan_SecAdd.g.cs
@@ -165,7 +164,6 @@ D:\VisualRepo\projeck_adm\Project_management\obj\Debug\SelectionMenuAdmin.baml
 D:\VisualRepo\projeck_adm\Project_management\obj\Debug\SelectionMenuLecturer.baml
 D:\VisualRepo\projeck_adm\Project_management\obj\Debug\SelectionMenuStudent.baml
 D:\VisualRepo\projeck_adm\Project_management\obj\Debug\SMA_add.baml
-D:\VisualRepo\projeck_adm\Project_management\obj\Debug\SMA_panel.baml
 D:\VisualRepo\projeck_adm\Project_management\obj\Debug\SML_AddPresence.baml
 D:\VisualRepo\projeck_adm\Project_management\obj\Debug\SML_Presence.baml
 D:\VisualRepo\projeck_adm\Project_management\obj\Debug\SML_SecMan_SecAdd.baml
@@ -233,3 +231,9 @@ C:\Users\Norman\Source\Repos\FAJNY_PROJEKT\Project_management\obj\Debug\Project_
 C:\Users\Norman\Source\Repos\FAJNY_PROJEKT\Project_management\obj\Debug\Project_management.csproj.CopyComplete
 C:\Users\Norman\Source\Repos\FAJNY_PROJEKT\Project_management\obj\Debug\Project_management.exe
 C:\Users\Norman\Source\Repos\FAJNY_PROJEKT\Project_management\obj\Debug\Project_management.pdb
+D:\VisualRepo\projeck_adm\Project_management\obj\Debug\SMA_Admin.g.cs
+D:\VisualRepo\projeck_adm\Project_management\obj\Debug\SMA_Lecturer.g.cs
+D:\VisualRepo\projeck_adm\Project_management\obj\Debug\SMA_Student.g.cs
+D:\VisualRepo\projeck_adm\Project_management\obj\Debug\SMA_Admin.baml
+D:\VisualRepo\projeck_adm\Project_management\obj\Debug\SMA_Lecturer.baml
+D:\VisualRepo\projeck_adm\Project_management\obj\Debug\SMA_Student.baml

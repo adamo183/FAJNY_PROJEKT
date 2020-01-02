@@ -240,6 +240,21 @@ namespace logic_layer
 
             return sis;
         }
+        public static void addSection(database_layer.Section sec)
+        {
+            DataClassesDataContext context = new DataClassesDataContext();
+            context.Section.InsertOnSubmit(sec);
+            context.SubmitChanges();
+        }
+
+        public static IEnumerable<Stu_Sem> getFreeStudentInSem(Semester sem)
+        {
+            DataClassesDataContext context = new DataClassesDataContext();
+            var freeStu = from s in context.Stu_Sem where !(from s2 in context.Stu_Sec select s2.ID_Album).Contains(s.ID_Album) select s;
+
+
+            return freeStu;
+        }
     }
 
 }
