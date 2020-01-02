@@ -33,6 +33,9 @@ namespace database_layer
     partial void Insertadmin_tab(admin_tab instance);
     partial void Updateadmin_tab(admin_tab instance);
     partial void Deleteadmin_tab(admin_tab instance);
+    partial void InsertUploaded(Uploaded instance);
+    partial void UpdateUploaded(Uploaded instance);
+    partial void DeleteUploaded(Uploaded instance);
     partial void InsertLecturer(Lecturer instance);
     partial void UpdateLecturer(Lecturer instance);
     partial void DeleteLecturer(Lecturer instance);
@@ -57,13 +60,10 @@ namespace database_layer
     partial void InsertSubject(Subject instance);
     partial void UpdateSubject(Subject instance);
     partial void DeleteSubject(Subject instance);
-    partial void InsertUploaded(Uploaded instance);
-    partial void UpdateUploaded(Uploaded instance);
-    partial void DeleteUploaded(Uploaded instance);
     #endregion
 		
 		public DataClassesDataContext() : 
-				base(global::database_layer.Properties.Settings.Default.BD_ProjectConnectionString, mappingSource)
+				base(global::database_layer.Properties.Settings.Default.BD_ProjectConnectionString1, mappingSource)
 		{
 			OnCreated();
 		}
@@ -97,6 +97,14 @@ namespace database_layer
 			get
 			{
 				return this.GetTable<admin_tab>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Uploaded> Uploaded
+		{
+			get
+			{
+				return this.GetTable<Uploaded>();
 			}
 		}
 		
@@ -169,14 +177,6 @@ namespace database_layer
 			get
 			{
 				return this.GetTable<Subject>();
-			}
-		}
-		
-		public System.Data.Linq.Table<Uploaded> Uploaded
-		{
-			get
-			{
-				return this.GetTable<Uploaded>();
 			}
 		}
 	}
@@ -290,6 +290,229 @@ namespace database_layer
 					this._active = value;
 					this.SendPropertyChanged("active");
 					this.OnactiveChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Uploaded")]
+	public partial class Uploaded : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private short _ID_Upl;
+		
+		private string _Name;
+		
+		private string _Description;
+		
+		private System.DateTime _Data;
+		
+		private short _ID_Section;
+		
+		private System.Data.Linq.Binary _Payload;
+		
+		private EntityRef<Section> _Section;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnID_UplChanging(short value);
+    partial void OnID_UplChanged();
+    partial void OnNameChanging(string value);
+    partial void OnNameChanged();
+    partial void OnDescriptionChanging(string value);
+    partial void OnDescriptionChanged();
+    partial void OnDataChanging(System.DateTime value);
+    partial void OnDataChanged();
+    partial void OnID_SectionChanging(short value);
+    partial void OnID_SectionChanged();
+    partial void OnPayloadChanging(System.Data.Linq.Binary value);
+    partial void OnPayloadChanged();
+    #endregion
+		
+		public Uploaded()
+		{
+			this._Section = default(EntityRef<Section>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_Upl", DbType="SmallInt NOT NULL", IsPrimaryKey=true)]
+		public short ID_Upl
+		{
+			get
+			{
+				return this._ID_Upl;
+			}
+			set
+			{
+				if ((this._ID_Upl != value))
+				{
+					this.OnID_UplChanging(value);
+					this.SendPropertyChanging();
+					this._ID_Upl = value;
+					this.SendPropertyChanged("ID_Upl");
+					this.OnID_UplChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="NChar(100) NOT NULL", CanBeNull=false)]
+		public string Name
+		{
+			get
+			{
+				return this._Name;
+			}
+			set
+			{
+				if ((this._Name != value))
+				{
+					this.OnNameChanging(value);
+					this.SendPropertyChanging();
+					this._Name = value;
+					this.SendPropertyChanged("Name");
+					this.OnNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Description", DbType="NText NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string Description
+		{
+			get
+			{
+				return this._Description;
+			}
+			set
+			{
+				if ((this._Description != value))
+				{
+					this.OnDescriptionChanging(value);
+					this.SendPropertyChanging();
+					this._Description = value;
+					this.SendPropertyChanged("Description");
+					this.OnDescriptionChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Data", DbType="Date NOT NULL")]
+		public System.DateTime Data
+		{
+			get
+			{
+				return this._Data;
+			}
+			set
+			{
+				if ((this._Data != value))
+				{
+					this.OnDataChanging(value);
+					this.SendPropertyChanging();
+					this._Data = value;
+					this.SendPropertyChanged("Data");
+					this.OnDataChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_Section", DbType="SmallInt NOT NULL")]
+		public short ID_Section
+		{
+			get
+			{
+				return this._ID_Section;
+			}
+			set
+			{
+				if ((this._ID_Section != value))
+				{
+					if (this._Section.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnID_SectionChanging(value);
+					this.SendPropertyChanging();
+					this._ID_Section = value;
+					this.SendPropertyChanged("ID_Section");
+					this.OnID_SectionChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Payload", DbType="VarBinary(MAX) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public System.Data.Linq.Binary Payload
+		{
+			get
+			{
+				return this._Payload;
+			}
+			set
+			{
+				if ((this._Payload != value))
+				{
+					this.OnPayloadChanging(value);
+					this.SendPropertyChanging();
+					this._Payload = value;
+					this.SendPropertyChanged("Payload");
+					this.OnPayloadChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Section_Uploaded", Storage="_Section", ThisKey="ID_Section", OtherKey="ID_Section", IsForeignKey=true)]
+		public Section Section
+		{
+			get
+			{
+				return this._Section.Entity;
+			}
+			set
+			{
+				Section previousValue = this._Section.Entity;
+				if (((previousValue != value) 
+							|| (this._Section.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Section.Entity = null;
+						previousValue.Uploaded.Remove(this);
+					}
+					this._Section.Entity = value;
+					if ((value != null))
+					{
+						value.Uploaded.Add(this);
+						this._ID_Section = value.ID_Section;
+					}
+					else
+					{
+						this._ID_Section = default(short);
+					}
+					this.SendPropertyChanged("Section");
 				}
 			}
 		}
@@ -765,9 +988,9 @@ namespace database_layer
 		
 		private short _ID_Semester;
 		
-		private EntitySet<Stu_Sec> _Stu_Sec;
-		
 		private EntitySet<Uploaded> _Uploaded;
+		
+		private EntitySet<Stu_Sec> _Stu_Sec;
 		
 		private EntityRef<Semester> _Semester;
 		
@@ -789,8 +1012,8 @@ namespace database_layer
 		
 		public Section()
 		{
-			this._Stu_Sec = new EntitySet<Stu_Sec>(new Action<Stu_Sec>(this.attach_Stu_Sec), new Action<Stu_Sec>(this.detach_Stu_Sec));
 			this._Uploaded = new EntitySet<Uploaded>(new Action<Uploaded>(this.attach_Uploaded), new Action<Uploaded>(this.detach_Uploaded));
+			this._Stu_Sec = new EntitySet<Stu_Sec>(new Action<Stu_Sec>(this.attach_Stu_Sec), new Action<Stu_Sec>(this.detach_Stu_Sec));
 			this._Semester = default(EntityRef<Semester>);
 			this._Subject = default(EntityRef<Subject>);
 			OnCreated();
@@ -884,19 +1107,6 @@ namespace database_layer
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Section_Stu_Sec", Storage="_Stu_Sec", ThisKey="ID_Section", OtherKey="ID_Section")]
-		public EntitySet<Stu_Sec> Stu_Sec
-		{
-			get
-			{
-				return this._Stu_Sec;
-			}
-			set
-			{
-				this._Stu_Sec.Assign(value);
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Section_Uploaded", Storage="_Uploaded", ThisKey="ID_Section", OtherKey="ID_Section")]
 		public EntitySet<Uploaded> Uploaded
 		{
@@ -907,6 +1117,19 @@ namespace database_layer
 			set
 			{
 				this._Uploaded.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Section_Stu_Sec", Storage="_Stu_Sec", ThisKey="ID_Section", OtherKey="ID_Section")]
+		public EntitySet<Stu_Sec> Stu_Sec
+		{
+			get
+			{
+				return this._Stu_Sec;
+			}
+			set
+			{
+				this._Stu_Sec.Assign(value);
 			}
 		}
 		
@@ -998,18 +1221,6 @@ namespace database_layer
 			}
 		}
 		
-		private void attach_Stu_Sec(Stu_Sec entity)
-		{
-			this.SendPropertyChanging();
-			entity.Section = this;
-		}
-		
-		private void detach_Stu_Sec(Stu_Sec entity)
-		{
-			this.SendPropertyChanging();
-			entity.Section = null;
-		}
-		
 		private void attach_Uploaded(Uploaded entity)
 		{
 			this.SendPropertyChanging();
@@ -1017,6 +1228,18 @@ namespace database_layer
 		}
 		
 		private void detach_Uploaded(Uploaded entity)
+		{
+			this.SendPropertyChanging();
+			entity.Section = null;
+		}
+		
+		private void attach_Stu_Sec(Stu_Sec entity)
+		{
+			this.SendPropertyChanging();
+			entity.Section = this;
+		}
+		
+		private void detach_Stu_Sec(Stu_Sec entity)
 		{
 			this.SendPropertyChanging();
 			entity.Section = null;
@@ -2039,229 +2262,6 @@ namespace database_layer
 		{
 			this.SendPropertyChanging();
 			entity.Subject = null;
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Uploaded")]
-	public partial class Uploaded : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private short _ID_Upl;
-		
-		private string _Name;
-		
-		private string _Description;
-		
-		private System.DateTime _Data;
-		
-		private short _ID_Section;
-		
-		private System.Data.Linq.Binary _Payload;
-		
-		private EntityRef<Section> _Section;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnID_UplChanging(short value);
-    partial void OnID_UplChanged();
-    partial void OnNameChanging(string value);
-    partial void OnNameChanged();
-    partial void OnDescriptionChanging(string value);
-    partial void OnDescriptionChanged();
-    partial void OnDataChanging(System.DateTime value);
-    partial void OnDataChanged();
-    partial void OnID_SectionChanging(short value);
-    partial void OnID_SectionChanged();
-    partial void OnPayloadChanging(System.Data.Linq.Binary value);
-    partial void OnPayloadChanged();
-    #endregion
-		
-		public Uploaded()
-		{
-			this._Section = default(EntityRef<Section>);
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_Upl", DbType="SmallInt NOT NULL", IsPrimaryKey=true)]
-		public short ID_Upl
-		{
-			get
-			{
-				return this._ID_Upl;
-			}
-			set
-			{
-				if ((this._ID_Upl != value))
-				{
-					this.OnID_UplChanging(value);
-					this.SendPropertyChanging();
-					this._ID_Upl = value;
-					this.SendPropertyChanged("ID_Upl");
-					this.OnID_UplChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="NChar(100) NOT NULL", CanBeNull=false)]
-		public string Name
-		{
-			get
-			{
-				return this._Name;
-			}
-			set
-			{
-				if ((this._Name != value))
-				{
-					this.OnNameChanging(value);
-					this.SendPropertyChanging();
-					this._Name = value;
-					this.SendPropertyChanged("Name");
-					this.OnNameChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Description", DbType="NText NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
-		public string Description
-		{
-			get
-			{
-				return this._Description;
-			}
-			set
-			{
-				if ((this._Description != value))
-				{
-					this.OnDescriptionChanging(value);
-					this.SendPropertyChanging();
-					this._Description = value;
-					this.SendPropertyChanged("Description");
-					this.OnDescriptionChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Data", DbType="Date NOT NULL")]
-		public System.DateTime Data
-		{
-			get
-			{
-				return this._Data;
-			}
-			set
-			{
-				if ((this._Data != value))
-				{
-					this.OnDataChanging(value);
-					this.SendPropertyChanging();
-					this._Data = value;
-					this.SendPropertyChanged("Data");
-					this.OnDataChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_Section", DbType="SmallInt NOT NULL")]
-		public short ID_Section
-		{
-			get
-			{
-				return this._ID_Section;
-			}
-			set
-			{
-				if ((this._ID_Section != value))
-				{
-					if (this._Section.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnID_SectionChanging(value);
-					this.SendPropertyChanging();
-					this._ID_Section = value;
-					this.SendPropertyChanged("ID_Section");
-					this.OnID_SectionChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Payload", DbType="VarBinary(MAX) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
-		public System.Data.Linq.Binary Payload
-		{
-			get
-			{
-				return this._Payload;
-			}
-			set
-			{
-				if ((this._Payload != value))
-				{
-					this.OnPayloadChanging(value);
-					this.SendPropertyChanging();
-					this._Payload = value;
-					this.SendPropertyChanged("Payload");
-					this.OnPayloadChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Section_Uploaded", Storage="_Section", ThisKey="ID_Section", OtherKey="ID_Section", IsForeignKey=true)]
-		public Section Section
-		{
-			get
-			{
-				return this._Section.Entity;
-			}
-			set
-			{
-				Section previousValue = this._Section.Entity;
-				if (((previousValue != value) 
-							|| (this._Section.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._Section.Entity = null;
-						previousValue.Uploaded.Remove(this);
-					}
-					this._Section.Entity = value;
-					if ((value != null))
-					{
-						value.Uploaded.Add(this);
-						this._ID_Section = value.ID_Section;
-					}
-					else
-					{
-						this._ID_Section = default(short);
-					}
-					this.SendPropertyChanged("Section");
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
 		}
 	}
 }

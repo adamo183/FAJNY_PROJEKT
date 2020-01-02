@@ -83,8 +83,14 @@
     <Compile Include="SMA_add.xaml.cs">
       <DependentUpon>SMA_add.xaml</DependentUpon>
     </Compile>
-    <Compile Include="SMA_panel.xaml.cs">
-      <DependentUpon>SMA_panel.xaml</DependentUpon>
+    <Compile Include="SMA_Admin.xaml.cs">
+      <DependentUpon>SMA_Admin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SMA_Lecturer.xaml.cs">
+      <DependentUpon>SMA_Lecturer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SMA_Student.xaml.cs">
+      <DependentUpon>SMA_Student.xaml</DependentUpon>
     </Compile>
     <Compile Include="SML_AddPresence.xaml.cs">
       <DependentUpon>SML_AddPresence.xaml</DependentUpon>
@@ -135,7 +141,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="SMA_panel.xaml">
+    <Page Include="SMA_Admin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SMA_Lecturer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SMA_Student.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

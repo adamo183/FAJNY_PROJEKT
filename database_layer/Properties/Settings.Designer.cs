@@ -32,5 +32,15 @@ namespace database_layer.Properties {
                 return ((string)(this["BD_ProjectConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=localhost;Initial Catalog=BD_Project;Integrated Security=True")]
+        public string BD_ProjectConnectionString1 {
+            get {
+                return ((string)(this["BD_ProjectConnectionString1"]));
+            }
+        }
     }
 }
