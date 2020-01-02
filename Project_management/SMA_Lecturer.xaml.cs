@@ -27,9 +27,9 @@ namespace Project_management
         {
             InitializeComponent();
             this.lecturer = lecturer;
-            IQueryable tab_l = MenuLecturerLogic.getSubjectList(lecturer.ID_lecturer);
-            Lecturer_Grid.IsReadOnly = true;
-            Lecturer_Grid.ItemsSource = tab_l;
+            //IQueryable tab_l = MenuLecturerLogic.getSubjectList(lecturer.ID_lecturer);
+            //Lecturer_Grid.IsReadOnly = true;
+            //Lecturer_Grid.ItemsSource = tab_l;
         }
     }
 }
