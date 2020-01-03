@@ -27,7 +27,7 @@ namespace Project_management
         {
             InitializeComponent();
             this.lecturer = lecturer;
-            IEnumerable<MenuLecturerLogic.SubjectInfo> tab_s = MenuLecturerLogic.getSubjectList(lecturer.ID_lecturer);
+            IEnumerable<MenuLecturerLogic.SubjectInfo> tab_s = MenuLecturerLogic.getAllSubjectList(lecturer.ID_lecturer);
             subject_grid.IsReadOnly = true;
             subject_grid.ItemsSource = tab_s;
             //subject_grid
