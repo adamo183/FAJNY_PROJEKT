@@ -16,10 +16,7 @@
             <Button Content="Change password" HorizontalAlignment="Right" Margin="381,99,50,0" VerticalAlignment="Top" Width="114" Grid.Column="4" Height="22"/>
             <Button Content="Deactivate account" Grid.Column="4" HorizontalAlignment="Right" Margin="381,128,50,0" VerticalAlignment="Top" Width="114" Height="22"/>
             <DataGrid Name="AdminGrid" Margin="50,32,0,50" Width="518" HorizontalAlignment="Left">
-                <DataGridTextColumn Binding="{Binding admin_id}" Header="Id" Width="100" />
-                <DataGridTextColumn Binding="{Binding admin_name}" Header="Name" Width="100" />
-                <DataGridTextColumn Binding="{Binding admin_surname}" Header="Surname" Width="100" />
-                <DataGridTextColumn Binding="{Binding active}" Header="Active " Width="100" />
+
             </DataGrid>
         </Grid>
     </Grid>
