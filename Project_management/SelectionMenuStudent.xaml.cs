@@ -11,7 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-
+using database_layer;
+using logic_layer;
 namespace Project_management
 {
     /// <summary>
@@ -19,15 +20,22 @@ namespace Project_management
     /// </summary>
     public partial class SelectionMenuStudent : Window
     {
-        public SelectionMenuStudent()
+
+        public Student student { get; set; }
+        public SelectionMenuStudent(Student stu)
         {
             InitializeComponent();
+            this.student = stu;
+
+            topicGrid.ItemsSource = MenuStudentLogic.getSectionList(student.ID_Album);
+
         }
 
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-         
+            var i = (MenuLecturerLogic.SectionDisplay)topicGrid.SelectedItem;
+            MessageBox.Show(i.Topic.ToString());
         }
     }
 }

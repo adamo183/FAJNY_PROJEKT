@@ -47,7 +47,7 @@ namespace Project_management
                 int id;
          
                 bool access = Login.login(login_text.Text, password_text.Password,out role,out id);
-               role =  role.Trim(' ');
+                role =  role.Trim(' ');
                 if (access)
                 {
 
@@ -59,7 +59,8 @@ namespace Project_management
                     }
                    else if (role == "student")
                     {
-                        SelectionMenuStudent student_window = new SelectionMenuStudent();
+                        Student stu = MenuStudentLogic.getStudentInfo(id);                     
+                        SelectionMenuStudent student_window = new SelectionMenuStudent(stu);
                         student_window.Show();
                     }
                    else if(role == "lecturer")
@@ -100,9 +101,9 @@ namespace Project_management
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            SelectionMenuStudent SelectionMenuStudent_Window = new SelectionMenuStudent();
-            this.Visibility = Visibility.Hidden;
-            SelectionMenuStudent_Window.Show();
+           // SelectionMenuStudent SelectionMenuStudent_Window = new SelectionMenuStudent(stu);
+          //  this.Visibility = Visibility.Hidden;
+           // SelectionMenuStudent_Window.Show();
         }
         protected override void OnClosed(EventArgs e)
         {

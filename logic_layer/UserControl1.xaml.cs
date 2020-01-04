@@ -125,6 +125,37 @@ namespace logic_layer
         public string fieldofstudy { get; set; }
         public string yearofstudy { get; set; }
     }
+
+   
+
+    public class MenuStudentLogic
+    {
+        public static IQueryable<MenuLecturerLogic.SectionDisplay> getSectionList(int id_student)
+        {
+            DataClassesDataContext context = new DataClassesDataContext();
+            var q = (from i in context.Stu_Sem where i.ID_Album == id_student select i.ID_Semester).FirstOrDefault();
+            var sec_list = (from k in context.Section where k.ID_Semester == q select new MenuLecturerLogic.SectionDisplay() {ID_sekcji = k.ID_Section , Topic = k.Subject.Name,Max_User=k.Max_user });
+           
+            return sec_list;
+        }
+        public static Student getStudentInfo(int id)
+        {
+            DataClassesDataContext context = new DataClassesDataContext();
+            var q = (from i in context.Student where i.ID_Album == id select i);
+
+            Student student = new Student();
+            student.ID_Album = q.First().ID_Album;
+            student.Name = q.First().Name;
+            student.Surname = q.First().Surname;
+
+
+
+            return student;
+        }
+    }
+
+
+
     public class MenuLecturerLogic
     {
 
@@ -177,12 +208,16 @@ namespace logic_layer
         public static IEnumerable<SubjectInfo> getSubjectList(int id_l)
         {
             DataClassesDataContext context = new DataClassesDataContext();
-            var sub_t = (from s in context.Subject where s.ID_Lecturer.Equals(id_l) select new SubjectInfo() {Id = s.ID_Subject,Name = s.Name,Description = s.Description.Trim(),Status = s.Status });
+            var sub_t = (from s in context.Subject where s.ID_Lecturer.Equals(id_l) && s.Status.Equals(1) select new SubjectInfo() {Id = s.ID_Subject,Name = s.Name,Description = s.Description.Trim(),Status = s.Status });
     
-
-
-
             return sub_t;  
+        }
+        public static IEnumerable<SubjectInfo> getAllSubjectList(int id_l)
+        {
+            DataClassesDataContext context = new DataClassesDataContext();
+            var sub_t = (from s in context.Subject where s.ID_Lecturer.Equals(id_l)  select new SubjectInfo() { Id = s.ID_Subject, Name = s.Name, Description = s.Description.Trim(), Status = s.Status });
+
+            return sub_t;
         }
         public static bool addSubject(Subject s1)
         {
@@ -232,12 +267,13 @@ namespace logic_layer
             public int Id { get; set; }
             public string Name { get; set; }
             public string Surname { get; set; }
+            public short Mark { get; set; }
         }
         public static IEnumerable<StudentDisplay> getStudentInSection(int sec_id)
         {
             DataClassesDataContext context = new DataClassesDataContext();
-            var sis = (from f in context.Stu_Sec where f.ID_Section == sec_id select new {f.Student.ID_Album, f.Student.Name, f.Student.Surname }).AsEnumerable().Select(x => new StudentDisplay() {Id = x.ID_Album,Name = x.Name,Surname = x.Surname }); 
-
+            var sis = (from f in context.Stu_Sec where f.ID_Section == sec_id select new {f.Student.ID_Album, f.Student.Name, f.Student.Surname,f.Mark }).AsEnumerable().Select(x => new StudentDisplay() {Id = x.ID_Album,Name = x.Name,Surname = x.Surname ,Mark = (short)x.Mark }); 
+            
             return sis;
         }
         public static void addSection(database_layer.Section sec)
@@ -247,14 +283,40 @@ namespace logic_layer
             context.SubmitChanges();
         }
 
-        public static IEnumerable<Stu_Sem> getFreeStudentInSem(Semester sem)
+        public static IEnumerable<StudentDisplay> getFreeStudentInSem(Semester sem)
         {
             DataClassesDataContext context = new DataClassesDataContext();
-            var freeStu = from s in context.Stu_Sem where !(from s2 in context.Stu_Sec select s2.ID_Album).Contains(s.ID_Album) select s;
+            var freeStu = (from s in context.Stu_Sem where !(from s2 in context.Stu_Sec select s2.ID_Album).Contains(s.ID_Album) && (s.ID_Semester == sem.ID_Semester) select new { s.Student.ID_Album, s.Student.Name, s.Student.Surname }).AsEnumerable().Select(x=>new StudentDisplay() {Id = x.ID_Album, Name = x.Name,Surname = x.Surname});
 
 
             return freeStu;
         }
-    }
 
+        public static void addDegree(List<MenuLecturerLogic.StudentDisplay> stud_list,int degree)
+        {
+            
+            DataClassesDataContext context = new DataClassesDataContext();
+            (from i in context.Stu_Sec where (stud_list.Select(x => x.Id)).Contains(i.ID_Album) select i).ToList().ForEach( S => S.Mark = (short)degree);
+
+            context.SubmitChanges();
+            
+        }
+        public static void removeStudents(List<MenuLecturerLogic.StudentDisplay> stud_list)
+        {
+            DataClassesDataContext context = new DataClassesDataContext();
+            var q = from i in context.Stu_Sec where (stud_list.Select(x => x.Id)).Contains(i.ID_Album) select i;
+            foreach(var i in q)
+            {
+                context.Stu_Sec.DeleteOnSubmit(i);
+            }
+            context.SubmitChanges();
+        }
+
+        public static void getSectionsWithCondition(int id_sem,string topic,bool NonFull)
+        {
+            DataClassesDataContext context = new DataClassesDataContext();
+            var s = (from f in context.Section where f.ID_Semester == id_sem select new SectionDisplay() { ID_sekcji = f.ID_Section, Max_User = f.Max_user, Topic = f.Subject.Name });
+        }
+    }
+            
 }
