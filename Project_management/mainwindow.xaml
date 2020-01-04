@@ -36,9 +36,6 @@
         </Button>
         <Label x:Name="Label" Content="Hello!" Grid.Column="4" HorizontalAlignment="Left" Margin="136,40,0,0" VerticalAlignment="Top" Height="68" Width="264" FontSize="40" Grid.IsSharedSizeScope="True" FontFamily="Rockwell Nova"/>
         <Image Grid.Column="5" HorizontalAlignment="Left" Height="100" Margin="207,196,-201,0" VerticalAlignment="Top" Width="100"/>
-        <Button Grid.ColumnSpan="2" Content="Do prowadzących" Grid.Column="4" HorizontalAlignment="Left" Margin="458,158,0,0" VerticalAlignment="Top" Width="116" Click="DoProwadzacych"/>
-        <Button Content="Do admina" Grid.Column="4" HorizontalAlignment="Left" Margin="458,224,0,0" VerticalAlignment="Top" Width="116" Grid.ColumnSpan="2" Click="Button_Click"/>
-        <Button Grid.ColumnSpan="2" Content="Do studenta" Grid.Column="4" HorizontalAlignment="Left" Margin="458,281,0,0" VerticalAlignment="Top" Width="116" Click="Button_Click_1"/>
         <PasswordBox Grid.Column="4" HorizontalAlignment="Left" Margin="33.4,224,0,0" VerticalAlignment="Top" Width="352" Height="26" Name ="password_text"/>
     </Grid>
 </Window>

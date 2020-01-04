@@ -18,12 +18,10 @@
         <DataGrid HorizontalAlignment="Left" Name="StuSecGrid" Height="194" Margin="44,316,0,0" VerticalAlignment="Top" Width="440" Grid.RowSpan="2" SelectionChanged="DataGrid_SelectionChanged"/>
         <Label Content="Students in section:" HorizontalAlignment="Left" Margin="200,285,0,0" Grid.RowSpan="2" VerticalAlignment="Top"/>
         <Label Content="Sections" HorizontalAlignment="Left" Margin="229,10,0,0" Grid.RowSpan="2" VerticalAlignment="Top"/>
-        <Label Content="Section ID:" HorizontalAlignment="Left" Margin="588,42,0,0" Grid.RowSpan="2" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="26" Margin="702,42,0,0" Grid.RowSpan="2" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="90"/>
-        <CheckBox Content="Non-full sections" HorizontalAlignment="Left" Margin="702,136,0,0" Grid.RowSpan="2" VerticalAlignment="Top"/>
+        <CheckBox Content="Non-full sections" Name="NonFullField" HorizontalAlignment="Left" Margin="702,104,0,0" Grid.RowSpan="2" VerticalAlignment="Top"/>
         <Label Content="Section topic:" HorizontalAlignment="Left" Margin="588,73,0,0" Grid.RowSpan="2" VerticalAlignment="Top" RenderTransformOrigin="0.549,-0.746"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="702,76,0,0" Grid.RowSpan="2" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="90"/>
-        <Button Content="Find" HorizontalAlignment="Left" Height="24" Margin="665,172,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="85"/>
+        <TextBox HorizontalAlignment="Left" Name="SecTopField" Height="23" Margin="702,76,0,0" Grid.RowSpan="2" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="90"/>
+        <Button Content="Find" HorizontalAlignment="Left" Height="24" Margin="665,138,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="85" Click="Button_Click_6"/>
         <Button Content="Add presence" HorizontalAlignment="Left" Height="31" Margin="573,328,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="200" Click="Button_Click_4"/>
         <Button Content="Show presence" HorizontalAlignment="Left" Margin="778,328,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="177" RenderTransformOrigin="0.42,0.167" Height="31" Click="Button_Click_3"/>
         <Button Content="Remove student" HorizontalAlignment="Left" Margin="573,364,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="200" Height="31" Click="Button_Click_5"/>

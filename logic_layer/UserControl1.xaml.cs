@@ -125,6 +125,37 @@ namespace logic_layer
         public string fieldofstudy { get; set; }
         public string yearofstudy { get; set; }
     }
+
+   
+
+    public class MenuStudentLogic
+    {
+        public static IQueryable<MenuLecturerLogic.SectionDisplay> getSectionList(int id_student)
+        {
+            DataClassesDataContext context = new DataClassesDataContext();
+            var q = (from i in context.Stu_Sem where i.ID_Album == id_student select i.ID_Semester).FirstOrDefault();
+            var sec_list = (from k in context.Section where k.ID_Semester == q select new MenuLecturerLogic.SectionDisplay() {ID_sekcji = k.ID_Section , Topic = k.Subject.Name,Max_User=k.Max_user });
+           
+            return sec_list;
+        }
+        public static Student getStudentInfo(int id)
+        {
+            DataClassesDataContext context = new DataClassesDataContext();
+            var q = (from i in context.Student where i.ID_Album == id select i);
+
+            Student student = new Student();
+            student.ID_Album = q.First().ID_Album;
+            student.Name = q.First().Name;
+            student.Surname = q.First().Surname;
+
+
+
+            return student;
+        }
+    }
+
+
+
     public class MenuLecturerLogic
     {
 
@@ -280,6 +311,12 @@ namespace logic_layer
             }
             context.SubmitChanges();
         }
-    }
 
+        public static void getSectionsWithCondition(int id_sem,string topic,bool NonFull)
+        {
+            DataClassesDataContext context = new DataClassesDataContext();
+            var s = (from f in context.Section where f.ID_Semester == id_sem select new SectionDisplay() { ID_sekcji = f.ID_Section, Max_User = f.Max_user, Topic = f.Subject.Name });
+        }
+    }
+            
 }

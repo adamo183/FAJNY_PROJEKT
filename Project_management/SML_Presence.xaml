@@ -8,7 +8,6 @@
         Title="SML_Presence" Height="450" Width="800">
     <Grid>
         <DataGrid HorizontalAlignment="Left" Height="353" Margin="41,32,0,0" VerticalAlignment="Top" Width="701"/>
-        <Button Content="Button" HorizontalAlignment="Left" Height="100" Margin="555,487,0,-167" VerticalAlignment="Top" Width="75"/>
 
     </Grid>
 </Window>

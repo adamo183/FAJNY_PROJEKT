@@ -95,7 +95,23 @@ namespace Project_management
 
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
-            SML_AddPresence addpresence_windows = new SML_AddPresence();
+            var selected_student = StuSecGrid.SelectedItems;
+            List<MenuLecturerLogic.StudentDisplay> stud_list = new List<MenuLecturerLogic.StudentDisplay>();
+
+            foreach (var i in selected_student)
+            {
+                var single_stud = (MenuLecturerLogic.StudentDisplay)i;
+                stud_list.Add(single_stud);
+            }
+            if (selected_student.Count == 0)
+            {
+                MessageBox.Show("Wybierz studentów");
+                return;
+            }
+
+
+
+            SML_AddPresence addpresence_windows = new SML_AddPresence(stud_list);
             addpresence_windows.Show();
         }
 
@@ -132,6 +148,15 @@ namespace Project_management
                 return;
             }
             MenuLecturerLogic.removeStudents(stud_list);
+        }
+
+        private void Button_Click_6(object sender, RoutedEventArgs e)
+        {
+            string topic_field = SecTopField.Text;
+            bool nonFull_field = (bool)NonFullField.IsChecked;
+            MenuLecturerLogic.getSectionsWithCondition(semestr.ID_Semester, topic_field, nonFull_field);
+
+
         }
     }
 }
