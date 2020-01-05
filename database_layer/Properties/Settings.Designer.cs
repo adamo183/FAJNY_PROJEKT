@@ -42,5 +42,16 @@ namespace database_layer.Properties {
                 return ((string)(this["BD_ProjectConnectionString1"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=bdproject.database.windows.net;Initial Catalog=BD_Project;Persist Sec" +
+            "urity Info=True;User ID=visual;Password=Q@wertyuiop")]
+        public string BD_ProjectConnectionString2 {
+            get {
+                return ((string)(this["BD_ProjectConnectionString2"]));
+            }
+        }
     }
 }
