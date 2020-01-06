@@ -64,7 +64,7 @@ namespace Project_management
                 s++;
             }
             context.SubmitChanges();
-            
+            this.Close();
         }
     }
 }
