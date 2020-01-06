@@ -63,7 +63,7 @@ namespace database_layer
     #endregion
 		
 		public DataClassesDataContext() : 
-				base(global::database_layer.Properties.Settings.Default.BD_ProjectConnectionString1, mappingSource)
+				base(global::database_layer.Properties.Settings.Default.BD_ProjectConnectionString2, mappingSource)
 		{
 			OnCreated();
 		}
@@ -554,8 +554,6 @@ namespace database_layer
 		
 		private bool _active;
 		
-		private EntitySet<Subject> _Subject;
-		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -574,7 +572,6 @@ namespace database_layer
 		
 		public Lecturer()
 		{
-			this._Subject = new EntitySet<Subject>(new Action<Subject>(this.attach_Subject), new Action<Subject>(this.detach_Subject));
 			OnCreated();
 		}
 		
@@ -678,19 +675,6 @@ namespace database_layer
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Lecturer_Subject", Storage="_Subject", ThisKey="ID_lecturer", OtherKey="ID_Lecturer")]
-		public EntitySet<Subject> Subject
-		{
-			get
-			{
-				return this._Subject;
-			}
-			set
-			{
-				this._Subject.Assign(value);
-			}
-		}
-		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -709,18 +693,6 @@ namespace database_layer
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
-		}
-		
-		private void attach_Subject(Subject entity)
-		{
-			this.SendPropertyChanging();
-			entity.Lecturer = this;
-		}
-		
-		private void detach_Subject(Subject entity)
-		{
-			this.SendPropertyChanging();
-			entity.Lecturer = null;
 		}
 	}
 	
@@ -1454,7 +1426,7 @@ namespace database_layer
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_Stu_Sek", DbType="SmallInt NOT NULL", IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_Stu_Sek", AutoSync=AutoSync.OnInsert, DbType="SmallInt NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public short ID_Stu_Sek
 		{
 			get
@@ -2052,11 +2024,9 @@ namespace database_layer
 		
 		private short _ID_Lecturer;
 		
-		private bool _Status;
+		private System.Nullable<bool> _Status;
 		
 		private EntitySet<Section> _Section;
-		
-		private EntityRef<Lecturer> _Lecturer;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -2070,18 +2040,17 @@ namespace database_layer
     partial void OnDescriptionChanged();
     partial void OnID_LecturerChanging(short value);
     partial void OnID_LecturerChanged();
-    partial void OnStatusChanging(bool value);
+    partial void OnStatusChanging(System.Nullable<bool> value);
     partial void OnStatusChanged();
     #endregion
 		
 		public Subject()
 		{
 			this._Section = new EntitySet<Section>(new Action<Section>(this.attach_Section), new Action<Section>(this.detach_Section));
-			this._Lecturer = default(EntityRef<Lecturer>);
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_Subject", DbType="SmallInt NOT NULL", IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_Subject", AutoSync=AutoSync.OnInsert, DbType="SmallInt NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public short ID_Subject
 		{
 			get
@@ -2152,10 +2121,6 @@ namespace database_layer
 			{
 				if ((this._ID_Lecturer != value))
 				{
-					if (this._Lecturer.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
 					this.OnID_LecturerChanging(value);
 					this.SendPropertyChanging();
 					this._ID_Lecturer = value;
@@ -2165,8 +2130,8 @@ namespace database_layer
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Status", DbType="Bit NOT NULL")]
-		public bool Status
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Status", DbType="Bit")]
+		public System.Nullable<bool> Status
 		{
 			get
 			{
@@ -2195,40 +2160,6 @@ namespace database_layer
 			set
 			{
 				this._Section.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Lecturer_Subject", Storage="_Lecturer", ThisKey="ID_Lecturer", OtherKey="ID_lecturer", IsForeignKey=true)]
-		public Lecturer Lecturer
-		{
-			get
-			{
-				return this._Lecturer.Entity;
-			}
-			set
-			{
-				Lecturer previousValue = this._Lecturer.Entity;
-				if (((previousValue != value) 
-							|| (this._Lecturer.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._Lecturer.Entity = null;
-						previousValue.Subject.Remove(this);
-					}
-					this._Lecturer.Entity = value;
-					if ((value != null))
-					{
-						value.Subject.Add(this);
-						this._ID_Lecturer = value.ID_lecturer;
-					}
-					else
-					{
-						this._ID_Lecturer = default(short);
-					}
-					this.SendPropertyChanged("Lecturer");
-				}
 			}
 		}
 		

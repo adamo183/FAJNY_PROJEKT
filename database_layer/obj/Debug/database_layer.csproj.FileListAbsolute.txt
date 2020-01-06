@@ -23,3 +23,4 @@ C:\Users\Norman\Source\Repos\FAJNY_PROJEKT\database_layer\obj\Debug\database_lay
 C:\Users\Norman\Source\Repos\FAJNY_PROJEKT\database_layer\obj\Debug\database_layer.csproj.GenerateResource.cache
 C:\Users\Norman\Source\Repos\FAJNY_PROJEKT\database_layer\obj\Debug\database_layer.dll
 C:\Users\Norman\Source\Repos\FAJNY_PROJEKT\database_layer\obj\Debug\database_layer.pdb
+C:\Users\Norman\Source\Repos\FAJNY_PROJEKT\database_layer\obj\Debug\database_layer.csprojAssemblyReference.cache
