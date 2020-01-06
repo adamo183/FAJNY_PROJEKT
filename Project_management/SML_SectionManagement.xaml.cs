@@ -31,7 +31,7 @@ namespace Project_management
             this.lecturer = lecturer;
             this.semestr = sem;
             sectionsgrid.IsReadOnly = true;
-            sectionsgrid.ItemsSource = MenuLecturerLogic.getSectionsWithCondition(sem.ID_Semester,lecturer.ID_lecturer,"",false);
+            sectionsgrid.ItemsSource = MenuLecturerLogic.getSection(sem.ID_Semester);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -89,18 +89,7 @@ namespace Project_management
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
-
-            var selected_sec = sectionsgrid.SelectedItem;
- 
-            if (selected_sec == null)
-            {
-                MessageBox.Show("Wybierz poprawną liczbę sekcji");
-                return;
-            }
-           int id_sec = ((MenuLecturerLogic.SectionDisplay)selected_sec).ID_sekcji;
-           
-            SML_Presence precence_window = new SML_Presence(id_sec);
-
+            SML_Presence precence_window = new SML_Presence();
             precence_window.Show();
         }
 
@@ -129,17 +118,11 @@ namespace Project_management
         private void sectionsgrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             var select_row = (MenuLecturerLogic.SectionDisplay)sectionsgrid.SelectedItem;
-            if (select_row == null)
-            {
-                return;
-            }
-            else
-            {
-                int seleted_secId = select_row.ID_sekcji;
-                max_user = select_row.Max_User;
-                var tab_source = MenuLecturerLogic.getStudentInSection(seleted_secId);
-                StuSecGrid.ItemsSource = tab_source;
-            }
+            int seleted_secId = select_row.ID_sekcji;
+            max_user = select_row.Max_User;
+            var tab_source = MenuLecturerLogic.getStudentInSection(seleted_secId);
+            StuSecGrid.ItemsSource = tab_source;
+
 
         }
 
@@ -171,8 +154,8 @@ namespace Project_management
         {
             string topic_field = SecTopField.Text;
             bool nonFull_field = (bool)NonFullField.IsChecked;
-           var tab =  MenuLecturerLogic.getSectionsWithCondition(semestr.ID_Semester,lecturer.ID_lecturer, topic_field, nonFull_field);
-            sectionsgrid.ItemsSource = tab;
+            MenuLecturerLogic.getSectionsWithCondition(semestr.ID_Semester, topic_field, nonFull_field);
+
 
         }
     }

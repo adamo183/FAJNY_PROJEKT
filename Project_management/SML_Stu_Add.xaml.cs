@@ -32,7 +32,7 @@ namespace Project_management
             this.semester = sems;
             this.selected_sec = selected_sec;
             free_space = selected_sec.Max_User - studentinsecnumber;
-            StudentGrid.ItemsSource = MenuLecturerLogic.getFreeStudentInSem(semester,selected_sec.ID_sekcji);
+            StudentGrid.ItemsSource = MenuLecturerLogic.getFreeStudentInSem(semester);
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -56,15 +56,15 @@ namespace Project_management
             }
             else if (Name_con.Length != 0 && Surname_con.Length == 0)
             {
-                StudentGrid.ItemsSource = MenuLecturerLogic.getFreeStudentInSem(semester, selected_sec.ID_sekcji).Where(x=>x.Name.Trim() == Name_con.Trim());
+                StudentGrid.ItemsSource = MenuLecturerLogic.getFreeStudentInSem(semester).Where(x=>x.Name.Trim() == Name_con.Trim());
             }
             else if (Surname_con.Length != 0 && Name_con.Length == 0)
             {
-                StudentGrid.ItemsSource = MenuLecturerLogic.getFreeStudentInSem(semester, selected_sec.ID_sekcji).Where(x=>x.Surname.Trim() == Surname_con.Trim());
+                StudentGrid.ItemsSource = MenuLecturerLogic.getFreeStudentInSem(semester).Where(x=>x.Surname.Trim() == Surname_con.Trim());
             }
             else if (Surname_con.Length != 0 && Name_con.Length != 0)
             {
-                StudentGrid.ItemsSource = MenuLecturerLogic.getFreeStudentInSem(semester, selected_sec.ID_sekcji).Where(x=>x.Surname.Trim() == Surname_con.Trim() && x.Name.Trim() == Name_con.Trim());
+                StudentGrid.ItemsSource = MenuLecturerLogic.getFreeStudentInSem(semester).Where(x=>x.Surname.Trim() == Surname_con.Trim() && x.Name.Trim() == Name_con.Trim());
             }
             else
                 MessageBox.Show("Samfing is not yes :(");
