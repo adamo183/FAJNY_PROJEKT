@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="BD_Project" Class="DataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=localhost;Initial Catalog=BD_Project;Integrated Security=True" SettingsObjectName="database_layer.Properties.Settings" SettingsPropertyName="BD_ProjectConnectionString1" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=bdproject.database.windows.net;Initial Catalog=BD_Project;Persist Security Info=True;User ID=visual" SettingsObjectName="database_layer.Properties.Settings" SettingsPropertyName="BD_ProjectConnectionString2" Provider="System.Data.SqlClient" />
   <Table Name="dbo.admin_tab" Member="admin_tab">
     <Type Name="admin_tab">
       <Column Name="admin_id" Type="System.Int16" DbType="SmallInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -26,7 +26,6 @@
       <Column Name="Name" Type="System.String" DbType="NChar(20) NOT NULL" CanBeNull="false" />
       <Column Name="Degree" Type="System.String" DbType="NChar(255) NOT NULL" CanBeNull="false" />
       <Column Name="active" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
-      <Association Name="Lecturer_Subject" Member="Subject" ThisKey="ID_lecturer" OtherKey="ID_Lecturer" Type="Subject" />
     </Type>
   </Table>
   <Table Name="dbo.login_tab" Member="login_tab">
@@ -69,7 +68,7 @@
   </Table>
   <Table Name="dbo.Stu_Sec" Member="Stu_Sec">
     <Type Name="Stu_Sec">
-      <Column Name="ID_Stu_Sek" Type="System.Int16" DbType="SmallInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ID_Stu_Sek" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="Mark" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
       <Column Name="ID_Album" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="ID_Section" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
@@ -99,13 +98,12 @@
   </Table>
   <Table Name="dbo.Subject" Member="Subject">
     <Type Name="Subject">
-      <Column Name="ID_Subject" Type="System.Int16" DbType="SmallInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ID_Subject" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="Name" Type="System.String" DbType="NChar(40) NOT NULL" CanBeNull="false" />
       <Column Name="Description" Type="System.String" DbType="Char(2000) NOT NULL" CanBeNull="false" />
       <Column Name="ID_Lecturer" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
-      <Column Name="Status" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
       <Association Name="Subject_Section" Member="Section" ThisKey="ID_Subject" OtherKey="ID_Subject" Type="Section" />
-      <Association Name="Lecturer_Subject" Member="Lecturer" ThisKey="ID_Lecturer" OtherKey="ID_lecturer" Type="Lecturer" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>
