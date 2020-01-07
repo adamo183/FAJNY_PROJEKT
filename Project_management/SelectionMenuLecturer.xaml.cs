@@ -80,9 +80,9 @@ namespace Project_management
 
         private void SML_Presence_button(object sender, RoutedEventArgs e)
         {
-            SML_Presence SML_Presence_window = new SML_Presence();
+            //SML_Presence SML_Presence_window = new SML_Presence();
             //this.Visibility = Visibility.Hidden;
-            SML_Presence_window.Show();
+           // SML_Presence_window.Show();
         }
 
         private void ComboBox_SelectionChanged()
