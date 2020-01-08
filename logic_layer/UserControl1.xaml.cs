@@ -118,6 +118,7 @@ namespace logic_layer
         }
     }
 
+    
 
     public class SemsestrInfo
     {
@@ -126,7 +127,36 @@ namespace logic_layer
         public string yearofstudy { get; set; }
     }
 
+    public class MenuAdminLogic
+    {
+        public static void addAdmin(string name,string surname,string login,string pass)
+        {
 
+        }
+        public static IQueryable<admin_tab>  getAdminList()
+        {
+            DataClassesDataContext context = new DataClassesDataContext();
+            var q = (from i in context.admin_tab select i);
+         
+            return q;
+        }
+
+        public static IQueryable<Lecturer> getLecturerList()
+        {
+            DataClassesDataContext context = new DataClassesDataContext();
+            var q = (from i in context.Lecturer select i);
+            return q;
+        }
+
+        public static IQueryable<Student> getStudentList()
+        {
+            DataClassesDataContext context = new DataClassesDataContext();
+            var q = (from i in context.Student select i);
+            return q;
+
+        }
+
+    }
 
     public class MenuStudentLogic
     {
@@ -149,7 +179,7 @@ namespace logic_layer
             context.ExecuteCommand("SET IDENTITY_INSERT Stu_Sec ON");
             int last_ID = context.Stu_Sec.OrderByDescending(x => x.ID_Stu_Sek).FirstOrDefault().ID_Stu_Sek + 1;
             Stu_Sec newStuInSec = new Stu_Sec();
-            newStuInSec.ID_Album = id_stud;
+            newStuInSec.ID_Album = (short)id_stud;
             newStuInSec.ID_Section = (short)id_sek;
             newStuInSec.ID_Stu_Sek = (short)last_ID;
             newStuInSec.Mark = 0;
@@ -240,14 +270,14 @@ namespace logic_layer
                               Name = l.Name,
                               Surname = l.Surname,
                               Degree = l.Degree,
-                              active = l.active
+                              
                           }).AsEnumerable().Select(x => new Lecturer
                           {
                               ID_lecturer = x.ID_lecturer,
                               Name = x.Name,
                               Surname = x.Surname,
                               Degree = x.Degree,
-                              active = x.active
+                              
                           }).ToList();
 
 
@@ -269,14 +299,14 @@ namespace logic_layer
         public static IEnumerable<SubjectInfo> getSubjectList(int id_l)
         {
             DataClassesDataContext context = new DataClassesDataContext();
-            var sub_t = (from s in context.Subject where s.ID_Lecturer.Equals(id_l) && s.Status.Equals(1) select new SubjectInfo() { Id = s.ID_Subject, Name = s.Name, Description = s.Description.Trim(), Status = s.Status });
+            var sub_t = (from s in context.Subject where s.ID_Lecturer.Equals(id_l) && s.Status.Equals(1) select new SubjectInfo() { Id = s.ID_Subject, Name = s.Name, Description = s.Description.Trim(), Status = (bool)s.Status });
 
             return sub_t;
         }
         public static IEnumerable<SubjectInfo> getAllSubjectList(int id_l)
         {
             DataClassesDataContext context = new DataClassesDataContext();
-            var sub_t = (from s in context.Subject where s.ID_Lecturer.Equals(id_l) select new SubjectInfo() { Id = s.ID_Subject, Name = s.Name, Description = s.Description.Trim(), Status = s.Status });
+            var sub_t = (from s in context.Subject where s.ID_Lecturer.Equals(id_l) select new SubjectInfo() { Id = s.ID_Subject, Name = s.Name, Description = s.Description.Trim(), Status = (bool)s.Status });
 
             return sub_t;
         }

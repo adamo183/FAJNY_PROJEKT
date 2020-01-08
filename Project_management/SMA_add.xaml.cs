@@ -19,9 +19,29 @@ namespace Project_management
     /// </summary>
     public partial class SMA_add : Window
     {
-        public SMA_add()
+        public int mode;
+        public SMA_add(int mode)
         {
             InitializeComponent();
+            this.mode = mode;
+            if(mode==1)
+            {
+                Degree_label.Visibility = Visibility.Hidden;
+                Degree_choose.Visibility = Visibility.Hidden;
+                Sem_label.Visibility = Visibility.Hidden;
+                Sem_choose.Visibility = Visibility.Hidden;
+            }
+            else if(mode==2)
+            {
+                Sem_label.Visibility = Visibility.Hidden;
+                Sem_choose.Visibility = Visibility.Hidden;
+
+            }
+            else if(mode ==3 )
+            {
+                Degree_label.Visibility = Visibility.Hidden;
+                Degree_choose.Visibility = Visibility.Hidden;
+            }
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -36,6 +56,24 @@ namespace Project_management
 
         private void TextBox_TextChanged_2(object sender, TextChangedEventArgs e)
         {
+
+        }
+
+        private void Degree_choose_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            string name = Name_field.Text.Trim();
+            string surname = Surname_field.Text.Trim();
+            string login = Login_field.Text.Trim();
+            string pass = Pass_Field.Text.Trim();
+            if(mode == 2)
+            {
+
+            }
 
         }
     }

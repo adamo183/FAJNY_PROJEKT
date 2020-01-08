@@ -12,6 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using database_layer;
+using logic_layer;
+
 
 namespace Project_management
 {
@@ -23,6 +26,7 @@ namespace Project_management
         public SMA_Admin()
         {
             InitializeComponent();
+            AdminGrid.ItemsSource = MenuAdminLogic.getAdminList();
         }
 
         private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -30,6 +34,10 @@ namespace Project_management
 
         }
 
-
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            SMA_add add_wind = new SMA_add(1);
+            add_wind.Show();
+        }
     }
 }

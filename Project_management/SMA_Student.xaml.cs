@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using database_layer;
+using logic_layer;
 
 namespace Project_management
 {
@@ -23,6 +25,18 @@ namespace Project_management
         public SMA_Student()
         {
             InitializeComponent();
+            StudentGrid.ItemsSource = MenuAdminLogic.getStudentList();
+        }
+
+        private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            SMA_add add_wind = new SMA_add(3);
+            add_wind.Show();
         }
     }
 }

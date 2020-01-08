@@ -95,7 +95,7 @@ namespace Project_management
             foreach(var i in selected_student)
             {
                 var atcStd = (MenuLecturerLogic.StudentDisplay)i;
-                list.Add(new Stu_Sec() { ID_Stu_Sek = (short)last_ID, Mark = 0, ID_Album = atcStd.Id,ID_Section = (short)selected_sec.ID_sekcji });
+                list.Add(new Stu_Sec() { ID_Stu_Sek = (short)last_ID, Mark = 0, ID_Album = (short)atcStd.Id,ID_Section = (short)selected_sec.ID_sekcji });
                 last_ID++;
                 context.Stu_Sec.InsertOnSubmit(list.ElementAt(list_nr));
                 list_nr++;

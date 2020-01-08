@@ -26,10 +26,15 @@ namespace Project_management
         public SMA_Lecturer()
         {
             InitializeComponent();
-            this.lecturer = lecturer;
-            IEnumerable<MenuLecturerLogic.SubjectInfo> tab_l = MenuLecturerLogic.getSubjectList(lecturer.ID_lecturer);
-            Lecturer_Grid.IsReadOnly = true;
-            Lecturer_Grid.ItemsSource = tab_l;
+            Lecturer_Grid.ItemsSource = MenuAdminLogic.getLecturerList(); 
+        
+            
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            SMA_add add_wind = new SMA_add(2);
+            add_wind.Show();
         }
     }
 }
