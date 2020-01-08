@@ -130,6 +130,61 @@ namespace logic_layer
 
     public class MenuStudentLogic
     {
+        public static void removeStudFromSec(int id_stud)
+        {
+            DataClassesDataContext context = new DataClassesDataContext();
+            var q = (from i in context.Presence where i.Stu_Sec.ID_Album == id_stud select i);
+            foreach(var i in q)
+                context.Presence.DeleteOnSubmit(i);
+
+            var s = (from i in context.Stu_Sec where i.ID_Album == id_stud select i);
+            foreach (var i in s)
+                context.Stu_Sec.DeleteOnSubmit(i);
+
+        }
+        public static void addStudentToSec(int id_sek,int id_stud)
+        {
+            DataClassesDataContext context = new DataClassesDataContext();
+            context.Connection.Open();
+            context.ExecuteCommand("SET IDENTITY_INSERT Stu_Sec ON");
+            int last_ID = context.Stu_Sec.OrderByDescending(x => x.ID_Stu_Sek).FirstOrDefault().ID_Stu_Sek + 1;
+            Stu_Sec newStuInSec = new Stu_Sec();
+            newStuInSec.ID_Album = id_stud;
+            newStuInSec.ID_Section = (short)id_sek;
+            newStuInSec.ID_Stu_Sek = (short)last_ID;
+            newStuInSec.Mark = 0;
+            context.Stu_Sec.InsertOnSubmit(newStuInSec);
+            context.SubmitChanges();
+            context.ExecuteCommand("SET IDENTITY_INSERT Stu_Sec OFF");
+
+        }
+
+        public static bool isStudentinSec(int id_student)
+        {
+            DataClassesDataContext context = new DataClassesDataContext();
+            var q = (from i in context.Stu_Sec where i.ID_Album == id_student select i);
+            if (q.Any())
+                return true;
+            else
+                return false;
+
+        }
+        public static IQueryable<MenuLecturerLogic.SectionDisplay> getSectionWithCondition(int id_sem,string name)
+        {
+            DataClassesDataContext context = new DataClassesDataContext();
+
+            if (name.Length != 0)
+            {
+                var q = (from i in context.Section where i.ID_Semester == id_sem && i.Subject.Name.Contains(name) select new MenuLecturerLogic.SectionDisplay() { ID_sekcji = i.ID_Section, Max_User = i.Max_user, Topic = i.Subject.Name.Trim() });
+                return q;
+            }
+            else
+            {
+                var q = (from i in context.Section where i.ID_Semester == id_sem select new MenuLecturerLogic.SectionDisplay() { ID_sekcji = i.ID_Section, Max_User = i.Max_user, Topic = i.Subject.Name.Trim() });
+                return q;
+            }
+
+        }
         public static IQueryable<MenuLecturerLogic.SectionDisplay> getSectionList(int id_student)
         {
             DataClassesDataContext context = new DataClassesDataContext();
@@ -147,10 +202,15 @@ namespace logic_layer
             student.ID_Album = q.First().ID_Album;
             student.Name = q.First().Name;
             student.Surname = q.First().Surname;
-
-
-
             return student;
+        }
+
+        public static int getStudentSemestr(int s_id)
+        {
+            DataClassesDataContext context = new DataClassesDataContext();
+            var q = (from i in context.Stu_Sem where i.ID_Album == s_id select i.ID_Semester).FirstOrDefault();
+
+            return q;
         }
     }
 
@@ -287,7 +347,7 @@ namespace logic_layer
         public static IEnumerable<StudentDisplay> getFreeStudentInSem(Semester sem, int sec_id)
         {
             DataClassesDataContext context = new DataClassesDataContext();
-            var freeStu = (from s in context.Stu_Sem where !(from s2 in context.Stu_Sec where s2.ID_Section == sec_id select s2.ID_Album).Contains(s.ID_Album) && (s.ID_Semester == sem.ID_Semester) select new { s.Student.ID_Album, s.Student.Name, s.Student.Surname }).AsEnumerable().Select(x => new StudentDisplay() { Id = x.ID_Album, Name = x.Name, Surname = x.Surname });
+            var freeStu = (from s in context.Stu_Sem where !(from s2 in context.Stu_Sec select s2.ID_Album).Contains(s.ID_Album) && (s.ID_Semester == sem.ID_Semester) select new { s.Student.ID_Album, s.Student.Name, s.Student.Surname }).AsEnumerable().Select(x => new StudentDisplay() { Id = x.ID_Album, Name = x.Name, Surname = x.Surname });
 
 
             return freeStu;
@@ -339,7 +399,7 @@ namespace logic_layer
                 DataClassesDataContext context = new DataClassesDataContext();
                 if ((NonFull == true) && (topic.Length != 0))
                 {
-                    var s = (from f in context.Section where (f.ID_Semester == id_sem) && (f.Subject.Name.Trim() == topic.Trim()) && (f.Subject.ID_Lecturer == id_lecturer) && (f.Max_user > (from k in context.Stu_Sec where k.ID_Section == f.ID_Section select k).Count()) select new SectionDisplay() { ID_sekcji = f.ID_Section, Max_User = f.Max_user, Topic = f.Subject.Name });
+                    var s = (from f in context.Section where (f.ID_Semester == id_sem) && ( f.Subject.Name.Trim().Contains(topic.Trim())) && (f.Subject.ID_Lecturer == id_lecturer) && (f.Max_user > (from k in context.Stu_Sec where k.ID_Section == f.ID_Section select k).Count()) select new SectionDisplay() { ID_sekcji = f.ID_Section, Max_User = f.Max_user, Topic = f.Subject.Name });
                     return s;
                 }
                 else if ((NonFull == true) && (topic.Length == 0))
@@ -349,7 +409,7 @@ namespace logic_layer
                 }
                 else if ((NonFull == false) && (topic.Length != 0))
                 {
-                    var s = (from f in context.Section where (f.ID_Semester == id_sem) && (f.Subject.Name.Trim() == topic.Trim()) && (f.Subject.ID_Lecturer == id_lecturer) select new SectionDisplay() { ID_sekcji = f.ID_Section, Max_User = f.Max_user, Topic = f.Subject.Name });
+                    var s = (from f in context.Section where (f.ID_Semester == id_sem) && (f.Subject.Name.Trim().Contains(topic.Trim())) && (f.Subject.ID_Lecturer == id_lecturer) select new SectionDisplay() { ID_sekcji = f.ID_Section, Max_User = f.Max_user, Topic = f.Subject.Name });
                     return s;
                 }
                 else

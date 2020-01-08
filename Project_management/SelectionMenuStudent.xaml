@@ -7,13 +7,13 @@
         mc:Ignorable="d"
         Title="SelectionMenuStudent" Height="450" Width="800">
     <Grid Margin="0,0,-50.4,-56">
-        <DataGrid HorizontalAlignment="Left" Name="topicGrid" Height="173" Margin="95,75,0,0" VerticalAlignment="Top" Width="269"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="435,79,0,0" TextWrapping="Wrap" Text="Subject name" VerticalAlignment="Top" Width="171"/>
+        <DataGrid HorizontalAlignment="Left" Name="topicGrid" Height="131" Margin="95,58,0,0" VerticalAlignment="Top" Width="269" SelectionChanged="topicGrid_SelectionChanged"/>
+        <TextBox HorizontalAlignment="Left" Name="subject_name" Height="23" Margin="435,79,0,0" TextWrapping="Wrap" Text="Subject name" VerticalAlignment="Top" Width="171"/>
         <Label Content="Subject" HorizontalAlignment="Left" Margin="381,75,0,0" VerticalAlignment="Top"/>
-        <Button Content="Search" HorizontalAlignment="Left" Margin="626,79,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Search" HorizontalAlignment="Left" Margin="626,79,0,0" VerticalAlignment="Top" Width="80" Height="23" Click="Button_Click"/>
         <Button Content="Join Section" HorizontalAlignment="Left" Margin="451,295,0,0" VerticalAlignment="Top" Width="155" Click="Button_Click_1" Height="47"/>
-        <Label Content="Topic:" HorizontalAlignment="Left" Margin="194,44,0,0" VerticalAlignment="Top"/>
-        <Label Content="Members:" HorizontalAlignment="Left" Margin="194,262,0,0" VerticalAlignment="Top"/>
-        <DataGrid HorizontalAlignment="Left" Height="107" Margin="95,295,0,0" VerticalAlignment="Top" Width="269"/>
+        <Label Content="Topic:" HorizontalAlignment="Left" Margin="194,27,0,0" VerticalAlignment="Top"/>
+        <Label Content="Members:" HorizontalAlignment="Left" Margin="194,207,0,0" VerticalAlignment="Top"/>
+        <DataGrid HorizontalAlignment="Left" Name="membersgrid" Height="165" Margin="95,238,0,0" VerticalAlignment="Top" Width="269"/>
     </Grid>
 </Window>
