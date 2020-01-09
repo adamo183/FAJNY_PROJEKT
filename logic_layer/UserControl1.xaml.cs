@@ -74,6 +74,10 @@ namespace logic_layer
 
     public class Login
     {
+        public static bool checklogin(string login)
+        {
+            return false;
+        }
         class UserIdentifiedValue
         {
             public string Role { get; private set; }
@@ -129,9 +133,48 @@ namespace logic_layer
 
     public class MenuAdminLogic
     {
-        public static void addAdmin(string name,string surname,string login,string pass)
+        public static void addStuInSem(int stu_id, int sem_id)
         {
+            DataClassesDataContext context = new DataClassesDataContext();
+            Stu_Sem new_stu_sem = new Stu_Sem();
+            new_stu_sem.ID_Stu_Sem = (short)((context.Stu_Sem.OrderByDescending(x => x.ID_Stu_Sem).FirstOrDefault()).ID_Stu_Sem + 1);
+            new_stu_sem.ID_Album = (short)stu_id;
+            new_stu_sem.ID_Semester = (short)sem_id;
+            context.Stu_Sem.InsertOnSubmit(new_stu_sem);
+            context.SubmitChanges();
+            
+        }
+        public static void addLogin(string login,string pass,string role,bool status,short u_id)
+        {
+            login_tab new_log = new login_tab();
+            new_log.login = login;
+            new_log.password = hashing.GetMd5Hash(MD5.Create(), pass);
+            new_log.role = role;
+            new_log.status = status;
+            new_log.u_id = u_id;
+            DataClassesDataContext context = new DataClassesDataContext();
+            new_log.Id = (short)((context.login_tab.OrderByDescending(u => u.Id).FirstOrDefault()).Id + 1);
+            context.login_tab.InsertOnSubmit(new_log);
+            context.SubmitChanges();
 
+        }
+        public static void  addLecturer(Lecturer lec)
+        {
+            DataClassesDataContext context = new DataClassesDataContext();
+            context.Lecturer.InsertOnSubmit(lec);
+            context.SubmitChanges();
+        }
+        public static void addStudent(Student stu)
+        {
+            DataClassesDataContext context = new DataClassesDataContext();
+            context.Student.InsertOnSubmit(stu);
+            context.SubmitChanges();
+        }
+        public static void addAdmin(admin_tab admin)
+        {
+            DataClassesDataContext context = new DataClassesDataContext();
+            context.admin_tab.InsertOnSubmit(admin);
+            context.SubmitChanges();
         }
         public static IQueryable<admin_tab>  getAdminList()
         {
@@ -164,19 +207,20 @@ namespace logic_layer
         {
             DataClassesDataContext context = new DataClassesDataContext();
             var q = (from i in context.Presence where i.Stu_Sec.ID_Album == id_stud select i);
-            foreach(var i in q)
-                context.Presence.DeleteOnSubmit(i);
-
             var s = (from i in context.Stu_Sec where i.ID_Album == id_stud select i);
+            foreach (var i in q)
+                context.Presence.DeleteOnSubmit(i);
+            
             foreach (var i in s)
                 context.Stu_Sec.DeleteOnSubmit(i);
 
+            context.SubmitChanges();
         }
         public static void addStudentToSec(int id_sek,int id_stud)
         {
             DataClassesDataContext context = new DataClassesDataContext();
             context.Connection.Open();
-            context.ExecuteCommand("SET IDENTITY_INSERT Stu_Sec ON");
+           // context.ExecuteCommand("SET IDENTITY_INSERT Stu_Sec ON");
             int last_ID = context.Stu_Sec.OrderByDescending(x => x.ID_Stu_Sek).FirstOrDefault().ID_Stu_Sek + 1;
             Stu_Sec newStuInSec = new Stu_Sec();
             newStuInSec.ID_Album = (short)id_stud;
@@ -185,7 +229,7 @@ namespace logic_layer
             newStuInSec.Mark = 0;
             context.Stu_Sec.InsertOnSubmit(newStuInSec);
             context.SubmitChanges();
-            context.ExecuteCommand("SET IDENTITY_INSERT Stu_Sec OFF");
+         //   context.ExecuteCommand("SET IDENTITY_INSERT Stu_Sec OFF");
 
         }
 

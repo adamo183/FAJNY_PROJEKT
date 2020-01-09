@@ -87,7 +87,7 @@ namespace Project_management
 
             DataClassesDataContext context = new DataClassesDataContext();
             context.Connection.Open();
-            context.ExecuteCommand("SET IDENTITY_INSERT Stu_Sec ON");
+            //context.ExecuteCommand("SET IDENTITY_INSERT Stu_Sec ON");
             int last_ID = context.Stu_Sec.OrderByDescending(x => x.ID_Stu_Sek).FirstOrDefault().ID_Stu_Sek+1;
 
             var list = new List<Stu_Sec>();
@@ -101,7 +101,7 @@ namespace Project_management
                 list_nr++;
             }
             context.SubmitChanges();
-            context.ExecuteCommand("SET IDENTITY_INSERT Stu_Sec OFF");
+            //context.ExecuteCommand("SET IDENTITY_INSERT Stu_Sec OFF");
         }
     }
 }
