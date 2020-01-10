@@ -88,7 +88,7 @@ namespace Project_management
             bool avaible = isAvaible.IsChecked.Value;
             if(!Login.checklogin(login))
             {
-
+                return;
             }
             if ( (name.Length==0)||(surname.Length==0)||(login.Length==0)||(pass.Length==0) )
             {
@@ -144,7 +144,7 @@ namespace Project_management
                 MenuAdminLogic.addAdmin(new_admin);
                 MenuAdminLogic.addLogin(login, pass, "admin",isAvaible.IsChecked.Value, (short)new_id);
             }
-
+            this.Close();
         }
     }
 }

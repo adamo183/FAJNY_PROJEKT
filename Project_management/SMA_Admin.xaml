@@ -13,7 +13,7 @@
             <TextBlock Text="Admin" HorizontalAlignment="Center"/>
             <Button Content="Add" HorizontalAlignment="Right" Margin="381,72,50,0" VerticalAlignment="Top" Width="114" Grid.Column="4" Height="22" Click="Button_Click"/>
             <Button Content="Save" HorizontalAlignment="Right" Margin="381,284,50,0" VerticalAlignment="Top" Width="114" Grid.Column="4" Height="22"/>
-            <Button Content="Change password" HorizontalAlignment="Right" Margin="381,99,50,0" VerticalAlignment="Top" Width="114" Grid.Column="4" Height="22"/>
+            <Button Content="Change password" HorizontalAlignment="Right" Margin="381,99,50,0" VerticalAlignment="Top" Width="114" Grid.Column="4" Height="22" Click="Button_Click_1"/>
             <Button Content="Deactivate account" Grid.Column="4" HorizontalAlignment="Right" Margin="381,128,50,0" VerticalAlignment="Top" Width="114" Height="22"/>
             <DataGrid Name="AdminGrid" Margin="50,32,0,50" Width="518" HorizontalAlignment="Left">
 

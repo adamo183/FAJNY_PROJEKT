@@ -33,6 +33,7 @@ namespace Project_management
             this.selected_sec = selected_sec;
             free_space = selected_sec.Max_User - studentinsecnumber;
             StudentGrid.ItemsSource = MenuLecturerLogic.getFreeStudentInSem(semester,selected_sec.ID_sekcji);
+            
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -101,6 +102,7 @@ namespace Project_management
                 list_nr++;
             }
             context.SubmitChanges();
+            this.Close();
             //context.ExecuteCommand("SET IDENTITY_INSERT Stu_Sec OFF");
         }
     }

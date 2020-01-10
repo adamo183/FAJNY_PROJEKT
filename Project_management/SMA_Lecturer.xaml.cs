@@ -36,5 +36,23 @@ namespace Project_management
             SMA_add add_wind = new SMA_add(2);
             add_wind.Show();
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            if (Lecturer_Grid.SelectedItem == null)
+            {
+                MessageBox.Show("Choose user");
+                return;
+            }
+            else if (Lecturer_Grid.SelectedItems.Count > 1)
+            {
+                MessageBox.Show("Choose one user");
+                return;
+            }
+
+            var selected_user_id = ((MenuAdminLogic.UserDisplay)Lecturer_Grid.SelectedItem).User_ID;
+            SMA_changePass chPass = new SMA_changePass(selected_user_id);
+            chPass.Show();
+        }
     }
 }

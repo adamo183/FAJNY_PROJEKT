@@ -76,7 +76,20 @@ namespace logic_layer
     {
         public static bool checklogin(string login)
         {
-            return false;
+            DataClassesDataContext context = new DataClassesDataContext();
+            var q = (from i in context.login_tab where i.login==login select i).Count();
+            if (q == 0)
+            {
+               
+                return true;
+            }
+            else
+            {
+                MessageBox.Show("Login jest już zajety");
+                return false;
+            }
+
+            
         }
         class UserIdentifiedValue
         {
@@ -133,6 +146,28 @@ namespace logic_layer
 
     public class MenuAdminLogic
     {
+       
+        public class UserDisplay
+        {
+            public int User_ID { get; set; }
+            public string Name { get; set; }
+            public string Surname { get; set; }
+            public bool active { get; set; }
+            public string login { get; set; }
+        }
+       
+        public static void changePassword(string new_pass,int login_id)
+        {
+            string pass = hashing.GetMd5Hash(MD5.Create(), new_pass);
+            DataClassesDataContext context = new DataClassesDataContext();
+            var q = (from i in context.login_tab where i.Id == login_id select i);
+            foreach(var x in q)
+            {
+                x.password = pass;
+            }
+            context.SubmitChanges();
+
+        }
         public static void addStuInSem(int stu_id, int sem_id)
         {
             DataClassesDataContext context = new DataClassesDataContext();
@@ -176,25 +211,25 @@ namespace logic_layer
             context.admin_tab.InsertOnSubmit(admin);
             context.SubmitChanges();
         }
-        public static IQueryable<admin_tab>  getAdminList()
+        public static IQueryable<UserDisplay>  getAdminList()
         {
             DataClassesDataContext context = new DataClassesDataContext();
-            var q = (from i in context.admin_tab select i);
+            var q = (from i in context.admin_tab select new { i.admin_id, i.admin_name, i.admin_surname }).Select(x => new UserDisplay() { User_ID = (from a in context.login_tab where a.u_id == x.admin_id && a.role == "admin" select a.Id).FirstOrDefault(), Name = x.admin_name, Surname = x.admin_surname, login = (from a in context.login_tab where a.u_id == x.admin_id && a.role == "admin" select a.login).FirstOrDefault(), active = (from s in context.login_tab where s.u_id == x.admin_id select s.status).FirstOrDefault() }); ;
          
             return q;
         }
 
-        public static IQueryable<Lecturer> getLecturerList()
+        public static IQueryable<UserDisplay> getLecturerList()
         {
             DataClassesDataContext context = new DataClassesDataContext();
-            var q = (from i in context.Lecturer select i);
+            var q = (from i in context.Lecturer select new { i.ID_lecturer, i.Name, i.Surname }).Select(x => new UserDisplay() { User_ID = (from a in context.login_tab where a.u_id == x.ID_lecturer && a.role == "lecturer" select a.Id).FirstOrDefault(), Name = x.Name, Surname = x.Surname, login = (from a in context.login_tab where a.u_id == x.ID_lecturer && a.role == "lecturer" select a.login).FirstOrDefault(), active = (from s in context.login_tab where s.u_id == x.ID_lecturer select s.status).FirstOrDefault() }); ;
             return q;
         }
 
-        public static IQueryable<Student> getStudentList()
+        public static IQueryable<UserDisplay> getStudentList()
         {
             DataClassesDataContext context = new DataClassesDataContext();
-            var q = (from i in context.Student select i);
+            var q = (from i in context.Student select new { i.ID_Album, i.Name, i.Surname }).Select(x => new UserDisplay() { User_ID = (from a in context.login_tab where a.u_id == x.ID_Album && a.role == "student" select a.Id).FirstOrDefault(), Name = x.Name, Surname = x.Surname, login = (from a in context.login_tab where a.u_id == x.ID_Album && a.role == "student" select a.login).FirstOrDefault(), active = (from s in context.login_tab where s.u_id == x.ID_Album select s.status).FirstOrDefault() });
             return q;
 
         }

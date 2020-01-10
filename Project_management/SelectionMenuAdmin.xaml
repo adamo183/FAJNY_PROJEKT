@@ -8,7 +8,7 @@
         Title="SelectionMenuAdmin" Height="450" Width="800">
     <Grid>
         <StackPanel Orientation="Horizontal" Height="35" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,5">
-            <Button Content="Admin" MinWidth="100" Click="Button_Click" Margin="0,0,0,0.2"/>
+            <Button Content="Admin" MinWidth="100" Click="Button_Click" Height="35" VerticalAlignment="Top"/>
             <Button Content="Lecturer" MinWidth="100" Margin="10,0,0,0" Click="Button_Click_1"/>
             <Button Content="Student" MinWidth="100" Margin="10,0,0,0" Click="Button_Click_2"/>
         </StackPanel>
