@@ -27,6 +27,8 @@ namespace Project_management
         {
             InitializeComponent();
             this.student = stu;
+            topicGrid.IsReadOnly = true;
+            membersgrid.IsReadOnly = true;
 
             topicGrid.ItemsSource = MenuStudentLogic.getSectionList(student.ID_Album);
             studentSemest = MenuStudentLogic.getStudentSemestr(student.ID_Album);
@@ -80,6 +82,15 @@ namespace Project_management
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             topicGrid.ItemsSource = MenuStudentLogic.getSectionWithCondition(studentSemest, subject_name.Text);
+        }
+
+        private void membersgrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            return;
+        }
+        private void membersgrid_DoubleClick(object sender, RoutedEventArgs e)
+        {
+            return;
         }
     }
 }
