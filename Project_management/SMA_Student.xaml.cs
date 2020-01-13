@@ -26,12 +26,12 @@ namespace Project_management
         {
             InitializeComponent();
             StudentGrid.ItemsSource = MenuAdminLogic.getStudentList();
-            
+
         }
 
         private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -57,6 +57,42 @@ namespace Project_management
             SMA_changePass chPass = new SMA_changePass(selected_user_id);
             chPass.Show();
 
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            if (StudentGrid.SelectedItem == null)
+            {
+                MessageBox.Show("Choose user");
+                return;
+            }
+            else if (StudentGrid.SelectedItems.Count > 1)
+            {
+                MessageBox.Show("Choose one user");
+                return;
+            }
+            var selected_user_id = ((MenuAdminLogic.UserDisplay)StudentGrid.SelectedItem).User_ID;
+            var selected_user_status = ((MenuAdminLogic.UserDisplay)StudentGrid.SelectedItem).active;
+            MenuAdminLogic.setUserStatus(selected_user_id, selected_user_status);
+            StudentGrid.ItemsSource = MenuAdminLogic.getStudentList();
+
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            if (StudentGrid.SelectedItem == null)
+            {
+                MessageBox.Show("Choose user");
+                return;
+            }
+            else if (StudentGrid.SelectedItems.Count > 1)
+            {
+                MessageBox.Show("Choose one user");
+                return;
+            }
+            var selected_user_id = ((MenuAdminLogic.UserDisplay)StudentGrid.SelectedItem);
+            SMA_editData edit_data = new SMA_editData(selected_user_id);
+            edit_data.Show();
         }
     }
 }

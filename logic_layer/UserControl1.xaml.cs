@@ -95,10 +95,12 @@ namespace logic_layer
         {
             public string Role { get; private set; }
             public int Id { get; private set; }
-            public UserIdentifiedValue(string role, int id)
+            public bool Status { get;private set; }
+            public UserIdentifiedValue(string role, int id, bool status)
             {
                 this.Role = role;
                 this.Id = id;
+                this.Status = status;
             }
 
         }
@@ -113,11 +115,16 @@ namespace logic_layer
             var q = from t in context.login_tab
                     where t.login == log_f &&
                     t.password == hash_pass
-                    select new UserIdentifiedValue(t.role, t.u_id);
+                    select new UserIdentifiedValue(t.role, t.u_id,t.status);
 
             u_id = 0;
             role = "";
 
+            if(q.Select(x=>x.Status).FirstOrDefault() == false)
+            {
+                MessageBox.Show("User is inactive");
+                return false;
+            }
 
             if (q.Count() == 1)
             {
@@ -155,7 +162,68 @@ namespace logic_layer
             public bool active { get; set; }
             public string login { get; set; }
         }
-       
+
+        
+        public static string getUserSurname(int user_id)
+        {
+            DataClassesDataContext context = new DataClassesDataContext();
+            var q = (from i in context.login_tab where i.Id == user_id select i).FirstOrDefault();
+            if (q.role == "admin") 
+            {
+                var a = (from i in context.admin_tab where i.admin_id == q.u_id select i.admin_surname);
+                return a.FirstOrDefault();
+            }
+            return "";
+        }
+        public static login_tab getLoginInfo(int user_id)
+        {
+            DataClassesDataContext context = new DataClassesDataContext();
+            var q = (from i in context.login_tab where i.Id == user_id select i).FirstOrDefault();
+            return q;
+        }
+        public static void setUserStatus(int userID,bool status)
+        {
+            DataClassesDataContext context_s = new DataClassesDataContext();
+            var q = context_s.login_tab.Single(x => x.Id == userID);
+            if (status == false)
+                q.status = false;
+            else
+                q.status = true;
+
+          
+            context_s.SubmitChanges();
+     
+           
+        }
+        public static void changeSurname(int user_id,string role, string new_surname)
+        {
+            DataClassesDataContext context = new DataClassesDataContext();
+            if (role.Trim() == "admin")
+            {
+                var q = (from i in context.admin_tab where i.admin_id == user_id select i).SingleOrDefault();
+                q.admin_surname = new_surname;
+                context.SubmitChanges();
+            }
+            else if (role.Trim() == "student")
+            {
+                var q = (from i in context.Student where i.ID_Album == user_id select i).SingleOrDefault();
+                q.Surname = new_surname;
+                context.SubmitChanges();
+            }
+            else if(role.Trim() == "lecturer")
+            {
+                var q = (from i in context.Lecturer where i.ID_lecturer == user_id select i).SingleOrDefault();
+                q.Surname = new_surname;
+                context.SubmitChanges();
+            }
+        }
+        public static void changeLogin(int user_id,string login)
+        {
+            DataClassesDataContext context = new DataClassesDataContext();
+            var q = (from i in context.login_tab where i.Id == user_id select i).SingleOrDefault();
+            q.login = login;
+            context.SubmitChanges();
+        }
         public static void changePassword(string new_pass,int login_id)
         {
             string pass = hashing.GetMd5Hash(MD5.Create(), new_pass);
@@ -214,7 +282,7 @@ namespace logic_layer
         public static IQueryable<UserDisplay>  getAdminList()
         {
             DataClassesDataContext context = new DataClassesDataContext();
-            var q = (from i in context.admin_tab select new { i.admin_id, i.admin_name, i.admin_surname }).Select(x => new UserDisplay() { User_ID = (from a in context.login_tab where a.u_id == x.admin_id && a.role == "admin" select a.Id).FirstOrDefault(), Name = x.admin_name, Surname = x.admin_surname, login = (from a in context.login_tab where a.u_id == x.admin_id && a.role == "admin" select a.login).FirstOrDefault(), active = (from s in context.login_tab where s.u_id == x.admin_id select s.status).FirstOrDefault() }); ;
+            var q = (from i in context.admin_tab select new { i.admin_id, i.admin_name, i.admin_surname }).Select(x => new UserDisplay() { User_ID = (from a in context.login_tab where a.u_id == x.admin_id && a.role == "admin" select a.Id).FirstOrDefault(), Name = x.admin_name, Surname = x.admin_surname, login = (from a in context.login_tab where a.u_id == x.admin_id && a.role == "admin" select a.login).FirstOrDefault(), active = (from s in context.login_tab where s.u_id == x.admin_id && s.role=="admin" select s.status).FirstOrDefault() }); ;
          
             return q;
         }
@@ -222,14 +290,14 @@ namespace logic_layer
         public static IQueryable<UserDisplay> getLecturerList()
         {
             DataClassesDataContext context = new DataClassesDataContext();
-            var q = (from i in context.Lecturer select new { i.ID_lecturer, i.Name, i.Surname }).Select(x => new UserDisplay() { User_ID = (from a in context.login_tab where a.u_id == x.ID_lecturer && a.role == "lecturer" select a.Id).FirstOrDefault(), Name = x.Name, Surname = x.Surname, login = (from a in context.login_tab where a.u_id == x.ID_lecturer && a.role == "lecturer" select a.login).FirstOrDefault(), active = (from s in context.login_tab where s.u_id == x.ID_lecturer select s.status).FirstOrDefault() }); ;
+            var q = (from i in context.Lecturer select new { i.ID_lecturer, i.Name, i.Surname }).Select(x => new UserDisplay() { User_ID = (from a in context.login_tab where a.u_id == x.ID_lecturer && a.role == "lecturer" select a.Id).FirstOrDefault(), Name = x.Name, Surname = x.Surname, login = (from a in context.login_tab where a.u_id == x.ID_lecturer && a.role == "lecturer" select a.login).FirstOrDefault(), active = (from s in context.login_tab where s.u_id == x.ID_lecturer && s.role=="lecturer"select s.status).FirstOrDefault() }); ;
             return q;
         }
 
         public static IQueryable<UserDisplay> getStudentList()
         {
             DataClassesDataContext context = new DataClassesDataContext();
-            var q = (from i in context.Student select new { i.ID_Album, i.Name, i.Surname }).Select(x => new UserDisplay() { User_ID = (from a in context.login_tab where a.u_id == x.ID_Album && a.role == "student" select a.Id).FirstOrDefault(), Name = x.Name, Surname = x.Surname, login = (from a in context.login_tab where a.u_id == x.ID_Album && a.role == "student" select a.login).FirstOrDefault(), active = (from s in context.login_tab where s.u_id == x.ID_Album select s.status).FirstOrDefault() });
+            var q = (from i in context.Student select new { i.ID_Album, i.Name, i.Surname }).Select(x => new UserDisplay() { User_ID = (from a in context.login_tab where a.u_id == x.ID_Album && a.role == "student" select a.Id).FirstOrDefault(), Name = x.Name, Surname = x.Surname, login = (from a in context.login_tab where a.u_id == x.ID_Album && a.role == "student" select a.login).FirstOrDefault(), active = (from s in context.login_tab where s.u_id == x.ID_Album && s.role== "student" select s.status).FirstOrDefault() });
             return q;
 
         }

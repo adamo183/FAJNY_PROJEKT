@@ -11,10 +11,10 @@
     <Grid>
         <Grid Background="#FFE5E5E5">
             <TextBlock Text="Lecturer" HorizontalAlignment="Center"/>
-            <Button Content="Add" HorizontalAlignment="Right" Margin="381,72,50,0" VerticalAlignment="Top" Width="114" Grid.Column="4" Height="22" Click="Button_Click"/>
-            <Button Content="Save" HorizontalAlignment="Right" Margin="381,284,50,0" VerticalAlignment="Top" Width="114" Grid.Column="4" Height="22"/>
-            <Button Content="Change password" HorizontalAlignment="Right" Margin="381,99,50,0" VerticalAlignment="Top" Width="114" Grid.Column="4" Height="22" Click="Button_Click_1"/>
-            <Button Content="Deactivate account" Grid.Column="4" HorizontalAlignment="Right" Margin="381,128,50,0" VerticalAlignment="Top" Width="114" Height="22"/>
+            <Button Content="Add" HorizontalAlignment="Right" Margin="0,72,10,0" VerticalAlignment="Top" Width="154" Height="47" Click="Button_Click"/>
+            <Button Content="Edit user data" HorizontalAlignment="Right" Margin="0,229,10,0" VerticalAlignment="Top" Width="154" Height="47" Click="Button_Click_3" RenderTransformOrigin="0.478,-1.018"/>
+            <Button Content="Change password" HorizontalAlignment="Right" Margin="0,124,10,0" VerticalAlignment="Top" Width="154" Height="48" Click="Button_Click_1"/>
+            <Button Content="Deactivate/Active account" HorizontalAlignment="Right" Margin="0,177,10,0" VerticalAlignment="Top" Width="154" Height="47" Click="Button_Click_2"/>
             <DataGrid Name="Lecturer_Grid" Margin="50,32,0,50" Width="518" HorizontalAlignment="Left"/>
         </Grid>
     </Grid>

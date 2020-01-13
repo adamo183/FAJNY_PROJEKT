@@ -26,7 +26,7 @@ namespace Project_management
         {
             InitializeComponent();
             this.id = id;
-            MessageBox.Show(id.ToString());
+           
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

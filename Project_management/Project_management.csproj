@@ -89,6 +89,9 @@
     <Compile Include="SMA_changePass.xaml.cs">
       <DependentUpon>SMA_changePass.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SMA_editData.xaml.cs">
+      <DependentUpon>SMA_editData.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SMA_Lecturer.xaml.cs">
       <DependentUpon>SMA_Lecturer.xaml</DependentUpon>
     </Compile>
@@ -149,6 +152,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="SMA_changePass.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SMA_editData.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

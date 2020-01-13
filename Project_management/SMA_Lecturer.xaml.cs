@@ -54,5 +54,40 @@ namespace Project_management
             SMA_changePass chPass = new SMA_changePass(selected_user_id);
             chPass.Show();
         }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            if (Lecturer_Grid.SelectedItem == null)
+            {
+                MessageBox.Show("Choose user");
+                return;
+            }
+            else if (Lecturer_Grid.SelectedItems.Count > 1)
+            {
+                MessageBox.Show("Choose one user");
+                return;
+            }
+            var selected_user_id = ((MenuAdminLogic.UserDisplay)Lecturer_Grid.SelectedItem).User_ID;
+            var selected_user_status = ((MenuAdminLogic.UserDisplay)Lecturer_Grid.SelectedItem).active;
+            MenuAdminLogic.setUserStatus(selected_user_id, selected_user_status);
+            Lecturer_Grid.ItemsSource = MenuAdminLogic.getLecturerList();
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            if (Lecturer_Grid.SelectedItem == null)
+            {
+                MessageBox.Show("Choose user");
+                return;
+            }
+            else if (Lecturer_Grid.SelectedItems.Count > 1)
+            {
+                MessageBox.Show("Choose one user");
+                return;
+            }
+            var selected_user_id = ((MenuAdminLogic.UserDisplay)Lecturer_Grid.SelectedItem);
+            SMA_editData edit_data = new SMA_editData(selected_user_id);
+            edit_data.Show();
+        }
     }
 }

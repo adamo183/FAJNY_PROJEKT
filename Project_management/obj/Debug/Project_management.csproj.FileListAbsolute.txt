@@ -239,3 +239,5 @@ D:\VisualRepo\projeck_adm\Project_management\obj\Debug\SMA_Lecturer.baml
 D:\VisualRepo\projeck_adm\Project_management\obj\Debug\SMA_Student.baml
 D:\VisualRepo\projeck_adm\Project_management\obj\Debug\SMA_changePass.g.cs
 D:\VisualRepo\projeck_adm\Project_management\obj\Debug\SMA_changePass.baml
+D:\VisualRepo\projeck_adm\Project_management\obj\Debug\SMA_editData.g.cs
+D:\VisualRepo\projeck_adm\Project_management\obj\Debug\SMA_editData.baml

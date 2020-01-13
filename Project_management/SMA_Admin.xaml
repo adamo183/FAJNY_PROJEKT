@@ -10,12 +10,16 @@
 
     <Grid>
         <Grid Background="#FFE5E5E5">
-            <TextBlock Text="Admin" HorizontalAlignment="Center"/>
-            <Button Content="Add" HorizontalAlignment="Right" Margin="381,72,50,0" VerticalAlignment="Top" Width="114" Grid.Column="4" Height="22" Click="Button_Click"/>
-            <Button Content="Save" HorizontalAlignment="Right" Margin="381,284,50,0" VerticalAlignment="Top" Width="114" Grid.Column="4" Height="22"/>
-            <Button Content="Change password" HorizontalAlignment="Right" Margin="381,99,50,0" VerticalAlignment="Top" Width="114" Grid.Column="4" Height="22" Click="Button_Click_1"/>
-            <Button Content="Deactivate account" Grid.Column="4" HorizontalAlignment="Right" Margin="381,128,50,0" VerticalAlignment="Top" Width="114" Height="22"/>
-            <DataGrid Name="AdminGrid" Margin="50,32,0,50" Width="518" HorizontalAlignment="Left">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="52*"/>
+                <RowDefinition Height="397*"/>
+            </Grid.RowDefinitions>
+            <TextBlock Text="Admin" HorizontalAlignment="Center" Margin="383,0,382,-0.4" Grid.RowSpan="2"/>
+            <Button Content="Add" HorizontalAlignment="Right" Margin="0,23.6,10,0" VerticalAlignment="Top" Width="154" Height="47" Click="Button_Click" RenderTransformOrigin="0.512,0.213" Grid.Row="1"/>
+            <Button Content="Edit user data" HorizontalAlignment="Right" Margin="0,179,10,0" VerticalAlignment="Top" Width="154" Height="47" Grid.Row="1" Click="Button_Click_3"/>
+            <Button Content="Change password" HorizontalAlignment="Right" Margin="0,75.6,10,0" VerticalAlignment="Top" Width="154" Height="46" Click="Button_Click_1" Grid.Row="1"/>
+            <Button Content="Deactivate/Active account" HorizontalAlignment="Right" Margin="0,126.6,10,0" VerticalAlignment="Top" Width="154" Height="47" Click="Button_Click_2" Grid.Row="1"/>
+            <DataGrid Name="AdminGrid" Margin="50,32,0,49.6" Width="518" HorizontalAlignment="Left" Grid.RowSpan="2">
 
             </DataGrid>
         </Grid>

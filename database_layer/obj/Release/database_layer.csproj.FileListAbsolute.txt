@@ -1,0 +1,13 @@
+D:\VisualRepo\projeck_adm\database_layer\bin\Release\database_layer.dll.config
+D:\VisualRepo\projeck_adm\database_layer\bin\Release\database_layer.dll
+D:\VisualRepo\projeck_adm\database_layer\bin\Release\database_layer.pdb
+D:\VisualRepo\projeck_adm\database_layer\obj\Release\database_layer.csprojAssemblyReference.cache
+D:\VisualRepo\projeck_adm\database_layer\obj\Release\UserControl1.g.cs
+D:\VisualRepo\projeck_adm\database_layer\obj\Release\database_layer_MarkupCompile.cache
+D:\VisualRepo\projeck_adm\database_layer\obj\Release\database_layer_MarkupCompile.lref
+D:\VisualRepo\projeck_adm\database_layer\obj\Release\UserControl1.baml
+D:\VisualRepo\projeck_adm\database_layer\obj\Release\database_layer.g.resources
+D:\VisualRepo\projeck_adm\database_layer\obj\Release\database_layer.Properties.Resources.resources
+D:\VisualRepo\projeck_adm\database_layer\obj\Release\database_layer.csproj.GenerateResource.cache
+D:\VisualRepo\projeck_adm\database_layer\obj\Release\database_layer.dll
+D:\VisualRepo\projeck_adm\database_layer\obj\Release\database_layer.pdb

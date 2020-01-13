@@ -1,0 +1,16 @@
+D:\VisualRepo\projeck_adm\logic_layer\bin\Release\logic_layer.dll
+D:\VisualRepo\projeck_adm\logic_layer\bin\Release\logic_layer.pdb
+D:\VisualRepo\projeck_adm\logic_layer\bin\Release\database_layer.dll
+D:\VisualRepo\projeck_adm\logic_layer\bin\Release\database_layer.pdb
+D:\VisualRepo\projeck_adm\logic_layer\bin\Release\database_layer.dll.config
+D:\VisualRepo\projeck_adm\logic_layer\obj\Release\logic_layer.csprojAssemblyReference.cache
+D:\VisualRepo\projeck_adm\logic_layer\obj\Release\UserControl1.g.cs
+D:\VisualRepo\projeck_adm\logic_layer\obj\Release\logic_layer_MarkupCompile.cache
+D:\VisualRepo\projeck_adm\logic_layer\obj\Release\logic_layer_MarkupCompile.lref
+D:\VisualRepo\projeck_adm\logic_layer\obj\Release\UserControl1.baml
+D:\VisualRepo\projeck_adm\logic_layer\obj\Release\logic_layer.g.resources
+D:\VisualRepo\projeck_adm\logic_layer\obj\Release\logic_layer.Properties.Resources.resources
+D:\VisualRepo\projeck_adm\logic_layer\obj\Release\logic_layer.csproj.GenerateResource.cache
+D:\VisualRepo\projeck_adm\logic_layer\obj\Release\logic_layer.csproj.CopyComplete
+D:\VisualRepo\projeck_adm\logic_layer\obj\Release\logic_layer.dll
+D:\VisualRepo\projeck_adm\logic_layer\obj\Release\logic_layer.pdb
