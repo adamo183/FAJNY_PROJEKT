@@ -30,6 +30,8 @@ namespace Project_management
 
             this.lecturer = lecturer;
             this.semestr = sem;
+            StuSecGrid.IsReadOnly = true;
+            
             sectionsgrid.IsReadOnly = true;
             sectionsgrid.ItemsSource = MenuLecturerLogic.getSectionsWithCondition(sem.ID_Semester,lecturer.ID_lecturer,"",false);
         }

@@ -84,6 +84,7 @@ namespace Project_management
                 MenuLecturerLogic.addSection(sec);
 
             }
+            this.Close();
         }
     }
 }
