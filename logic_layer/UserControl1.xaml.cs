@@ -460,15 +460,15 @@ namespace logic_layer
         public static bool addSubject(Subject s1)
         {
             DataClassesDataContext context = new DataClassesDataContext();
-            var f = context.Subject.OrderByDescending(u => u.ID_Subject).FirstOrDefault();
-            s1.ID_Subject = (short)(f.ID_Subject + 1);
-            context.Connection.Open();
-            context.ExecuteCommand("SET IDENTITY_INSERT Subject ON");
+           // var f = context.Subject.OrderByDescending(u => u.ID_Subject).FirstOrDefault();
+          //  s1.ID_Subject = (short)(f.ID_Subject + 1);
+           // context.Connection.Open();
+           // context.ExecuteCommand("SET IDENTITY_INSERT Subject ON");
             context.Subject.InsertOnSubmit(s1);
             try
             {
                 context.SubmitChanges();
-                context.ExecuteCommand("SET IDENTITY_INSERT Subject OFF");
+             //   context.ExecuteCommand("SET IDENTITY_INSERT Subject OFF");
                 return true;
 
             }
