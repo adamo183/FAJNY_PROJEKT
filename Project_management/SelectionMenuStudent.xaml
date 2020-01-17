@@ -5,15 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Project_management"
         mc:Ignorable="d"
-        Title="SelectionMenuStudent" Height="450" Width="800">
-    <Grid Margin="0,0,-48.4,-110">
-        <DataGrid HorizontalAlignment="Left" Name="topicGrid" Height="149" Margin="95,58,0,0" VerticalAlignment="Top" Width="347" SelectionChanged="topicGrid_SelectionChanged"/>
-        <TextBox HorizontalAlignment="Left" Name="subject_name" Height="23" Margin="589,62,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="171" RenderTransformOrigin="0.468,-1.426"/>
-        <Label Content="Subject" HorizontalAlignment="Left" Margin="532,58,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.538,3.195"/>
-        <Button Content="Search" HorizontalAlignment="Left" Margin="589,90,0,0" VerticalAlignment="Top" Width="80" Height="23" Click="Button_Click" RenderTransformOrigin="0.539,-0.878"/>
-        <Button Content="Join Section" HorizontalAlignment="Left" Margin="514,294,0,0" VerticalAlignment="Top" Width="155" Click="Button_Click_1" Height="47"/>
-        <Label Content="Topic:" HorizontalAlignment="Left" Margin="252,32,0,0" VerticalAlignment="Top"/>
-        <Label Content="Members:" HorizontalAlignment="Left" Margin="252,212,0,0" VerticalAlignment="Top"/>
-        <DataGrid HorizontalAlignment="Left" Name="membersgrid" Height="160" Margin="95,238,0,0" VerticalAlignment="Top" Width="347" SelectionChanged="membersgrid_SelectionChanged" MouseDoubleClick="membersgrid_DoubleClick"/>
+        Title="SelectionMenuStudent" Height="450" Width="640">
+    <Grid Margin="0,0,0,0">
+        <DataGrid HorizontalAlignment="Left" Name="topicGrid" Height="149" Margin="10,39,0,0" VerticalAlignment="Top" Width="347" SelectionChanged="topicGrid_SelectionChanged"/>
+        <TextBox HorizontalAlignment="Left" Name="subject_name" Height="23" Margin="440,47,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="171" RenderTransformOrigin="0.468,-1.426"/>
+        <Label Content="Topic" HorizontalAlignment="Left" Margin="383,43,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.538,3.195"/>
+        <Button Content="Search" HorizontalAlignment="Left" Margin="440,75,0,0" VerticalAlignment="Top" Width="80" Height="23" Click="Button_Click" RenderTransformOrigin="0.539,-0.878"/>
+        <Button Content="Join Section" HorizontalAlignment="Left" Margin="440,276,0,0" VerticalAlignment="Top" Width="155" Click="Button_Click_1" Height="47"/>
+        <Label Content="Topic:" HorizontalAlignment="Left" Margin="167,13,0,0" VerticalAlignment="Top"/>
+        <Label Content="Members:" HorizontalAlignment="Left" Margin="156,193,0,0" VerticalAlignment="Top"/>
+        <DataGrid HorizontalAlignment="Left" Name="membersgrid" Height="160" Margin="10,219,0,0" VerticalAlignment="Top" Width="347" SelectionChanged="membersgrid_SelectionChanged" MouseDoubleClick="membersgrid_DoubleClick"/>
     </Grid>
 </Window>

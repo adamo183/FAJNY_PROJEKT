@@ -5,13 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Project_management"
         mc:Ignorable="d"
-        Title="SMA_changePass" Height="309.2" Width="516">
+        Title="SMA_changePass" Height="182.775" Width="388.13">
     <Grid>
-        <Label Content="New password:" HorizontalAlignment="Left" Margin="136,76,0,0" VerticalAlignment="Top"/>
-        <Label Content="Repeat new password:" HorizontalAlignment="Left" Margin="101,116,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.437,0.57"/>
-        <PasswordBox HorizontalAlignment="Left" Name="new_pass0" Margin="262,76,0,0" VerticalAlignment="Top" Width="165" Height="26"/>
-        <PasswordBox HorizontalAlignment="Left" Name="new_pass1" Margin="262,116,0,0" VerticalAlignment="Top" Width="165" Height="26"/>
-        <Button Content="Change" HorizontalAlignment="Left" Margin="312,164,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <Label Content="New password:" HorizontalAlignment="Left" Margin="55,22,0,0" VerticalAlignment="Top"/>
+        <Label Content="Repeat new password:" HorizontalAlignment="Left" Margin="20,62,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.437,0.57"/>
+        <PasswordBox HorizontalAlignment="Left" Name="new_pass0" Margin="181,22,0,0" VerticalAlignment="Top" Width="165" Height="26"/>
+        <PasswordBox HorizontalAlignment="Left" Name="new_pass1" Margin="181,62,0,0" VerticalAlignment="Top" Width="165" Height="26"/>
+        <Button Content="Change" HorizontalAlignment="Center"  VerticalAlignment="Top" Width="76" Click="Button_Click" Margin="152,108,152,0"/>
 
     </Grid>
 </Window>

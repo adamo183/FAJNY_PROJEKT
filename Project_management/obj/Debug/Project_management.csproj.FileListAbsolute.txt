@@ -241,3 +241,7 @@ D:\VisualRepo\projeck_adm\Project_management\obj\Debug\SMA_changePass.g.cs
 D:\VisualRepo\projeck_adm\Project_management\obj\Debug\SMA_changePass.baml
 D:\VisualRepo\projeck_adm\Project_management\obj\Debug\SMA_editData.g.cs
 D:\VisualRepo\projeck_adm\Project_management\obj\Debug\SMA_editData.baml
+C:\Users\Norman\Source\Repos\FAJNY_PROJEKT\Project_management\obj\Debug\SMA_changePass.g.cs
+C:\Users\Norman\Source\Repos\FAJNY_PROJEKT\Project_management\obj\Debug\SMA_editData.g.cs
+C:\Users\Norman\Source\Repos\FAJNY_PROJEKT\Project_management\obj\Debug\SMA_changePass.baml
+C:\Users\Norman\Source\Repos\FAJNY_PROJEKT\Project_management\obj\Debug\SMA_editData.baml

@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Project_management"
         mc:Ignorable="d"
-        Title="SML_AddPresence" Height="391.2" Width="375.2">
-    <Grid Margin="0,0,119.6,-30">
+        Title="SML_AddPresence" Height="326.896" Width="294.333">
+    <Grid Margin="0,0,0,0">
         <Calendar HorizontalAlignment="Left" Name="Presence_calendar" Margin="31,35,0,0" VerticalAlignment="Top" Height="169" Width="225"/>
         <Button Content="Add presence" HorizontalAlignment="Left" Margin="82,209,0,0" VerticalAlignment="Top" Width="122" Height="49" Click="Button_Click"/>
 

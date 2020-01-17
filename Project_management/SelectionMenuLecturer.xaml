@@ -5,12 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Project_management"
         mc:Ignorable="d"
-        Title="SelectionMenuLecturer" Height="450" Width="800">
+        Title="SelectionMenuLecturer" Height="258" Width="392">
     <Grid>
-        <Button Content="Create Subject" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" Margin="150,145,0,0" Height="80" Click="SML_CreateSubject_button"/>
-        <Button Content="Section Management" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" Margin="325,145,0,0" Height="80" Click="SML_SectionManagement_button"/>
-        <Label Content="Kierunek:" HorizontalAlignment="Left" Margin="150,255,0,0" VerticalAlignment="Top" Height="26" Width="104"/>
-        <ComboBox HorizontalAlignment="Left" Margin="150,286,0,0" VerticalAlignment="Top" Name="fieldofstudybox"  Width="205" SelectionChanged="ComboBox_SelectionChanged_2" />
+        <Button Content="Topic" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" Margin="30,110,0,0" Height="80" Click="SML_CreateSubject_button"/>
+        <Button Content="Section Management" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" Margin="205,110,0,0" Height="80" Click="SML_SectionManagement_button"/>
+        <Label Content="Kierunek:" HorizontalAlignment="Left" Margin="90,30,0,0" VerticalAlignment="Top" Height="26" Width="104"/>
+        <ComboBox HorizontalAlignment="Left" Margin="90,61,0,0" VerticalAlignment="Top" Name="fieldofstudybox"  Width="205" SelectionChanged="ComboBox_SelectionChanged_2" />
 
     </Grid>
 </Window>

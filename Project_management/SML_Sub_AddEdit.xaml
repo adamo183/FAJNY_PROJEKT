@@ -5,16 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Project_management"
         mc:Ignorable="d"
-        Title="SML_Sub_AddEdit" Height="450" Width="800">
+        Title="SML_Sub_AddEdit" Height="322" Width="743">
     <Grid>
-        <Label Content="Add/Edit Subject" HorizontalAlignment="Left" Margin="319,20,0,0" VerticalAlignment="Top" FontSize="19"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="80,112,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="500" Name="s_name"/>
-        <TextBox HorizontalAlignment="Left" Name="Desctrip" Height="133" Margin="80,205,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="500"/>
-        <CheckBox Content="Subject available" Name="Availbe" HorizontalAlignment="Left" Margin="268,379,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked"/>
-        <Label Content="Name" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="80,81,0,0"/>
-        <Label Content="Description" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="80,174,0,0"/>
-        <Button Content="Save" HorizontalAlignment="Left" Margin="613,112,0,0" VerticalAlignment="Top" Width="150" Height="80" Click="Button_Click"/>
-        <Button Content="Cancel" HorizontalAlignment="Left" Margin="613,285,0,0" VerticalAlignment="Top" Width="150" Height="80" Click="Button_Click_1"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="27,56,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="500" Name="s_name"/>
+        <TextBox HorizontalAlignment="Left" Name="Desctrip" Height="133" Margin="27,115,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="500"/>
+        <CheckBox Content="Subject available" Name="Availbe" HorizontalAlignment="Left" Margin="215,253,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked"/>
+        <Label Content="Name" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="27,25,0,0"/>
+        <Label Content="Description" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="27,84,0,0"/>
+        <Button Content="Save" HorizontalAlignment="Left" Margin="560,56,0,0" VerticalAlignment="Top" Width="150" Height="80" Click="Button_Click"/>
+        <Button Content="Cancel" HorizontalAlignment="Left" Margin="560,168,0,0" VerticalAlignment="Top" Width="150" Height="80" Click="Button_Click_1"/>
 
     </Grid>
 </Window>
