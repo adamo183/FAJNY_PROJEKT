@@ -14,13 +14,13 @@
         <DataGrid x:Name="sectionsgrid" HorizontalAlignment="Left" Height="222" Margin="44,42,0,0" VerticalAlignment="Top" Width="440" Grid.RowSpan="2" SelectionChanged="sectionsgrid_SelectionChanged"/>
         <Button Content="New section" HorizontalAlignment="Left" Height="51" Margin="518,210,0,0" VerticalAlignment="Top" Width="380" Grid.RowSpan="2" Click="Button_Click_2"/>
         <Button Content="Add student" HorizontalAlignment="Left" Height="51" Margin="518,334,0,0" VerticalAlignment="Top" Width="380" Click="Button_Click" Grid.RowSpan="2"/>
-        <Button Content="Add degree" HorizontalAlignment="Left" Height="31" Margin="518,426,0,0" VerticalAlignment="Top" Width="185" Click="Button_Click_1" Grid.RowSpan="2"/>
+        <Button Content="Add mark" HorizontalAlignment="Left" Height="31" Margin="518,426,0,0" VerticalAlignment="Top" Width="185" Click="Button_Click_1" Grid.RowSpan="2"/>
         <DataGrid HorizontalAlignment="Left" Name="StuSecGrid" Height="194" Margin="44,316,0,0" VerticalAlignment="Top" Width="440" Grid.RowSpan="2" SelectionChanged="DataGrid_SelectionChanged"/>
         <Label Content="Students in section:" HorizontalAlignment="Left" Margin="200,285,0,0" Grid.RowSpan="2" VerticalAlignment="Top"/>
         <Label Content="Sections" HorizontalAlignment="Left" Margin="229,10,0,0" Grid.RowSpan="2" VerticalAlignment="Top"/>
         <CheckBox Content="Non-full sections" Name="NonFullField" HorizontalAlignment="Left" Margin="703,101,0,0" Grid.RowSpan="2" VerticalAlignment="Top"/>
         <Label Content="Section topic:" HorizontalAlignment="Left" Margin="589,70,0,0" Grid.RowSpan="2" VerticalAlignment="Top" RenderTransformOrigin="0.549,-0.746"/>
-        <TextBox HorizontalAlignment="Left" Name="SecTopField" Height="23" Margin="703,73,0,0" Grid.RowSpan="2" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="90"/>
+        <TextBox HorizontalAlignment="Left" Name="SecTopField" Height="23" Margin="703,73,0,0" Grid.RowSpan="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="90"/>
         <Button Content="Find" HorizontalAlignment="Left" Height="24" Margin="666,135,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="85" Click="Button_Click_6"/>
         <Button Content="Add presence" HorizontalAlignment="Left" Height="31" Margin="518,390,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="185" Click="Button_Click_4"/>
         <Button Content="Show presence" HorizontalAlignment="Left" Margin="713,390,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="185" RenderTransformOrigin="0.42,0.167" Height="31" Click="Button_Click_3"/>

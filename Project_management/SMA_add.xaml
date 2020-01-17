@@ -5,21 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Project_management"
         mc:Ignorable="d"
-        Title="SMA_add" Height="295.457" Width="549.562">
+        Title="SMA_add" Height="311.298" Width="277.521">
     <Grid Margin="0,0,0,0">
-        <Label Content="Name:" HorizontalAlignment="Left" Margin="23,19,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.552,-0.484" Height="23" Width="83"/>
-        <Label Content="Surname:" HorizontalAlignment="Left" Margin="23,47,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.719,-1.578" Height="28" Width="63"/>
+        <Label Content="Name:" HorizontalAlignment="Left" Margin="34,21,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.552,-0.484" Height="23" Width="63"/>
+        <Label Content="Surname:" HorizontalAlignment="Left" Margin="34,49,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.719,-1.578" Height="23" Width="63"/>
         <TextBox HorizontalAlignment="Left" Name="Name_field" Height="23" Margin="102,21,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Name="Surname_field" Height="23" Margin="102,53,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Degree:" Name="Degree_label" HorizontalAlignment="Left" Margin="296,16,0,0" VerticalAlignment="Top" RenderTransformOrigin="-3.198,-2.641"/>
-        <ComboBox Name="Degree_choose" HorizontalAlignment="Left" Margin="369,20,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="Degree_choose_SelectionChanged"/>
-        <Label Content="Semestr:" Name="Sem_label" HorizontalAlignment="Left" Margin="296,53,0,0" VerticalAlignment="Top"/>
-        <ComboBox HorizontalAlignment="Left" Name="Sem_choose" Margin="369,53,0,0" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Login:" HorizontalAlignment="Left" Margin="102,128,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Name="Login_field" Height="23" Margin="184,130,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="251"/>
-        <Label Content="Password:" HorizontalAlignment="Left" Margin="102,159,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Name="Pass_Field" Height="23" Margin="184,159,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="251"/>
-        <Button Content="Add" HorizontalAlignment="Center"  VerticalAlignment="Top" Width="74" Click="Button_Click" Margin="239,205,229,0"/>
-        <CheckBox Content="Active" Name="isAvaible" HorizontalAlignment="Left" Margin="249,95,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.316,-0.408"/>
+        <TextBox HorizontalAlignment="Left" Name="Surname_field" Height="23" Margin="102,49,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Degree:" Name="Degree_label" HorizontalAlignment="Left" Margin="34,77,0,0" VerticalAlignment="Top" RenderTransformOrigin="-3.198,-2.641" Height="23" Width="63"/>
+        <ComboBox Name="Degree_choose" HorizontalAlignment="Left" Margin="102,77,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="Degree_choose_SelectionChanged"/>
+        <Label Content="Semestr:" Name="Sem_label" HorizontalAlignment="Left" Margin="34,105,0,0" VerticalAlignment="Top" Height="23" Width="63"/>
+        <ComboBox HorizontalAlignment="Left" Name="Sem_choose" Margin="102,104,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Login:" HorizontalAlignment="Left" Margin="34,133,0,0" VerticalAlignment="Top" Height="23" Width="63"/>
+        <TextBox HorizontalAlignment="Left" Name="Login_field" Height="23" Margin="102,131,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Password:" HorizontalAlignment="Left" Margin="34,161,0,0" VerticalAlignment="Top" Height="23" Width="63"/>
+        <TextBox HorizontalAlignment="Left" Name="Pass_Field" Height="23" Margin="102,159,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Add" HorizontalAlignment="Center"  VerticalAlignment="Top" Width="74" Click="Button_Click" Margin="98,227,98,0" />
+        <CheckBox Content="Active" Name="isAvaible" HorizontalAlignment="Left" Margin="102,187,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.316,-0.408"/>
     </Grid>
 </Window>
