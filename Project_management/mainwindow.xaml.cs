@@ -36,6 +36,7 @@ namespace Project_management
             this.Visibility = Visibility.Hidden;
             objSMA.Show();
             */
+            
             log_t = login_text.Text;
             if(login_text.Text == "" || password_text.Password == "")
             {
